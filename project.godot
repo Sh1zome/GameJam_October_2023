@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="GameJam_October_2023"
+run/main_scene="res://tutorial.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_height"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/softbody2d/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_nodes/plugin.cfg", "res://addons/softbody2d/plugin.cfg")
