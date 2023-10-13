@@ -1,0 +1,186 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://6412i1ghv161"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_tqi7q"]
+
+[resource]
+script = ExtResource("1_tqi7q")
+starts = {
+"TUTOR": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(40, -640),
+"start_id": "TUTOR"
+},
+"1_1": {
+"dialogue": "Если надо идти жми....",
+"offset": Vector2(390.698, -566.8),
+"options": {
+0: {
+"link": &"3_1",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_2": {
+"dialogue": "A - Идти влево
+D - Идти вправо",
+"offset": Vector2(982.245, -599.306),
+"options": {
+0: {
+"link": &"1_3",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_3": {
+"dialogue": "Всё просто!",
+"offset": Vector2(1248.89, -646.762),
+"options": {
+0: {
+"link": &"3_2",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_4": {
+"dialogue": "Ну а если хочешь прыгнуть...",
+"offset": Vector2(1760, -640),
+"options": {
+0: {
+"link": &"3_3",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.001,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_5": {
+"dialogue": "Жми W !",
+"offset": Vector2(2180, -680),
+"options": {
+0: {
+"link": &"3_5",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_6": {
+"dialogue": "Но ещё есть кое-что интересное....",
+"offset": Vector2(2500, -660),
+"options": {
+0: {
+"link": &"1_7",
+"text": "Что?"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_7": {
+"dialogue": "Это перекаты!",
+"offset": Vector2(2900, -640),
+"options": {
+0: {
+"link": &"3_4",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_8": {
+"dialogue": "Нажми два раза A или D что бы сделать перекат!",
+"offset": Vector2(3440, -620),
+"options": {
+0: {
+"link": &"3_6",
+"text": "Ок"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_9": {
+"dialogue": "Это всё что тебе нужно знать!",
+"offset": Vector2(3860, -620),
+"options": {
+"0": {
+"link": "END",
+"text": "Ладно"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"3_1": {
+"link": &"1_2",
+"offset": Vector2(680, -500),
+"signalValue": "buttons"
+},
+"3_2": {
+"link": &"1_4",
+"offset": Vector2(1500, -600),
+"signalValue": "disableButtons"
+},
+"3_3": {
+"link": &"1_5",
+"offset": Vector2(1970.8, -731.274),
+"signalValue": "showW"
+},
+"3_4": {
+"link": &"1_8",
+"offset": Vector2(3180, -600),
+"signalValue": "showDash"
+},
+"3_5": {
+"link": &"1_6",
+"offset": Vector2(2400, -760),
+"signalValue": "disableW"
+},
+"3_6": {
+"link": &"1_9",
+"offset": Vector2(3627.28, -709.595),
+"signalValue": "end"
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""
