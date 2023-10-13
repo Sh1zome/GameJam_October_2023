@@ -33,6 +33,7 @@ offset_bottom = 151.0
 script = ExtResource("1_ffetm")
 
 [node name="DialogueBox" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 0
 offset_left = 57.0

@@ -1,0 +1,63 @@
+extends CharacterBody2D
+
+
+const SPEED = 150
+const JUMP_VELOCITY = -400.0
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready var sprite = $AnimatedSprite2D
+var clickStat = 2
+var DashRight = false
+var DashColdown = false
+var DashColdownVisual = 5.0
+func _physics_process(delta):
+
+	if not is_on_floor():
+		velocity.y += gravity * delta
+	if Input.is_action_just_pressed("Up") and is_on_floor():
+		velocity.y = JUMP_VELOCITY
+		sprite.play("Jump")
+	var direction = Input.get_axis("Left", "Right")
+	if direction:
+		velocity.x = direction * SPEED
+		if velocity.y == 0:
+			sprite.play("Run")
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		if velocity.y == 0:
+			sprite.play("Idle")
+	if direction ==-1:
+		sprite.flip_h = true
+	elif direction == 1:
+		sprite.flip_h = false
+	if velocity.y >0:
+		sprite.play("Fall")
+	if Input.is_action_just_pressed("Right"):
+		if DashColdown == false:
+			clickStat -= 1
+			if clickStat <= 0:
+				velocity.x =+ 2000
+				velocity.y -= 200
+				DashColdown = true
+	if Input.is_action_just_pressed("Left"):
+		if DashColdown == false:
+			clickStat -= 1
+			if clickStat <= 0:
+				velocity.x -= 2000
+				velocity.y -= 200
+				DashColdown = true
+	
+	move_and_slide()
+
+func _on_timer_timeout():
+	clickStat = 2
+	if DashColdownVisual != 0:
+		DashColdownVisual -= 0.5 
+	
+
+
+func _on_dash_coldown_timeout():
+	if DashColdown == true:
+		DashColdownVisual = 5
+		DashColdown = false
+	
+		
