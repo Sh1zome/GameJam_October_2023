@@ -1,0 +1,123 @@
+[gd_scene load_steps=15 format=3 uid="uid://cir4csp41pul1"]
+
+[ext_resource type="Script" path="res://Tutor/Tutorial.gd" id="1_b8c3u"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="1_irvko"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="2_3sukt"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="3_8026m"]
+[ext_resource type="Resource" uid="uid://6412i1ghv161" path="res://Tutorial.tres" id="3_tceox"]
+[ext_resource type="Texture2D" uid="uid://cc16ywfn0wh35" path="res://a.png" id="7_6jfe4"]
+[ext_resource type="Theme" path="res://Theme.tres" id="7_27mjp"]
+[ext_resource type="Texture2D" uid="uid://ipmas4ukvhni" path="res://d.png" id="8_glewx"]
+[ext_resource type="Texture2D" uid="uid://bn7vsvth8txfd" path="res://w.png" id="9_aniph"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txtil"]
+bg_color = Color(0, 0, 0, 0.372549)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 16
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_lrhb7"]
+script = ExtResource("2_3sukt")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_nqg2e"]
+script = ExtResource("3_8026m")
+
+[sub_resource type="LabelSettings" id="LabelSettings_gx8ac"]
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_y2o3o"]
+line_spacing = 5.0
+font_size = 11
+font_color = Color(0, 0, 0, 1)
+outline_size = 1
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 536.0
+offset_bottom = 216.0
+script = ExtResource("1_b8c3u")
+
+[node name="Tutorial" type="Panel" parent="."]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 0
+offset_left = 121.0
+offset_top = 43.0
+offset_right = 388.0
+offset_bottom = 171.0
+theme = ExtResource("7_27mjp")
+theme_override_styles/panel = SubResource("StyleBoxFlat_txtil")
+script = ExtResource("1_irvko")
+dialogue_file = ExtResource("3_tceox")
+start_id = "TUTOR"
+max_options = 1
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_lrhb7"), SubResource("RichTextEffect_nqg2e")])
+
+[node name="ButtonsForMove" type="CanvasLayer" parent="."]
+
+[node name="A&D" type="Label" parent="ButtonsForMove"]
+offset_left = 229.0
+offset_top = 44.0
+offset_right = 364.0
+offset_bottom = 93.0
+text = "                     "
+
+[node name="A" type="Sprite2D" parent="ButtonsForMove/A&D"]
+position = Vector2(79, 33)
+scale = Vector2(0.0625001, 0.0527344)
+texture = ExtResource("7_6jfe4")
+
+[node name="D" type="Sprite2D" parent="ButtonsForMove/A&D"]
+position = Vector2(114, 33)
+scale = Vector2(0.0644532, 0.0527344)
+texture = ExtResource("8_glewx")
+
+[node name="W" type="Label" parent="ButtonsForMove"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="W" type="Sprite2D" parent="ButtonsForMove/W"]
+position = Vector2(324, 73)
+scale = Vector2(0.0598144, 0.0532226)
+texture = ExtResource("9_aniph")
+
+[node name="Dash" type="Label" parent="ButtonsForMove"]
+offset_left = 259.0
+offset_top = 41.0
+offset_right = 299.0
+offset_bottom = 93.0
+text = "
+
+"
+
+[node name="Label" type="Label" parent="ButtonsForMove/Dash"]
+layout_mode = 0
+offset_top = 13.0
+offset_right = 40.0
+offset_bottom = 39.0
+text = "2x"
+label_settings = SubResource("LabelSettings_gx8ac")
+
+[node name="A" type="Sprite2D" parent="ButtonsForMove/Dash"]
+position = Vector2(41, 26)
+scale = Vector2(0.0625001, 0.0527344)
+texture = ExtResource("7_6jfe4")
+
+[node name="D" type="Sprite2D" parent="ButtonsForMove/Dash"]
+position = Vector2(99, 26)
+scale = Vector2(0.0644532, 0.0527344)
+texture = ExtResource("8_glewx")
+
+[node name="Label2" type="Label" parent="ButtonsForMove/Dash"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 17.0
+offset_right = 99.0
+offset_bottom = 43.0
+text = "или"
+label_settings = SubResource("LabelSettings_y2o3o")
+
+[connection signal="dialogue_signal" from="Tutorial" to="." method="_on_tutorial_dialogue_signal"]
+[connection signal="dialogue_signal" from="Tutorial" to="." method="_on_tutorial_dialogue_signal2"]

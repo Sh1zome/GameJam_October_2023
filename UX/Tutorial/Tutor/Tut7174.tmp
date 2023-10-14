@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=3 uid="uid://cir4csp41pul1"]
+
+[ext_resource type="Script" path="res://Tutor/Tutorial.gd" id="1_b8c3u"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="1_irvko"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="2_3sukt"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="3_8026m"]
+[ext_resource type="Resource" uid="uid://6412i1ghv161" path="res://Tutorial.tres" id="3_tceox"]
+[ext_resource type="Texture2D" uid="uid://72repkxugs0c" path="res://bg_castle.png" id="6_c78vd"]
+[ext_resource type="Theme" uid="uid://dq18m3ugydevw" path="res://Theme.tres" id="7_27mjp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txtil"]
+bg_color = Color(0, 0, 0, 0.372549)
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_lrhb7"]
+script = ExtResource("2_3sukt")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_nqg2e"]
+script = ExtResource("3_8026m")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 536.0
+offset_bottom = 216.0
+script = ExtResource("1_b8c3u")
+
+[node name="Tutorial" type="Panel" parent="."]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 0
+offset_left = 121.0
+offset_top = 43.0
+offset_right = 377.0
+offset_bottom = 171.0
+theme = ExtResource("7_27mjp")
+theme_override_styles/panel = SubResource("StyleBoxFlat_txtil")
+script = ExtResource("1_irvko")
+dialogue_file = ExtResource("3_tceox")
+start_id = "TUTOR"
+max_options = 1
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_lrhb7"), SubResource("RichTextEffect_nqg2e")])
+
+[node name="ButtonsForMove" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="ButtonsForMove"]
+offset_left = 260.0
+offset_top = 191.0
+offset_right = 490.0
+offset_bottom = 335.0
+text = "W A S D
+"
+
+[node name="BgCastle" type="Sprite2D" parent="ButtonsForMove/Label"]
+position = Vector2(19, 38)
+scale = Vector2(0.105469, 0.0898438)
+texture = ExtResource("6_c78vd")
+
+[node name="BgCastle2" type="Sprite2D" parent="ButtonsForMove/Label"]
+position = Vector2(52, 38)
+scale = Vector2(0.105469, 0.0898438)
+texture = ExtResource("6_c78vd")
+
+[node name="BgCastle3" type="Sprite2D" parent="ButtonsForMove/Label"]
+position = Vector2(85, 38)
+scale = Vector2(0.105469, 0.0898438)
+texture = ExtResource("6_c78vd")
+
+[node name="BgCastle4" type="Sprite2D" parent="ButtonsForMove/Label"]
+position = Vector2(117, 38)
+scale = Vector2(0.105469, 0.0898438)
+texture = ExtResource("6_c78vd")
+
+[node name="Tutorial2" type="Panel" parent="."]
+custom_minimum_size = Vector2(256, 128)
+offset_left = 130.0
+offset_top = 190.0
+offset_right = 386.0
+offset_bottom = 318.0
+theme = ExtResource("7_27mjp")
+theme_override_styles/panel = SubResource("StyleBoxFlat_txtil")
+script = ExtResource("1_irvko")
+dialogue_file = ExtResource("3_tceox")
+max_options = 1
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_lrhb7"), SubResource("RichTextEffect_nqg2e")])
+
+[connection signal="dialogue_signal" from="Tutorial" to="." method="_on_tutorial_dialogue_signal"]
+[connection signal="dialogue_signal" from="Tutorial2" to="." method="_on_tutorial_dialogue_signal"]
