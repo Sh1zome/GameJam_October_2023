@@ -3554,6 +3554,16 @@ layer_0/tile_data = PackedInt32Array(2621454, 458752, 30)
 [node name="PlayerAndUI2" parent="." instance=ExtResource("5_qytpn")]
 position = Vector2(18, 691)
 
+[node name="DashColdown" parent="PlayerAndUI2/CanvasLayer" index="0"]
+offset_left = 247.0
+offset_right = -850.0
+
+[node name="ProgressBar" parent="PlayerAndUI2/CanvasLayer" index="1"]
+offset_left = 123.0
+offset_top = 653.0
+offset_right = 246.0
+offset_bottom = 685.0
+
 [node name="PerehodNext" type="Area2D" parent="."]
 position = Vector2(317, 673)
 
