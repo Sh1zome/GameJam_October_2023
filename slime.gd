@@ -26,9 +26,6 @@ func _physics_process(delta):
 func _on_detect_body_entered(body):
 	if body.name == "PlayerHuman":
 		chase = true
-
-
-
 func _on_detect_body_exited(body):
 	if body.name == "PlayerHuman":
 		chase = false
