@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://7xcjog5ae4ho"]
 
 [ext_resource type="Script" path="res://Tutorial.gd" id="1_ffetm"]
-[ext_resource type="Theme" path="res://TESTTHEME.tres" id="2_e7rao"]
+[ext_resource type="Theme" uid="uid://du336a60o3of8" path="res://TESTTHEME.tres" id="2_e7rao"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="3_fcgbb"]
 [ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://Tutorial.tres" id="4_7aded"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_r2ua3"]
@@ -33,6 +33,7 @@ offset_bottom = 151.0
 script = ExtResource("1_ffetm")
 
 [node name="DialogueBox" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 0
 offset_left = 57.0
