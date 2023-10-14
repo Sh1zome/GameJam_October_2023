@@ -58,7 +58,6 @@ func _physics_process(delta):
 
 func _on_dash_track_timeout():
 	clickStat = 2
-	print("test")
 	if DashColdownVisual != 0:
 		DashColdownVisual -= 0.5
 	

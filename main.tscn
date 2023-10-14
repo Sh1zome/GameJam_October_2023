@@ -32,6 +32,7 @@ autostart = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+visible = false
 offset_left = 274.0
 offset_top = 506.0
 offset_right = 536.0
