@@ -23,6 +23,10 @@ boot_splash/size/window_width_override=0
 boot_splash/max_fps=0
 boot_splash/main_scene="res://level_1.tscn"
 
+[autoload]
+
+GloabalTreker="*res://GloabalTreker.gd"
+
 [display]
 
 window/size/viewport_width=256
