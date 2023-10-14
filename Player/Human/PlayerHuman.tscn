@@ -1,10 +1,11 @@
-[gd_scene load_steps=43 format=3 uid="uid://dv8b8adh14rnc"]
+[gd_scene load_steps=52 format=3 uid="uid://dv8b8adh14rnc"]
 
 [ext_resource type="Texture2D" uid="uid://d2lt2yoyy6kts" path="res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player land 48x48.png" id="1_dww7d"]
 [ext_resource type="Script" path="res://Player/Human/PlayerHuman.gd" id="1_iux1n"]
 [ext_resource type="Texture2D" uid="uid://wj8nmcogs56" path="res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/Character Idle 48x48.png" id="2_uflm4"]
 [ext_resource type="Texture2D" uid="uid://dj0ahbpdk5xrh" path="res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player jump 48x48.png" id="3_i7hfk"]
 [ext_resource type="Texture2D" uid="uid://rp2osh58kfvw" path="res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/run cycle 48x48.png" id="4_yomtk"]
+[ext_resource type="Texture2D" uid="uid://dmr028qplwa22" path="res://Player/Human/Assets/Asset Pack-V3/Sword Stab/Player Sword Stab 96x48.png" id="6_7aqnu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c2ld5"]
 atlas = ExtResource("1_dww7d")
@@ -138,6 +139,34 @@ region = Rect2(288, 0, 48, 48)
 atlas = ExtResource("4_yomtk")
 region = Rect2(336, 0, 48, 48)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhfr6"]
+atlas = ExtResource("6_7aqnu")
+region = Rect2(0, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm5uf"]
+atlas = ExtResource("6_7aqnu")
+region = Rect2(96, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_thl3d"]
+atlas = ExtResource("6_7aqnu")
+region = Rect2(192, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_66w5q"]
+atlas = ExtResource("6_7aqnu")
+region = Rect2(288, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hantt"]
+atlas = ExtResource("6_7aqnu")
+region = Rect2(384, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydv8i"]
+atlas = ExtResource("6_7aqnu")
+region = Rect2(480, 0, 96, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu37o"]
+atlas = ExtResource("6_7aqnu")
+region = Rect2(576, 0, 96, 48)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_ofrvw"]
 animations = [{
 "frames": [{
@@ -258,6 +287,32 @@ animations = [{
 "loop": true,
 "name": &"Run",
 "speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhfr6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dm5uf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_thl3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_66w5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hantt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydv8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu37o")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 12.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iw06q"]
@@ -278,15 +333,14 @@ func _process(_delta):
 "
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ufxl8"]
-emission_shape = 6
-emission_ring_axis = Vector3(0, 0, 1)
-emission_ring_height = 16.16
-emission_ring_radius = -23.41
-emission_ring_inner_radius = 10.0
+emission_shape = 1
+emission_sphere_radius = 13.13
 particle_flag_align_y = true
 particle_flag_rotate_y = true
 particle_flag_disable_z = true
 gravity = Vector3(0, 0, 0)
+angular_velocity_min = 10.0
+angular_velocity_max = 45.47
 orbit_velocity_min = 0.0
 orbit_velocity_max = 0.0
 radial_accel_min = -200.0
@@ -297,6 +351,9 @@ anim_offset_max = 0.9431
 sub_emitter_mode = 1
 sub_emitter_frequency = 75.52
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qie41"]
+size = Vector2(23, 25)
+
 [node name="PlayerHuman" type="CharacterBody2D"]
 position = Vector2(-3, 0)
 script = ExtResource("1_iux1n")
@@ -305,8 +362,10 @@ script = ExtResource("1_iux1n")
 position = Vector2(163, -7)
 scale = Vector2(0.882844, 0.882071)
 sprite_frames = SubResource("SpriteFrames_ofrvw")
-animation = &"Fall"
+animation = &"attack"
 autoplay = "Idle"
+frame = 1
+frame_progress = 0.360238
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(161.5, -5.375)
@@ -330,7 +389,16 @@ editor_draw_drag_margin = true
 script = SubResource("GDScript_7pfub")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
-position = Vector2(0, -9)
+z_index = -1
+position = Vector2(162, -13)
+scale = Vector2(0.2, 0.2)
 amount = 5
 sub_emitter = NodePath(".")
 process_material = SubResource("ParticleProcessMaterial_ufxl8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(180.5, -5.5)
+shape = SubResource("RectangleShape2D_qie41")
+disabled = true

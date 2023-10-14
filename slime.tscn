@@ -1,0 +1,177 @@
+[gd_scene load_steps=23 format=3 uid="uid://qk2jj5o2msdl"]
+
+[ext_resource type="Texture2D" uid="uid://doyc2r14fyjrh" path="res://Mobs/Slime/Assets/slime-Sheet.png" id="1_0awyf"]
+[ext_resource type="Script" path="res://slime.gd" id="1_ma4r3"]
+[ext_resource type="Texture2D" uid="uid://mr4o7gkpqfbp" path="res://Mobs/Slime/Assets/kenney_particle-pack/PNG (Transparent)/star_07.png" id="3_mv6io"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6rqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j6580"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(160, 25, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tg0m2"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(192, 25, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kyh3m"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(224, 25, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7w0m"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(0, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ty0u3"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(32, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s24ae"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(64, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7i3st"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(96, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfqid"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(0, 25, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss37r"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(32, 25, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7camp"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(64, 25, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_it0rr"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(96, 25, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6c00"]
+atlas = ExtResource("1_0awyf")
+region = Rect2(128, 25, 32, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_taiv5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j6580")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tg0m2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kyh3m")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7w0m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ty0u3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s24ae")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7i3st")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfqid")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss37r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7camp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_it0rr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6c00")
+}],
+"loop": true,
+"name": &"targeting",
+"speed": 9.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5wv4h"]
+font_size = 7
+font_color = Color(0.478431, 0.627451, 0.890196, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g31i6"]
+radius = 108.074
+
+[sub_resource type="Gradient" id="Gradient_fs8h8"]
+colors = PackedColorArray(0.326759, 0.812313, 0.971105, 1, 1, 1, 1, 0.54902)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_s6p4y"]
+gradient = SubResource("Gradient_fs8h8")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_63cm1"]
+emission_shape = 1
+emission_sphere_radius = 1.0
+particle_flag_disable_z = true
+direction = Vector3(0, 0, 0)
+spread = 180.0
+flatness = 0.46
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 20.0
+damping_max = 31.579
+scale_min = 0.0
+scale_max = 0.02
+color_ramp = SubResource("GradientTexture1D_s6p4y")
+
+[node name="slime" type="CharacterBody2D"]
+script = ExtResource("1_ma4r3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_i6rqr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
+sprite_frames = SubResource("SpriteFrames_taiv5")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.433866
+
+[node name="Label" type="Label" parent="."]
+offset_left = -18.0
+offset_top = -16.0
+offset_right = 22.0
+offset_bottom = 7.0
+text = "slime"
+label_settings = SubResource("LabelSettings_5wv4h")
+horizontal_alignment = 1
+
+[node name="detect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detect"]
+shape = SubResource("CircleShape2D_g31i6")
+
+[node name="particles-slime" type="GPUParticles2D" parent="."]
+z_index = -1
+z_as_relative = false
+amount = 32
+process_material = SubResource("ParticleProcessMaterial_63cm1")
+texture = ExtResource("3_mv6io")
+
+[connection signal="body_entered" from="detect" to="." method="_on_detect_body_entered"]
+[connection signal="body_exited" from="detect" to="." method="_on_detect_body_exited"]
