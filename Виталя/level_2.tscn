@@ -3571,8 +3571,8 @@ position = Vector2(317, 673)
 position = Vector2(-25, -39)
 shape = SubResource("RectangleShape2D_m0533")
 
-[connection signal="body_entered" from="PerehodNext" to="." method="_on_perehod_body_entered"]
 [connection signal="body_entered" from="PerehodNext" to="." method="_on_perehod_next_body_entered"]
+[connection signal="body_entered" from="PerehodNext" to="." method="_on_perehod_body_entered"]
 
 [editable path="PlayerAndUI2"]
 [editable path="PlayerAndUI2/PlayerHuman"]

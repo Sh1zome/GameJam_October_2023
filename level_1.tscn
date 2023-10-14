@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=27 format=3 uid="uid://dydwdvjdmdgdb"]
-
-[ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
-[ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
-[ext_resource type="PackedScene" uid="uid://3gg8toisms16" path="res://Paralax.tscn" id="2_ols3x"]
-[ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="4_5kto1"]
-[ext_resource type="Texture2D" uid="uid://due8taewbgcps" path="res://Виталя/Планета/верёвка.png" id="5_1dleq"]
-[ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
-[ext_resource type="PackedScene" uid="uid://dv8b8adh14rnc" path="res://Player/Human/PlayerHuman.tscn" id="7_7du80"]
-[ext_resource type="Texture2D" uid="uid://bh6mk415qit6i" path="res://UX/Interface/Assets/хп 2.png" id="8_fh13j"]
-[ext_resource type="Texture2D" uid="uid://bpcq0xmiswim4" path="res://UX/Interface/Assets/хп 1.png" id="9_ldko1"]
-[ext_resource type="PackedScene" uid="uid://ckfowd3y3lkdf" path="res://Player/Human/dash_coldown.tscn" id="10_phmtq"]
-[ext_resource type="PackedScene" uid="uid://qk2jj5o2msdl" path="res://slime.tscn" id="11_cj6un"]
-=======
-[gd_scene load_steps=24 format=3 uid="uid://dydwdvjdmdgdb"]
+[gd_scene load_steps=25 format=3 uid="uid://c4pdrkhalwkik"]
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
@@ -22,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="4_5kto1"]
 [ext_resource type="Texture2D" uid="uid://due8taewbgcps" path="res://Виталя/Планета/верёвка.png" id="5_1dleq"]
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
->>>>>>> 50b59fe5b092c6908bf50005246d8271afdfe33a
+[ext_resource type="PackedScene" uid="uid://clnnthwxer12t" path="res://slime.tscn" id="8_n78aq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nob7"]
 texture = ExtResource("4_5kto1")
@@ -2119,42 +2104,7 @@ position = Vector2(591, 663)
 position = Vector2(-25, -39)
 shape = SubResource("RectangleShape2D_d6877")
 
-<<<<<<< HEAD
-[node name="DashColdown" type="Timer" parent="."]
-wait_time = 4.0
-autostart = true
+[node name="slime" parent="." instance=ExtResource("8_n78aq")]
+position = Vector2(431, 662)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
-offset_left = 274.0
-offset_top = 506.0
-offset_right = 536.0
-offset_bottom = 803.0
-scale = Vector2(0.66356, 0.710306)
-min_value = -13.0
-max_value = 60.0
-step = 2.0
-value = 1.0
-fill_mode = 3
-nine_patch_stretch = true
-texture_under = ExtResource("8_fh13j")
-texture_progress = ExtResource("9_ldko1")
-metadata/_edit_use_anchors_ = true
-
-[node name="DashColdown" parent="CanvasLayer" instance=ExtResource("10_phmtq")]
-offset_left = 318.0
-offset_top = 76.0
-offset_right = -779.0
-offset_bottom = -480.0
-scale = Vector2(1, 1.02593)
-metadata/_edit_use_anchors_ = true
-
-[node name="CharacterBody2D" parent="." instance=ExtResource("11_cj6un")]
-position = Vector2(428, 664)
-
-[connection signal="timeout" from="DashTrack" to="PlayerHuman" method="_on_dash_track_timeout"]
-[connection signal="timeout" from="DashColdown" to="PlayerHuman" method="_on_dash_coldown_timeout"]
-=======
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
->>>>>>> 50b59fe5b092c6908bf50005246d8271afdfe33a
