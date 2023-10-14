@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://didk1x33cio11"]
+[gd_scene load_steps=9 format=3 uid="uid://didk1x33cio11"]
 
 [ext_resource type="Texture2D" uid="uid://bea4uppvnvrt3" path="res://Player/Human/Assets/Asset Pack-V1/Tilemap/Basic Tilemap.png" id="1_d2ebt"]
 [ext_resource type="Script" path="res://main.gd" id="1_ekqv6"]
 [ext_resource type="PackedScene" uid="uid://dv8b8adh14rnc" path="res://Player/Human/PlayerHuman.tscn" id="1_u1ckt"]
 [ext_resource type="PackedScene" uid="uid://ckfowd3y3lkdf" path="res://Player/Human/dash_coldown.tscn" id="5_4jg2o"]
+[ext_resource type="Texture2D" uid="uid://bh6mk415qit6i" path="res://UX/Interface/Assets/хп 2.png" id="5_idrum"]
+[ext_resource type="Texture2D" uid="uid://bpcq0xmiswim4" path="res://UX/Interface/Assets/хп 1.png" id="6_fekj4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u52kv"]
 texture = ExtResource("1_d2ebt")
@@ -196,11 +198,27 @@ autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 274.0
+offset_top = 506.0
+offset_right = 536.0
+offset_bottom = 803.0
+scale = Vector2(0.66356, 0.710306)
+min_value = -13.0
+max_value = 60.0
+step = 2.0
+value = 1.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("5_idrum")
+texture_progress = ExtResource("6_fekj4")
+
 [node name="DashColdown" parent="CanvasLayer" instance=ExtResource("5_4jg2o")]
 offset_left = 360.0
 offset_top = 160.0
 offset_right = -737.0
 offset_bottom = -396.0
+scale = Vector2(1, 1.02593)
 
 [connection signal="DashCd" from="PlayerHuman" to="." method="_on_player_human_dash_cd"]
 [connection signal="timeout" from="DashTrack" to="PlayerHuman" method="_on_timer_timeout"]

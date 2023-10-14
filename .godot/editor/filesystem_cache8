@@ -1,13 +1,13 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697270008
+::res://::1697272711
 control.gd::GDScript::-1::1697222657::0::1::::<>Control<>::
 EmptyProggresBarPNG.png::CompressedTexture2D::6007117632273747535::1697258042::1697258044::1::::<><>::
 icon.svg::CompressedTexture2D::8323506659126814680::1697223351::1697223351::1::::<><>::
-main.gd::GDScript::-1::1697265468::0::1::::<>Node2D<>::
-main.tscn::PackedScene::7727620786581706534::1697269987::0::1::::<><>::uid://bea4uppvnvrt3::::res://Player/Human/Assets/Asset Pack-V1/Tilemap/Basic Tilemap.png<>res://main.gd<>uid://dv8b8adh14rnc::::res://Player/Human/PlayerHuman.tscn<>uid://ckfowd3y3lkdf::::res://Player/Human/dash_coldown.tscn
+main.gd::GDScript::-1::1697272711::0::1::::<>Node2D<>::
+main.tscn::PackedScene::7727620786581706534::1697272711::0::1::::<><>::uid://bea4uppvnvrt3::::res://Player/Human/Assets/Asset Pack-V1/Tilemap/Basic Tilemap.png<>res://main.gd<>uid://dv8b8adh14rnc::::res://Player/Human/PlayerHuman.tscn<>uid://ckfowd3y3lkdf::::res://Player/Human/dash_coldown.tscn<>uid://bh6mk415qit6i::::res://UX/Interface/Assets/хп 2.png<>uid://bpcq0xmiswim4::::res://UX/Interface/Assets/хп 1.png
 README.md::TextFile::-1::1697223351::0::1::::<><>::
 TESTTHEME.tres::Theme::-1::1697223523::0::1::::<><>::
-Tutorial.tres::Resource/DialogueData::5569308218799504738::1697270008::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
+Tutorial.tres::Resource/DialogueData::5569308218799504738::1697272770::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
 ::res://addons/::1697222257
 ::res://addons/dialogue_nodes/::1697223367
 NodeEditor.tscn::PackedScene::3546733721400696897::1697223351::0::1::::<><>::res://addons/dialogue_nodes/editor/editor.gd<>res://addons/dialogue_nodes/editor/graph.gd<>uid://bnlg07ckbg0w
@@ -69,13 +69,13 @@ softbody2d.svg::CompressedTexture2D::2048758211529010319::1697223351::1697223351
 voronoi2d.gd::GDScript::-1::1697223351::0::1::::Voronoi2D<>Node2D<>res://addons/softbody2d/voronoi_icon.png::
 voronoi_icon.png::CompressedTexture2D::1609182819172224690::1697223351::1697222139::1::::<><>::
 ::res://Player/::1697259108
-::res://Player/Human/::1697269974
+::res://Player/Human/::1697272649
 dash_coldown.gd::GDScript::-1::1697266634::0::1::::<>Control<>::
 dash_coldown.tscn::PackedScene::5485941219854348715::1697265657::0::1::::<><>::res://Player/Human/dash_coldown.gd<>uid://b4lrh2j7v1g3e::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png<>uid://7xcjog5ae4ho::::res://tutorial.tscn<>uid://brptfd35n213c::::res://Player/Human/UI_Flat_Select_01a1.png<>uid://dgmlr245vd0um::::res://UX/Interface/Assets/Charge/1charhe.png<>uid://kkiufdkksk1q::::res://UX/Interface/Assets/Charge/2charge.png<>uid://coifldrv7fvo0::::res://Player/Human/UI_Flat_Frame_01_Standard.png<>uid://cqjnilcry47ui::::res://UX/Interface/Assets/UI_Flat_Slot_01_Unavailable.png<>uid://dlm036s674nrh::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Selected.png<>uid://c1d845x1v45xm::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Available.png<>uid://dxr1x0y3i36u2::::res://UX/Interface/Assets/MenuIcon.png<>uid://xoleaf6swoly::::res://UX/Interface/Assets/3inAnimate.png<>uid://bw1jloe6luy4i::::res://UX/Interface/Assets/imgonline-com-ua-Resize-ioyy8902fgOCje.png<>uid://blp4um3is87l8::::res://UX/Interface/Assets/2inAnim.png
 InterFace.gd::GDScript::-1::1697264757::0::1::::<>Control<>::
-Interface.tscn::PackedScene::2956275407261290072::1697269885::0::1::::<><>::res://Player/Human/dash_coldown.gd<>uid://b4lrh2j7v1g3e::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png<>uid://7xcjog5ae4ho::::res://tutorial.tscn<>uid://brptfd35n213c::::res://Player/Human/UI_Flat_Select_01a1.png<>uid://dgmlr245vd0um::::res://UX/Interface/Assets/Charge/1charhe.png<>uid://kkiufdkksk1q::::res://UX/Interface/Assets/Charge/2charge.png<>uid://coifldrv7fvo0::::res://Player/Human/UI_Flat_Frame_01_Standard.png<>uid://cqjnilcry47ui::::res://UX/Interface/Assets/UI_Flat_Slot_01_Unavailable.png<>uid://dlm036s674nrh::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Selected.png<>uid://c1d845x1v45xm::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Available.png<>uid://dxr1x0y3i36u2::::res://UX/Interface/Assets/MenuIcon.png<>uid://xoleaf6swoly::::res://UX/Interface/Assets/3inAnimate.png<>uid://bw1jloe6luy4i::::res://UX/Interface/Assets/imgonline-com-ua-Resize-ioyy8902fgOCje.png<>uid://blp4um3is87l8::::res://UX/Interface/Assets/2inAnim.png
-PlayerHuman.gd::GDScript::-1::1697264564::0::1::::<>CharacterBody2D<>::
-PlayerHuman.tscn::PackedScene::8701471886541949736::1697269974::0::1::::<><>::uid://d2lt2yoyy6kts::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player land 48x48.png<>res://Player/Human/PlayerHuman.gd<>uid://wj8nmcogs56::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/Character Idle 48x48.png<>uid://dj0ahbpdk5xrh::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player jump 48x48.png<>uid://rp2osh58kfvw::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/run cycle 48x48.png
+Interface.tscn::PackedScene::2956275407261290072::1697272770::0::1::::<><>::res://Player/Human/dash_coldown.gd<>uid://b4lrh2j7v1g3e::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png<>uid://7xcjog5ae4ho::::res://tutorial.tscn<>uid://brptfd35n213c::::res://Player/Human/UI_Flat_Select_01a1.png<>uid://dgmlr245vd0um::::res://UX/Interface/Assets/Charge/1charhe.png<>uid://kkiufdkksk1q::::res://UX/Interface/Assets/Charge/2charge.png<>uid://coifldrv7fvo0::::res://Player/Human/UI_Flat_Frame_01_Standard.png<>uid://cqjnilcry47ui::::res://UX/Interface/Assets/UI_Flat_Slot_01_Unavailable.png<>uid://dlm036s674nrh::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Selected.png<>uid://c1d845x1v45xm::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Available.png<>uid://dxr1x0y3i36u2::::res://UX/Interface/Assets/MenuIcon.png<>uid://xoleaf6swoly::::res://UX/Interface/Assets/3inAnimate.png<>uid://bw1jloe6luy4i::::res://UX/Interface/Assets/imgonline-com-ua-Resize-ioyy8902fgOCje.png<>uid://blp4um3is87l8::::res://UX/Interface/Assets/2inAnim.png
+PlayerHuman.gd::GDScript::-1::1697272649::0::1::::<>CharacterBody2D<>::
+PlayerHuman.tscn::PackedScene::8701471886541949736::1697272648::0::1::::<><>::uid://d2lt2yoyy6kts::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player land 48x48.png<>res://Player/Human/PlayerHuman.gd<>uid://wj8nmcogs56::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/Character Idle 48x48.png<>uid://dj0ahbpdk5xrh::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player jump 48x48.png<>uid://rp2osh58kfvw::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/run cycle 48x48.png
 UI_Flat_Frame_01_Standard.png::CompressedTexture2D::5772323613876773329::1697260973::1697260973::1::::<><>::
 UI_Flat_Frame_02_Inward.png::CompressedTexture2D::7827561864853874923::1697261371::1697261371::1::::<><>::
 UI_Flat_Frame_02_Standard.png::CompressedTexture2D::155081375364040452::1697260969::1697260969::1::::<><>::
@@ -134,18 +134,18 @@ Player Sword Stab 96x48.png::CompressedTexture2D::8038190496493823857::169722713
 ::res://UX/::1697270001
 Tutorial.tres::Resource/Resource::5569308218799504738::1697269885::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
 w.png::CompressedTexture2D::7364954857023180391::1697223664::1697270001::1::::<><>::
-::res://UX/DialogWindow/::1697270008
+::res://UX/DialogWindow/::1697272711
 control.gd::GDScript::-1::1697223351::0::1::::<>Control<>::
-control.tscn::PackedScene::5939177040270115898::1697265657::0::1::::<><>::res://control.gd<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://dq18m3ugydevw::::res://UX/DialogWindow/Theme.tres<>uid://cunreq3xqciw6::::res://UX/DialogWindow/MainTree.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd
-MainTree.tres::Resource/DialogueData::6204495367696887067::1697270008::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
+control.tscn::PackedScene::5939177040270115898::1697272315::0::1::::<><>::res://control.gd<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://dq18m3ugydevw::::res://UX/DialogWindow/Theme.tres<>uid://cunreq3xqciw6::::res://UX/DialogWindow/MainTree.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd
+MainTree.tres::Resource/DialogueData::6204495367696887067::1697272770::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
 Theme.tres::Theme::8337983963036227784::1697223351::0::1::::<><>::
-::res://UX/Interface/::1697270008
+::res://UX/Interface/::1697272315
 a.png::CompressedTexture2D::3178689114684193261::1697223672::1697270004::1::::<><>::
 d.png::CompressedTexture2D::2211656184324445442::1697223676::1697270008::1::::<><>::
 Tutorial.gd::GDScript::-1::1697224960::0::1::::<>Control<>::
 Tutorial.tres::Resource/Resource::5569308218799504738::1697269829::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
-tutorial.tscn::PackedScene::2293661936850070352::1697270008::0::1::::<><>::res://UX/Interface/Tutorial.gd<>uid://du336a60o3of8::::res://TESTTHEME.tres<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://cll2xsy85sfyo::::res://UX/Interface/Tutorial.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://cf2wcktgorrup::::res://Player/Human/UI_Flat_Textfield_01.png<>uid://dc6vy3ocnvkd8::::res://UX/w.png<>uid://6rlwij2rosmc::::res://UX/Interface/d.png<>uid://blj1ssmy1vfej::::res://UX/Interface/a.png
-::res://UX/Interface/Assets/::1697264052
+tutorial.tscn::PackedScene::2293661936850070352::1697272315::0::1::::<><>::res://UX/Interface/Tutorial.gd<>res://TESTTHEME.tres<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://cll2xsy85sfyo::::res://UX/Interface/Tutorial.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://cf2wcktgorrup::::res://Player/Human/UI_Flat_Textfield_01.png<>uid://dc6vy3ocnvkd8::::res://UX/w.png<>uid://6rlwij2rosmc::::res://UX/Interface/d.png<>uid://blj1ssmy1vfej::::res://UX/Interface/a.png
+::res://UX/Interface/Assets/::1697272112
 2inAnim.png::CompressedTexture2D::3191260812614276543::1697263677::1697263711::1::::<><>::
 3inAnimate.png::CompressedTexture2D::1643919731485087926::1697263765::1697263793::1::::<><>::
 imgonline-com-ua-Resize-ioyy8902fgOCje.png::CompressedTexture2D::3984815904933352050::1697263754::1697263793::1::::<><>::
@@ -153,6 +153,8 @@ MenuIcon.png::CompressedTexture2D::8810320943087884063::1697262015::1697262037::
 UI_Flat_Frame_01_Inward.png::CompressedTexture2D::5778360331635440916::1697263114::1697263114::1::::<><>::
 UI_Flat_Select_01a1.png::CompressedTexture2D::2882121070240917829::1697263586::1697263586::1::::<><>::
 UI_Flat_Slot_01_Unavailable.png::CompressedTexture2D::5915246454290573624::1697263992::1697263793::1::::<><>::
+хп 1.png::CompressedTexture2D::3444399437466710309::1697272111::1697272112::1::::<><>::
+хп 2.png::CompressedTexture2D::2942486326114277874::1697272111::1697272112::1::::<><>::
 ::res://UX/Interface/Assets/Charge/::1697264262
 1charhe.png::CompressedTexture2D::7605867355694084352::1697264206::1697264262::1::::<><>::
 2charge.png::CompressedTexture2D::723053933460752732::1697264233::1697264262::1::::<><>::

@@ -7,8 +7,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var sprite = $AnimatedSprite2D
 
 
-
-
+var max_health = 60
+var health = 60
 var clickStat = 2
 var DashRight = false
 var DashColdown = false
@@ -36,6 +36,7 @@ func _physics_process(delta):
 	if velocity.y >0:
 		sprite.play("Fall")
 	if Input.is_action_just_pressed("Right"):
+		
 		if DashColdown == false:
 			clickStat -= 1
 			if clickStat <= 0:
@@ -57,10 +58,7 @@ func _on_timer_timeout():
 	clickStat = 2
 	if DashColdownVisual != 0:
 		DashColdownVisual -= 0.5
-		
 	
-
-
 func _on_dash_coldown_timeout():
 	if DashColdown == true:
 		DashColdown = false
