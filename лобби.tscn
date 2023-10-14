@@ -13,12 +13,9 @@
 [ext_resource type="AudioStream" uid="uid://com02j8fygnde" path="res://main_menu.wav" id="10_vlmdv"]
 
 [node name="Лобби" type="Node2D"]
-scale = Vector2(0.2, 0.2)
 script = ExtResource("1_0mhn5")
 
 [node name="Паралакс" parent="." instance=ExtResource("3_4ph3j")]
-scale = Vector2(0.2, 0.2)
-transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
 [node name="Battle of the" parent="." instance=ExtResource("3_ssdbm")]
 position = Vector2(214, 60)
