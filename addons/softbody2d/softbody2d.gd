@@ -36,7 +36,7 @@ func _set(property, value):
 		return draw_regions
 
 ## Distance between internal vertices
-@export_range(10, 50, 1, "or_greater") var vertex_interval := 30:
+@export_range(10, 50, 1, "or_greater", "or_less") var vertex_interval := 30:
 	set (value):
 		if vertex_interval == value:
 			return

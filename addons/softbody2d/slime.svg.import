@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc6vy3ocnvkd8"
-path="res://.godot/imported/w.png-971d8fd05ba81f764ac31d344fbf8443.ctex"
+uid="uid://b72pj1q5hox44"
+path="res://.godot/imported/slime.svg-5da69e0e2d71e1b1ee0d776cbe943357.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://w.png"
-dest_files=["res://.godot/imported/w.png-971d8fd05ba81f764ac31d344fbf8443.ctex"]
+source_file="res://addons/softbody2d/slime.svg"
+dest_files=["res://.godot/imported/slime.svg-5da69e0e2d71e1b1ee0d776cbe943357.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

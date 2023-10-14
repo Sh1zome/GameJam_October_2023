@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6rlwij2rosmc"
-path="res://.godot/imported/d.png-0c878291b1c62a6bb45e390abeafd2c3.ctex"
+uid="uid://c0guwstfu0h8q"
+path="res://.godot/imported/Player Sword Idle 48x48.png-a3988f918eb37251bbf4af852f6d965f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://d.png"
-dest_files=["res://.godot/imported/d.png-0c878291b1c62a6bb45e390abeafd2c3.ctex"]
+source_file="res://Player/Human/Assets/Asset Pack-V3/Player Sword Idle/Player Sword Idle 48x48.png"
+dest_files=["res://.godot/imported/Player Sword Idle 48x48.png-a3988f918eb37251bbf4af852f6d965f.ctex"]
 
 [params]
 
