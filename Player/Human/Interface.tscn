@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://ckfowd3y3lkdf"]
+[gd_scene load_steps=29 format=3 uid="uid://bieboogqne11m"]
 
 [ext_resource type="Script" path="res://Player/Human/dash_coldown.gd" id="1_jir8f"]
 [ext_resource type="Texture2D" uid="uid://b4lrh2j7v1g3e" path="res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png" id="2_47puo"]
@@ -114,10 +114,10 @@ size_flags_vertical = 8
 script = ExtResource("1_jir8f")
 
 [node name="Tutorial" parent="." instance=ExtResource("2_bjav1")]
-offset_left = 419.0
-offset_top = 508.0
-offset_right = 713.0
-offset_bottom = 659.0
+offset_left = 367.0
+offset_top = 100.0
+offset_right = 661.0
+offset_bottom = 251.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

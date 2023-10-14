@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://control.gd" id="1_a76hm"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="2_0sm8c"]
-[ext_resource type="Theme" uid="uid://dq18m3ugydevw" path="res://Theme.tres" id="2_1ekqf"]
-[ext_resource type="Resource" uid="uid://cunreq3xqciw6" path="res://MainTree.tres" id="3_m1bqp"]
+[ext_resource type="Theme" uid="uid://dq18m3ugydevw" path="res://UX/DialogWindow/Theme.tres" id="2_1ekqf"]
+[ext_resource type="Resource" uid="uid://cunreq3xqciw6" path="res://UX/DialogWindow/MainTree.tres" id="3_m1bqp"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_ppcps"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_fanvg"]
 
@@ -49,6 +49,7 @@ color = Color(1, 1, 0.109804, 1)
 color_ramp = SubResource("Gradient_hojxt")
 
 [node name="DialogueBox" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_direction = 3
 layout_mode = 1

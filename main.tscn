@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://didk1x33cio11"]
+[gd_scene load_steps=7 format=3 uid="uid://didk1x33cio11"]
 
 [ext_resource type="Texture2D" uid="uid://bea4uppvnvrt3" path="res://Player/Human/Assets/Asset Pack-V1/Tilemap/Basic Tilemap.png" id="1_d2ebt"]
 [ext_resource type="Script" path="res://main.gd" id="1_ekqv6"]
 [ext_resource type="PackedScene" uid="uid://dv8b8adh14rnc" path="res://Player/Human/PlayerHuman.tscn" id="1_u1ckt"]
-[ext_resource type="PackedScene" uid="uid://7xcjog5ae4ho" path="res://tutorial.tscn" id="1_u5ilq"]
-[ext_resource type="PackedScene" uid="uid://cfo6fc3xymio" path="res://Player/Human/dash_coldown.tscn" id="5_4jg2o"]
+[ext_resource type="PackedScene" uid="uid://ckfowd3y3lkdf" path="res://Player/Human/dash_coldown.tscn" id="5_4jg2o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_u52kv"]
 texture = ExtResource("1_d2ebt")
@@ -195,12 +194,6 @@ wait_time = 4.0
 autostart = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Tutorial" parent="CanvasLayer" instance=ExtResource("1_u5ilq")]
-offset_left = -12.0
-offset_top = 22.0
-offset_right = 315.0
-offset_bottom = 173.0
 
 [node name="DashColdown" parent="CanvasLayer" instance=ExtResource("5_4jg2o")]
 offset_left = 335.0

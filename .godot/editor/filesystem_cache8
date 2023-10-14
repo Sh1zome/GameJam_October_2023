@@ -1,17 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1697263999
+::res://::1697265850
 a.png::CompressedTexture2D::3178689114684193261::1697223672::1697223672::1::::<><>::
 control.gd::GDScript::-1::1697222657::0::1::::<>Control<>::
 d.png::CompressedTexture2D::2211656184324445442::1697223676::1697223677::1::::<><>::
 EmptyProggresBarPNG.png::CompressedTexture2D::6007117632273747535::1697258042::1697258044::1::::<><>::
 icon.svg::CompressedTexture2D::8323506659126814680::1697223351::1697223351::1::::<><>::
-main.tscn::PackedScene::7727620786581706534::1697263999::0::1::::<><>::uid://bea4uppvnvrt3::::res://Player/Human/Assets/Asset Pack-V1/Tilemap/Basic Tilemap.png<>res://main.gd<>uid://dv8b8adh14rnc::::res://Player/Human/PlayerHuman.tscn<>uid://7xcjog5ae4ho::::res://tutorial.tscn<>uid://cfo6fc3xymio::::res://Player/Human/dash_coldown.tscn
+main.tscn::PackedScene::7727620786581706534::1697265850::0::1::::<><>::uid://bea4uppvnvrt3::::res://Player/Human/Assets/Asset Pack-V1/Tilemap/Basic Tilemap.png<>res://main.gd<>uid://dv8b8adh14rnc::::res://Player/Human/PlayerHuman.tscn<>uid://ckfowd3y3lkdf::::res://Player/Human/dash_coldown.tscn
 README.md::TextFile::-1::1697223351::0::1::::<><>::
-main.gd::GDScript::-1::1697259013::0::1::::<>Node2D<>::
+main.gd::GDScript::-1::1697265468::0::1::::<>Node2D<>::
 TESTTHEME.tres::Theme::-1::1697223523::0::1::::<><>::
 Tutorial.gd::GDScript::-1::1697224960::0::1::::<>Control<>::
 Tutorial.tres::Resource/Resource::5569308218799504738::1697225478::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
-tutorial.tscn::PackedScene::2293661936850070352::1697263999::0::1::::<><>::res://Tutorial.gd<>res://TESTTHEME.tres<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://cll2xsy85sfyo::::res://Tutorial.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://6rlwij2rosmc::::res://d.png<>uid://dc6vy3ocnvkd8::::res://w.png<>uid://blj1ssmy1vfej::::res://a.png
+tutorial.tscn::PackedScene::2293661936850070352::1697265849::0::1::::<><>::res://Tutorial.gd<>res://TESTTHEME.tres<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://cll2xsy85sfyo::::res://Tutorial.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://6rlwij2rosmc::::res://d.png<>uid://dc6vy3ocnvkd8::::res://w.png<>uid://blj1ssmy1vfej::::res://a.png
 w.png::CompressedTexture2D::7364954857023180391::1697223664::1697223664::1::::<><>::
 ::res://addons/::1697222257
 ::res://addons/dialogue_nodes/::1697223367
@@ -74,16 +74,19 @@ softbody2d.svg::CompressedTexture2D::2048758211529010319::1697223351::1697223351
 voronoi2d.gd::GDScript::-1::1697223351::0::1::::Voronoi2D<>Node2D<>res://addons/softbody2d/voronoi_icon.png::
 voronoi_icon.png::CompressedTexture2D::1609182819172224690::1697223351::1697222139::1::::<><>::
 ::res://Player/::1697259108
-::res://Player/Human/::1697264163
-PlayerHuman.gd::GDScript::-1::1697259830::0::1::::<>CharacterBody2D<>::
-PlayerHuman.tscn::PackedScene::8701471886541949736::1697263999::0::1::::<><>::uid://d2lt2yoyy6kts::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player land 48x48.png<>res://Player/Human/PlayerHuman.gd<>uid://wj8nmcogs56::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/Character Idle 48x48.png<>uid://dj0ahbpdk5xrh::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player jump 48x48.png<>uid://rp2osh58kfvw::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/run cycle 48x48.png
-dash_coldown.tscn::PackedScene::151605240566390526::1697264163::0::1::::<><>::res://Player/Human/dash_coldown.gd<>uid://b4lrh2j7v1g3e::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png<>uid://brptfd35n213c::::res://Player/Human/UI_Flat_Select_01a1.png<>uid://coifldrv7fvo0::::res://Player/Human/UI_Flat_Frame_01_Standard.png<>uid://cqjnilcry47ui::::res://UX/Interface/Assets/UI_Flat_Slot_01_Unavailable.png<>uid://dxr1x0y3i36u2::::res://UX/Interface/Assets/MenuIcon.png<>uid://xoleaf6swoly::::res://UX/Interface/Assets/3inAnimate.png<>uid://bw1jloe6luy4i::::res://UX/Interface/Assets/imgonline-com-ua-Resize-ioyy8902fgOCje.png<>uid://blp4um3is87l8::::res://UX/Interface/Assets/2inAnim.png
-dash_coldown.gd::GDScript::-1::1697261221::0::1::::<>Control<>::
+::res://Player/Human/::1697265944
+InterFace.gd::GDScript::-1::1697264757::0::1::::<>Control<>::
+Interface.tscn::PackedScene::2956275407261290072::1697265850::0::1::::<><>::res://Player/Human/dash_coldown.gd<>uid://b4lrh2j7v1g3e::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png<>uid://7xcjog5ae4ho::::res://tutorial.tscn<>uid://brptfd35n213c::::res://Player/Human/UI_Flat_Select_01a1.png<>uid://dgmlr245vd0um::::res://UX/Interface/Assets/Charge/1charhe.png<>uid://kkiufdkksk1q::::res://UX/Interface/Assets/Charge/2charge.png<>uid://coifldrv7fvo0::::res://Player/Human/UI_Flat_Frame_01_Standard.png<>uid://cqjnilcry47ui::::res://UX/Interface/Assets/UI_Flat_Slot_01_Unavailable.png<>uid://dlm036s674nrh::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Selected.png<>uid://c1d845x1v45xm::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Available.png<>uid://dxr1x0y3i36u2::::res://UX/Interface/Assets/MenuIcon.png<>uid://xoleaf6swoly::::res://UX/Interface/Assets/3inAnimate.png<>uid://bw1jloe6luy4i::::res://UX/Interface/Assets/imgonline-com-ua-Resize-ioyy8902fgOCje.png<>uid://blp4um3is87l8::::res://UX/Interface/Assets/2inAnim.png
+PlayerHuman.gd::GDScript::-1::1697264564::0::1::::<>CharacterBody2D<>::
+PlayerHuman.tscn::PackedScene::8701471886541949736::1697265850::0::1::::<><>::uid://d2lt2yoyy6kts::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player land 48x48.png<>res://Player/Human/PlayerHuman.gd<>uid://wj8nmcogs56::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/Character Idle 48x48.png<>uid://dj0ahbpdk5xrh::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player jump 48x48.png<>uid://rp2osh58kfvw::::res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/run cycle 48x48.png
+dash_coldown.tscn::PackedScene::5485941219854348715::1697265657::0::1::::<><>::res://Player/Human/dash_coldown.gd<>uid://b4lrh2j7v1g3e::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png<>uid://7xcjog5ae4ho::::res://tutorial.tscn<>uid://brptfd35n213c::::res://Player/Human/UI_Flat_Select_01a1.png<>uid://dgmlr245vd0um::::res://UX/Interface/Assets/Charge/1charhe.png<>uid://kkiufdkksk1q::::res://UX/Interface/Assets/Charge/2charge.png<>uid://coifldrv7fvo0::::res://Player/Human/UI_Flat_Frame_01_Standard.png<>uid://cqjnilcry47ui::::res://UX/Interface/Assets/UI_Flat_Slot_01_Unavailable.png<>uid://dlm036s674nrh::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Selected.png<>uid://c1d845x1v45xm::::res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Available.png<>uid://dxr1x0y3i36u2::::res://UX/Interface/Assets/MenuIcon.png<>uid://xoleaf6swoly::::res://UX/Interface/Assets/3inAnimate.png<>uid://bw1jloe6luy4i::::res://UX/Interface/Assets/imgonline-com-ua-Resize-ioyy8902fgOCje.png<>uid://blp4um3is87l8::::res://UX/Interface/Assets/2inAnim.png
 UI_Flat_Frame_01_Standard.png::CompressedTexture2D::5772323613876773329::1697260973::1697260973::1::::<><>::
 UI_Flat_Frame_02_Inward.png::CompressedTexture2D::7827561864853874923::1697261371::1697261371::1::::<><>::
 UI_Flat_Frame_02_Standard.png::CompressedTexture2D::155081375364040452::1697260969::1697260969::1::::<><>::
 UI_Flat_Select_01a1.png::CompressedTexture2D::3611759445888736906::1697260909::1697260909::1::::<><>::
-::res://Player/Human/Assets/::1697227128
+UI_Flat_Textfield_01.png::CompressedTexture2D::5180863685241445091::1697265944::1697265945::1::::<><>::
+::res://Player/Human/Assets/::1697265934
+UI_Flat_Textfield_01.png::CompressedTexture2D::1879222662600653501::1697265934::1697265934::1::::<><>::
 ::res://Player/Human/Assets/Asset Pack-V1/::1697227128
 ::res://Player/Human/Assets/Asset Pack-V1/Aseprite Files/::1697227128
 ::res://Player/Human/Assets/Asset Pack-V1/Aseprite Files/Player/::1697227128
@@ -133,9 +136,9 @@ PlayerWalk 48x48.png::CompressedTexture2D::4035889546626304475::1697227130::1697
 ::res://Player/Human/Assets/Asset Pack-V3/Sword Stab/::1697227156
 Player Sword Stab 96x48.png::CompressedTexture2D::8038190496493823857::1697227130::1697227156::1::::<><>::
 ::res://UX/::1697261769
-::res://UX/DialogWindow/::1697223361
+::res://UX/DialogWindow/::1697265657
 control.gd::GDScript::-1::1697223351::0::1::::<>Control<>::
-control.tscn::PackedScene::5939177040270115898::1697223351::0::1::::<><>::res://control.gd<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://dq18m3ugydevw
+control.tscn::PackedScene::5939177040270115898::1697265657::0::1::::<><>::res://control.gd<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://dq18m3ugydevw::::res://UX/DialogWindow/Theme.tres<>uid://cunreq3xqciw6::::res://UX/DialogWindow/MainTree.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd
 MainTree.tres::Resource/Resource::6204495367696887067::1697223351::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
 Theme.tres::Theme::8337983963036227784::1697223351::0::1::::<><>::
 ::res://UX/Interface/::1697261778
@@ -147,7 +150,7 @@ MenuIcon.png::CompressedTexture2D::8810320943087884063::1697262015::1697262037::
 UI_Flat_Frame_01_Inward.png::CompressedTexture2D::5778360331635440916::1697263114::1697263114::1::::<><>::
 UI_Flat_Select_01a1.png::CompressedTexture2D::2882121070240917829::1697263586::1697263586::1::::<><>::
 UI_Flat_Slot_01_Unavailable.png::CompressedTexture2D::5915246454290573624::1697263992::1697263793::1::::<><>::
-::res://UX/Interface/Assets/Charge/::1697264259
+::res://UX/Interface/Assets/Charge/::1697264262
 1charhe.png::CompressedTexture2D::7605867355694084352::1697264206::1697264262::1::::<><>::
 2charge.png::CompressedTexture2D::723053933460752732::1697264233::1697264262::1::::<><>::
 UI_Flat_Slot_01_Available.png::CompressedTexture2D::6606001496463323978::1697260648::1697264086::1::::<><>::
