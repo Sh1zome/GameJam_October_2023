@@ -1,10 +1,11 @@
-[gd_scene load_steps=21 format=3 uid="uid://3vih16u2rxk"]
+[gd_scene load_steps=23 format=3 uid="uid://8jiudhihxs1g"]
 
+[ext_resource type="Script" path="res://Виталя/level_2.gd" id="1_adahb"]
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="1_lurcq"]
-[ext_resource type="PackedScene" uid="uid://dwtl78ignmaig" path="res://человек.tscn" id="2_bhkkx"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="3_ikmuu"]
 [ext_resource type="Texture2D" uid="uid://c1e6rs674gcyl" path="res://Виталя/Планета/всетекстуры (3).png" id="4_ehycr"]
 [ext_resource type="Texture2D" uid="uid://b03gkcjjul50h" path="res://Виталя/Планета/всетекстуры (4).png" id="5_hxmtb"]
+[ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="5_qytpn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6vos"]
 texture = ExtResource("1_lurcq")
@@ -3453,7 +3454,12 @@ texture = ExtResource("5_hxmtb")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_slaxw")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0533"]
+size = Vector2(35, 126)
+
 [node name="level_2" type="Node2D"]
+position = Vector2(-10, 4)
+script = ExtResource("1_adahb")
 
 [node name="пол" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tbick")
@@ -3489,9 +3495,6 @@ layer_4/y_sort_enabled = false
 layer_4/y_sort_origin = 0
 layer_4/z_index = 0
 layer_4/tile_data = PackedInt32Array()
-
-[node name="человек" parent="." instance=ExtResource("2_bhkkx")]
-position = Vector2(44, 659)
 
 [node name="Потолок" type="TileMap" parent="."]
 position = Vector2(32, 1120)
@@ -3547,3 +3550,19 @@ scale = Vector2(1.26125, 0.993967)
 tile_set = SubResource("TileSet_8sqde")
 format = 2
 layer_0/tile_data = PackedInt32Array(2621454, 458752, 30)
+
+[node name="PlayerAndUI2" parent="." instance=ExtResource("5_qytpn")]
+position = Vector2(18, 691)
+
+[node name="PerehodNext" type="Area2D" parent="."]
+position = Vector2(317, 673)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PerehodNext"]
+position = Vector2(-25, -39)
+shape = SubResource("RectangleShape2D_m0533")
+
+[connection signal="body_entered" from="PerehodNext" to="." method="_on_perehod_body_entered"]
+[connection signal="body_entered" from="PerehodNext" to="." method="_on_perehod_next_body_entered"]
+
+[editable path="PlayerAndUI2"]
+[editable path="PlayerAndUI2/PlayerHuman"]

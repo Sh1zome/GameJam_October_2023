@@ -355,6 +355,7 @@ sub_emitter_frequency = 75.52
 size = Vector2(23, 25)
 
 [node name="PlayerHuman" type="CharacterBody2D"]
+position = Vector2(-3, 0)
 script = ExtResource("1_iux1n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
