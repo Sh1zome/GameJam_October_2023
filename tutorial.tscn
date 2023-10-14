@@ -1,27 +1,15 @@
 [gd_scene load_steps=15 format=3 uid="uid://7xcjog5ae4ho"]
 
-<<<<<<< HEAD
-[ext_resource type="Script" path="res://Tutorial.gd" id="1_ffetm"]
-[ext_resource type="Theme" uid="uid://du336a60o3of8" path="res://TESTTHEME.tres" id="2_e7rao"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="3_fcgbb"]
-[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://Tutorial.tres" id="4_7aded"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_r2ua3"]
-[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_e0ysu"]
-[ext_resource type="Texture2D" uid="uid://6rlwij2rosmc" path="res://d.png" id="7_5rndl"]
-[ext_resource type="Texture2D" uid="uid://dc6vy3ocnvkd8" path="res://w.png" id="7_7str5"]
-[ext_resource type="Texture2D" uid="uid://blj1ssmy1vfej" path="res://a.png" id="8_0lwfn"]
-=======
 [ext_resource type="Script" path="res://UX/Interface/Tutorial.gd" id="1_pgiag"]
 [ext_resource type="Theme" path="res://TESTTHEME.tres" id="2_jly6l"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="3_gmq6a"]
-[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://UX/Interface/Tutorial.tres" id="4_cvwb1"]
+[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://Tutorial.tres" id="4_cvwb1"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_o2il1"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_7h34a"]
 [ext_resource type="Texture2D" uid="uid://cf2wcktgorrup" path="res://Player/Human/UI_Flat_Textfield_01.png" id="7_7ywsj"]
 [ext_resource type="Texture2D" uid="uid://dc6vy3ocnvkd8" path="res://UX/w.png" id="8_bc638"]
 [ext_resource type="Texture2D" uid="uid://6rlwij2rosmc" path="res://UX/Interface/d.png" id="9_eiswf"]
 [ext_resource type="Texture2D" uid="uid://blj1ssmy1vfej" path="res://UX/Interface/a.png" id="10_y13xs"]
->>>>>>> 6f936a2d006ade2d6caefb7a7b2ccef7fe00b063
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_qnngi"]
 script = ExtResource("5_o2il1")
@@ -41,14 +29,13 @@ outline_color = Color(0, 0, 0, 1)
 [node name="Tutorial" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 412.0
-offset_top = 268.0
-offset_right = 706.0
-offset_bottom = 419.0
+offset_left = 213.0
+offset_top = 315.0
+offset_right = 507.0
+offset_bottom = 466.0
 script = ExtResource("1_pgiag")
 
 [node name="DialogueBox" type="Panel" parent="."]
-visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 0
 offset_left = 59.0
@@ -63,7 +50,7 @@ custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_qnngi"), Sub
 [node name="ButtonForMove" type="CanvasLayer" parent="."]
 
 [node name="W" type="Sprite2D" parent="ButtonForMove"]
-position = Vector2(1024, 658)
+position = Vector2(798, 602)
 scale = Vector2(1, 1.00275)
 texture = ExtResource("7_7ywsj")
 
@@ -73,10 +60,10 @@ scale = Vector2(0.0732422, 0.07012)
 texture = ExtResource("8_bc638")
 
 [node name="Dash" type="Label" parent="ButtonForMove"]
-offset_left = 871.0
-offset_top = 621.0
-offset_right = 911.0
-offset_bottom = 644.0
+offset_left = 645.0
+offset_top = 565.0
+offset_right = 685.0
+offset_bottom = 588.0
 metadata/_edit_use_anchors_ = true
 
 [node name="D" type="Sprite2D" parent="ButtonForMove/Dash"]
@@ -91,7 +78,6 @@ texture = ExtResource("9_eiswf")
 
 [node name="A" type="Sprite2D" parent="ButtonForMove/Dash"]
 position = Vector2(125, 38)
-scale = Vector2(1, 1)
 texture = ExtResource("7_7ywsj")
 
 [node name="A2" type="Sprite2D" parent="ButtonForMove/Dash/A"]
@@ -130,10 +116,10 @@ label_settings = SubResource("LabelSettings_jwcms")
 metadata/_edit_use_anchors_ = true
 
 [node name="A&D" type="Label" parent="ButtonForMove"]
-offset_left = 850.0
-offset_top = 621.0
-offset_right = 890.0
-offset_bottom = 644.0
+offset_left = 624.0
+offset_top = 565.0
+offset_right = 664.0
+offset_bottom = 588.0
 metadata/_edit_use_anchors_ = true
 
 [node name="D" type="Sprite2D" parent="ButtonForMove/A&D"]
@@ -148,7 +134,6 @@ texture = ExtResource("9_eiswf")
 
 [node name="A" type="Sprite2D" parent="ButtonForMove/A&D"]
 position = Vector2(158, 37)
-scale = Vector2(1, 1)
 texture = ExtResource("7_7ywsj")
 
 [node name="A2" type="Sprite2D" parent="ButtonForMove/A&D/A"]

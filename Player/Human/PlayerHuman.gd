@@ -2,10 +2,9 @@ extends CharacterBody2D
 
 
 const SPEED = 150
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var sprite = $AnimatedSprite2D
-
 
 var max_health = 60
 var health = 60
@@ -52,12 +51,17 @@ func _physics_process(delta):
 				velocity.y -= 200
 				DashColdown = true
 				DashColdownVisual = 3.5
+				
+	if health <=0:
+		$".".queue_free()
 	move_and_slide()
 
-func _on_timer_timeout():
+func _on_dash_track_timeout():
 	clickStat = 2
+	print("test")
 	if DashColdownVisual != 0:
 		DashColdownVisual -= 0.5
+	
 	
 func _on_dash_coldown_timeout():
 	if DashColdown == true:
@@ -65,3 +69,6 @@ func _on_dash_coldown_timeout():
 	
 	
 		
+
+
+

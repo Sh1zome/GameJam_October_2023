@@ -9,7 +9,6 @@ func _ready():
 	InColdown.visible = false
 	OutColdown.visible = true
 	
-
 func _process(delta):
 	if Player.DashColdown == true:
 		InColdown.play("Animate");
