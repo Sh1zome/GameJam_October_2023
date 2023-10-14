@@ -1,8 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://dydwdvjdmdgdb"]
+[gd_scene load_steps=27 format=3 uid="uid://dydwdvjdmdgdb"]
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
-[ext_resource type="PackedScene" path="res://Paralax.tscn" id="2_ols3x"]
+[ext_resource type="PackedScene" uid="uid://3gg8toisms16" path="res://Paralax.tscn" id="2_ols3x"]
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="4_5kto1"]
 [ext_resource type="Texture2D" uid="uid://due8taewbgcps" path="res://Виталя/Планета/верёвка.png" id="5_1dleq"]
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bh6mk415qit6i" path="res://UX/Interface/Assets/хп 2.png" id="8_fh13j"]
 [ext_resource type="Texture2D" uid="uid://bpcq0xmiswim4" path="res://UX/Interface/Assets/хп 1.png" id="9_ldko1"]
 [ext_resource type="PackedScene" uid="uid://ckfowd3y3lkdf" path="res://Player/Human/dash_coldown.tscn" id="10_phmtq"]
+[ext_resource type="PackedScene" uid="uid://qk2jj5o2msdl" path="res://slime.tscn" id="11_cj6un"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nob7"]
 texture = ExtResource("4_5kto1")
@@ -2129,6 +2130,9 @@ offset_right = -779.0
 offset_bottom = -480.0
 scale = Vector2(1, 1.02593)
 metadata/_edit_use_anchors_ = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("11_cj6un")]
+position = Vector2(428, 664)
 
 [connection signal="timeout" from="DashTrack" to="PlayerHuman" method="_on_dash_track_timeout"]
 [connection signal="timeout" from="DashColdown" to="PlayerHuman" method="_on_dash_coldown_timeout"]
