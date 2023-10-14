@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://3gg8toisms16"]
+[gd_scene load_steps=2 format=3 uid="uid://dtmb0mftycg0c"]
 
 [sub_resource type="GDScript" id="GDScript_tony2"]
 script/source = "extends ParallaxBackground

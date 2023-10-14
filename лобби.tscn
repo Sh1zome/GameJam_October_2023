@@ -1,17 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://c4tv3anbeihmc"]
+[gd_scene load_steps=12 format=3 uid="uid://bcllrgmijfue0"]
 
 [ext_resource type="Script" path="res://лобби.gd" id="1_0mhn5"]
 [ext_resource type="PackedScene" uid="uid://c2cth1l2xj3tv" path="res://Виталя/космос/Collectabls.tscn" id="2_u03pm"]
 [ext_resource type="PackedScene" uid="uid://c346y8ww55n8x" path="res://Виталя/космос/parallax_background.tscn" id="3_4ph3j"]
-[ext_resource type="PackedScene" uid="uid://cb5stdrswuoog" path="res://battle_of_the.tscn" id="3_ssdbm"]
+[ext_resource type="PackedScene" uid="uid://1hl1wln8372f" path="res://battle_of_the.tscn" id="3_ssdbm"]
 [ext_resource type="PackedScene" uid="uid://kplaoterj3dw" path="res://Виталя/Планета/планета слизи.tscn" id="4_n3h78"]
 [ext_resource type="Script" path="res://Button.gd" id="4_xpl63"]
-[ext_resource type="Texture2D" uid="uid://bpmgjgdrmfw1r" path="res://текст/Battle of.png" id="7_cy4mv"]
+[ext_resource type="FontFile" uid="uid://jcd2bdklhtqc" path="res://Duskey Rough.ttf" id="5_e7yas"]
+[ext_resource type="Texture2D" uid="uid://bxglwgxr34ur1" path="res://logo.png" id="7_l5sy0"]
+[ext_resource type="Texture2D" uid="uid://e3v4ypua17uq" path="res://splash.png" id="8_tpgxj"]
+[ext_resource type="Script" path="res://splash.gd" id="9_06wac"]
+[ext_resource type="AudioStream" uid="uid://com02j8fygnde" path="res://main_menu.wav" id="10_vlmdv"]
 
 [node name="Лобби" type="Node2D"]
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_0mhn5")
 
 [node name="Паралакс" parent="." instance=ExtResource("3_4ph3j")]
+scale = Vector2(0.2, 0.2)
+transform = Transform2D(0.2, 0, 0, 0.2, 0, 0)
 
 [node name="Battle of the" parent="." instance=ExtResource("3_ssdbm")]
 position = Vector2(214, 60)
@@ -22,29 +29,43 @@ metadata/_edit_group_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Button" type="Button" parent="."]
-offset_left = 671.0
-offset_top = 417.0
-offset_right = 1136.0
-offset_bottom = 644.0
-theme_override_colors/font_color = Color(0.803922, 0.552941, 0, 1)
-theme_override_font_sizes/font_size = 160
-text = "Game
-"
-script = ExtResource("4_xpl63")
-theme_override_colors/font_color = Color(0.803922, 0.552941, 0, 1)
-
 [node name="Планета Земля" parent="." instance=ExtResource("2_u03pm")]
 position = Vector2(258, 452)
+
+[node name="Button" type="Button" parent="."]
+offset_left = 672.0
+offset_top = 444.0
+offset_right = 1353.0
+offset_bottom = 671.0
+scale = Vector2(0.78, 0.78)
+theme_override_colors/font_color = Color(0.654902, 0.286275, 0.282353, 1)
+theme_override_fonts/font = ExtResource("5_e7yas")
+theme_override_font_sizes/font_size = 160
+text = "Game"
+flat = true
+script = ExtResource("4_xpl63")
+theme_override_colors/font_color = Color(0.654902, 0.286275, 0.282353, 1)
+theme_override_fonts/font = ExtResource("5_e7yas")
 
 [node name="BattleOf" type="Sprite2D" parent="."]
 position = Vector2(547, 210)
 scale = Vector2(3.57812, 3.57812)
 
 [node name="BattleOf2" type="Sprite2D" parent="."]
-modulate = Color(0.501961, 1, 1, 1)
 position = Vector2(606, 221)
 scale = Vector2(3.76042, 3.76042)
-texture = ExtResource("7_cy4mv")
+texture = ExtResource("7_l5sy0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+z_index = 20
+scale = Vector2(5, 5)
+texture = ExtResource("8_tpgxj")
+centered = false
+script = ExtResource("9_06wac")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_vlmdv")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
