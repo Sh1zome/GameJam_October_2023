@@ -1,15 +1,13 @@
-[gd_scene load_steps=26 format=3 uid="uid://dydwdvjdmdgdb"]
+[gd_scene load_steps=25 format=3 uid="uid://c4pdrkhalwkik"]
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
 [ext_resource type="PackedScene" path="res://Paralax.tscn" id="2_ols3x"]
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="2_w1i3t"]
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="4_5kto1"]
 [ext_resource type="Texture2D" uid="uid://due8taewbgcps" path="res://Виталя/Планета/верёвка.png" id="5_1dleq"]
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
-[ext_resource type="PackedScene" uid="uid://dv8b8adh14rnc" path="res://Player/Human/PlayerHuman.tscn" id="7_7du80"]
-[ext_resource type="Texture2D" uid="uid://bh6mk415qit6i" path="res://UX/Interface/Assets/хп 2.png" id="8_fh13j"]
-[ext_resource type="Texture2D" uid="uid://bpcq0xmiswim4" path="res://UX/Interface/Assets/хп 1.png" id="9_ldko1"]
-[ext_resource type="PackedScene" uid="uid://ckfowd3y3lkdf" path="res://Player/Human/dash_coldown.tscn" id="10_phmtq"]
+[ext_resource type="PackedScene" uid="uid://clnnthwxer12t" path="res://slime.tscn" id="8_n78aq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nob7"]
 texture = ExtResource("4_5kto1")
@@ -1987,6 +1985,9 @@ tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_c443e")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d6877"]
+size = Vector2(20, 126)
+
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_5sw6k")
 
@@ -2084,6 +2085,10 @@ tile_set = SubResource("TileSet_rj4hx")
 format = 2
 layer_0/tile_data = PackedInt32Array(2424831, 393216, 27, 2752511, 393216, 32, 2359296, 458752, 27, 2424832, 458752, 28, 2490368, 458752, 29, 2555904, 458752, 30, 2621440, 458752, 31, 2686976, 458752, 32, 2359297, 524288, 27, 2424833, 524288, 28, 2490369, 524288, 29, 2555905, 524288, 30, 2621441, 524288, 31, 2686977, 524288, 32, 2359298, 589824, 27, 2686978, 589824, 32, 2359318, 851968, 27, 2686998, 851968, 32, 2359319, 917504, 27, 2424855, 917504, 28, 2490391, 917504, 29, 2555927, 917504, 30, 2621463, 917504, 31, 2686999, 917504, 32, 2359320, 983040, 27, 2424856, 983040, 28, 2490392, 983040, 29, 2555928, 983040, 30, 2621464, 983040, 31, 2687000, 983040, 32)
 
+[node name="PlayerAndUI" parent="." instance=ExtResource("2_w1i3t")]
+z_index = 3
+position = Vector2(36, 620)
+
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 5
 position = Vector2(68, 147)
@@ -2092,43 +2097,14 @@ tile_set = SubResource("TileSet_88i3v")
 format = 2
 layer_0/tile_data = PackedInt32Array(1245195, 0, 0, 1310731, 0, 1, 1245196, 65536, 0, 1310732, 65536, 1)
 
-[node name="PlayerHuman" parent="." instance=ExtResource("7_7du80")]
-z_index = 3
-position = Vector2(64, 661)
+[node name="Perehod" type="Area2D" parent="."]
+position = Vector2(591, 663)
 
-[node name="DashTrack" type="Timer" parent="."]
-wait_time = 0.4
-autostart = true
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perehod"]
+position = Vector2(-25, -39)
+shape = SubResource("RectangleShape2D_d6877")
 
-[node name="DashColdown" type="Timer" parent="."]
-wait_time = 4.0
-autostart = true
+[node name="slime" parent="." instance=ExtResource("8_n78aq")]
+position = Vector2(431, 662)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
-offset_left = 274.0
-offset_top = 506.0
-offset_right = 536.0
-offset_bottom = 803.0
-scale = Vector2(0.66356, 0.710306)
-min_value = -13.0
-max_value = 60.0
-step = 2.0
-value = 1.0
-fill_mode = 3
-nine_patch_stretch = true
-texture_under = ExtResource("8_fh13j")
-texture_progress = ExtResource("9_ldko1")
-metadata/_edit_use_anchors_ = true
-
-[node name="DashColdown" parent="CanvasLayer" instance=ExtResource("10_phmtq")]
-offset_left = 318.0
-offset_top = 76.0
-offset_right = -779.0
-offset_bottom = -480.0
-scale = Vector2(1, 1.02593)
-metadata/_edit_use_anchors_ = true
-
-[connection signal="timeout" from="DashTrack" to="PlayerHuman" method="_on_dash_track_timeout"]
-[connection signal="timeout" from="DashColdown" to="PlayerHuman" method="_on_dash_coldown_timeout"]
+[connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]

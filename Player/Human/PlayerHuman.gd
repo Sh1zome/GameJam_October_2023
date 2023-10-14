@@ -5,15 +5,15 @@ const SPEED = 150
 const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var sprite = $AnimatedSprite2D
-
-var max_health = 60
-var health = 60
+@onready var health_bar = $"../CanvasLayer/ProgressBar"
 var clickStat = 2
 var DashRight = false
 var DashColdown = false
 var DashColdownVisual = 3.5
+
 signal DashCd (new_DashCd)
 func _physics_process(delta):
+	health_bar.value = GloabalTreker.health
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	if Input.is_action_just_pressed("Up") and is_on_floor():
@@ -51,14 +51,12 @@ func _physics_process(delta):
 				velocity.y -= 200
 				DashColdown = true
 				DashColdownVisual = 3.5
-				
-	if health <=0:
-		$".".queue_free()
+	if Input.is_action_just_pressed("ui_down"):
+		GloabalTreker.health -= 10
 	move_and_slide()
 
 func _on_dash_track_timeout():
 	clickStat = 2
-	print("test")
 	if DashColdownVisual != 0:
 		DashColdownVisual -= 0.5
 	
@@ -66,7 +64,7 @@ func _on_dash_track_timeout():
 func _on_dash_coldown_timeout():
 	if DashColdown == true:
 		DashColdown = false
-	
+
 	
 		
 

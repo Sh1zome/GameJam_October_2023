@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://baalbckctpirx"]
+
+[ext_resource type="Script" path="res://Mobs/Slime/Slime.gd" id="1_5u5u2"]
+[ext_resource type="Texture2D" uid="uid://doyc2r14fyjrh" path="res://Mobs/Slime/Assets/slime-Sheet.png" id="1_t7c6t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1g5hj"]
+radius = 15.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80xkr"]
+size = Vector2(24, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc3d4"]
+atlas = ExtResource("1_t7c6t")
+region = Rect2(0, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnqt0"]
+atlas = ExtResource("1_t7c6t")
+region = Rect2(32, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_negpo"]
+atlas = ExtResource("1_t7c6t")
+region = Rect2(64, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4k06"]
+atlas = ExtResource("1_t7c6t")
+region = Rect2(96, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_di1mn"]
+atlas = ExtResource("1_t7c6t")
+region = Rect2(160, 0, 32, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ii1cq"]
+atlas = ExtResource("1_t7c6t")
+region = Rect2(192, 0, 32, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6ldde"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc3d4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnqt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_negpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4k06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di1mn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ii1cq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_5u5u2")
+
+[node name="AttackDetect" type="Area2D" parent="."]
+
+[node name="DetectBox" type="CollisionShape2D" parent="AttackDetect"]
+position = Vector2(6, -1)
+shape = SubResource("CircleShape2D_1g5hj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7, -0.5)
+shape = SubResource("RectangleShape2D_80xkr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7, -5)
+sprite_frames = SubResource("SpriteFrames_6ldde")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 3
+frame_progress = 0.282966
+
+[node name="DetectorAgr" type="Area2D" parent="."]
+
+[node name="DetectBox" type="CollisionShape2D" parent="DetectorAgr"]
+position = Vector2(6, -1)
+shape = SubResource("CircleShape2D_1g5hj")
+
+[connection signal="body_entered" from="AttackDetect" to="." method="_on_detector_body_entered"]
+[connection signal="body_entered" from="AttackDetect" to="." method="_on_attack_detect_body_entered"]
+[connection signal="body_entered" from="DetectorAgr" to="." method="_on_detector_body_entered"]
