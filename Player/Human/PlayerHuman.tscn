@@ -321,6 +321,7 @@ editor_draw_drag_margin = true
 script = SubResource("GDScript_7pfub")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(0, -9)
 amount = 5
 sub_emitter = NodePath(".")
 process_material = SubResource("ParticleProcessMaterial_ufxl8")
