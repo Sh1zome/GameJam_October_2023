@@ -5,12 +5,16 @@ const SPEED = 150
 const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var sprite = $AnimatedSprite2D
+
+
+
+
 var clickStat = 2
 var DashRight = false
 var DashColdown = false
-var DashColdownVisual = 5.0
+var DashColdownVisual = 3.5
+signal DashCd (new_DashCd)
 func _physics_process(delta):
-
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	if Input.is_action_just_pressed("Up") and is_on_floor():
@@ -38,6 +42,7 @@ func _physics_process(delta):
 				velocity.x =+ 2000
 				velocity.y -= 200
 				DashColdown = true
+				DashColdownVisual = 3.5
 	if Input.is_action_just_pressed("Left"):
 		if DashColdown == false:
 			clickStat -= 1
@@ -45,19 +50,20 @@ func _physics_process(delta):
 				velocity.x -= 2000
 				velocity.y -= 200
 				DashColdown = true
-	
+				DashColdownVisual = 3.5
 	move_and_slide()
 
 func _on_timer_timeout():
 	clickStat = 2
 	if DashColdownVisual != 0:
-		DashColdownVisual -= 0.5 
+		DashColdownVisual -= 0.5
+		
 	
 
 
 func _on_dash_coldown_timeout():
 	if DashColdown == true:
-		DashColdownVisual = 5
 		DashColdown = false
+	
 	
 		
