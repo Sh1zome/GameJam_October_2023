@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://cat5nxj3cw0tb"]
+[gd_scene load_steps=12 format=3 uid="uid://0bgx0cwetnok"]
 
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="3_sip8g"]
+[ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -4162,6 +4162,7 @@ texture = ExtResource("1_ojoin")
 sources/0 = SubResource("TileSetAtlasSource_4wsu1")
 
 [node name="Lev 2" type="Node2D"]
+position = Vector2(-14, 5)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5as5a")
@@ -4231,5 +4232,15 @@ tile_set = SubResource("TileSet_8llfa")
 format = 2
 layer_0/tile_data = PackedInt32Array(2752517, 2228224, 16, 2818053, 2228224, 17, 2752518, 2293760, 16, 2818054, 2293760, 17)
 
-[node name="PlayerAndUI" parent="." instance=ExtResource("3_sip8g")]
-position = Vector2(8, 679)
+[node name="PlayerAndUI2" parent="." instance=ExtResource("3_yms1s")]
+position = Vector2(47, 661)
+
+[node name="Camera" parent="PlayerAndUI2/PlayerHuman" index="2"]
+position = Vector2(43, -4)
+zoom = Vector2(4.5, 4.5)
+limit_top = 565
+limit_right = 270
+limit_bottom = 720
+
+[editable path="PlayerAndUI2"]
+[editable path="PlayerAndUI2/PlayerHuman"]

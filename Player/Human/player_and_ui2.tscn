@@ -1,11 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciwayywiyy5ja"]
+[gd_scene load_steps=2 format=3 uid="uid://bwo6chdqne5wk"]
 
 [ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_rocan"]
 
 [node name="PlayerAndUI2" instance=ExtResource("1_rocan")]
+position = Vector2(1, -10)
 
 [node name="PlayerHuman" parent="." index="0"]
-position = Vector2(-1, -25)
+position = Vector2(6, -29)
 
 [node name="AnimatedSprite2D" parent="PlayerHuman" index="0"]
 position = Vector2(49.1883, -7.8303)
