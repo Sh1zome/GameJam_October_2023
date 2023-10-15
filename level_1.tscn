@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
-[ext_resource type="PackedScene" path="res://Paralax.tscn" id="2_ols3x"]
+[ext_resource type="PackedScene" uid="uid://dtmb0mftycg0c" path="res://Paralax.tscn" id="2_ols3x"]
 [ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="2_w1i3t"]
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="4_5kto1"]
 [ext_resource type="Texture2D" uid="uid://due8taewbgcps" path="res://Виталя/Планета/верёвка.png" id="5_1dleq"]
@@ -2108,3 +2108,5 @@ shape = SubResource("RectangleShape2D_d6877")
 position = Vector2(431, 662)
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
+
+[editable path="PlayerAndUI"]

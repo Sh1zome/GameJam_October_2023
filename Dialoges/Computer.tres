@@ -1,0 +1,35 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://357kpahjo0db"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_ebw4k"]
+
+[resource]
+script = ExtResource("1_ebw4k")
+starts = {
+"Computer": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(500, 487),
+"start_id": "Computer"
+},
+"1_1": {
+"dialogue": "ТЕст",
+"offset": Vector2(770, 363.5),
+"options": {
+"0": {
+"link": "END",
+"text": "11"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+}
+}
+variables = {}
+comments = Array[String]([])
+strays = Array[String]([])
+characters = ""

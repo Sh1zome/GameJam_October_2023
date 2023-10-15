@@ -10,7 +10,7 @@ func _ready():
 	buttonForMove.visible = false
 	jump.visible = false
 	dash.visible = false
-	dialoge_box1.start("TUTOR")
+	
 
 func _on_dialogue_box_dialogue_signal(value):
 		if value == "buttons":
