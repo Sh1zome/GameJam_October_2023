@@ -7,6 +7,7 @@ var exit_timer = 0
 var entered = false
 var exited = false
 
+@onready var dialog = $PlayerAndUI/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	entered = true
@@ -32,3 +33,18 @@ func _on_perehod_body_entered(body):
 		entered = false
 		exited = true
 		GloabalTreker.tp = true
+
+
+func _on_perehod_2_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.start("RightDoor")
+
+
+func _on_perehod_2_body_exited(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
+
+
+func _on_door_active_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.start("MiddleDoor")

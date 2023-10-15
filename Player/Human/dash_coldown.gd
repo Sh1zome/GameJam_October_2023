@@ -4,7 +4,7 @@ extends Control
 @onready var InColdown = $CanvasLayer/InColdown
 @onready var OutColdown = $CanvasLayer/OutColdown
 @onready var Player = $"../../PlayerHuman"
-
+@onready var dialog = $PlayerAndUI2/CanvasLayer/DashColdown/Comp
 func _ready():
 	InColdown.visible = false
 	OutColdown.visible = true
@@ -18,3 +18,15 @@ func _process(delta):
 		InColdown.visible = false
 		OutColdown.visible = true
 		
+
+
+func _on_comp_dialogue_signal(value):
+	print(dialog.test)
+	if value == "SSD":
+		if GloabalTreker.ssd == false:
+			pass
+		if GloabalTreker.ssd == true:
+			pass
+			
+	if value == "GoToScene4":
+		get_tree().change_scene_to_file("res://lev_4.tscn")
