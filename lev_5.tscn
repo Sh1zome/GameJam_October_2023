@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bkr2x65ad44kq"]
+[gd_scene load_steps=29 format=3 uid="uid://boi40p8nayr4t"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Script" path="res://lev_5.gd" id="1_xgtt5"]
@@ -8,8 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ivprcfponu2k" path="res://Виталя/Текстуры/Экспонаты/Ракета.png" id="4_wjx84"]
 [ext_resource type="Texture2D" uid="uid://cdofqnao24c56" path="res://Виталя/Текстуры/Экспонаты/Гуманоид с планеты жопа.png" id="5_7tt5m"]
 [ext_resource type="Texture2D" uid="uid://h7xdlxiu3wnv" path="res://Виталя/Текстуры/Экспонаты/telescop.png" id="6_6vngj"]
-[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_kjn3m"]
-[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="8_yg4il"]
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_kjn3m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4y2q6"]
 texture = ExtResource("1_gcuxi")
@@ -5081,6 +5080,13 @@ gradient = SubResource("Gradient_xliwf")
 fill_from = Vector2(0.275229, 0.389908)
 fill_to = Vector2(0.862385, 0.747706)
 
+[sub_resource type="Gradient" id="Gradient_hgak3"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u86y8"]
+gradient = SubResource("Gradient_hgak3")
+fill_from = Vector2(0.59633, 0.334862)
+fill_to = Vector2(0.123853, 0.706422)
+
 [node name="Lev_5" type="Node2D"]
 position = Vector2(-8, 20)
 script = ExtResource("1_xgtt5")
@@ -5160,35 +5166,35 @@ position = Vector2(-23.7714, -21.9429)
 shape = SubResource("RectangleShape2D_2a0ay")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(145, 581)
-scale = Vector2(1, 1.96875)
+position = Vector2(153.719, 581)
+scale = Vector2(1.14063, 1.96875)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_7imd5")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(81.1648, 580)
-scale = Vector2(0.905884, 2)
+position = Vector2(80.7273, 580)
+scale = Vector2(1.12463, 2)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_kbu68")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(211.375, 581)
-scale = Vector2(0.8125, 1.98438)
+position = Vector2(211.25, 581)
+scale = Vector2(0.875, 1.98438)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ruxm7")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D4" type="PointLight2D" parent="."]
-position = Vector2(215, 580)
-scale = Vector2(1, 1.98438)
+position = Vector2(215.156, 580)
+scale = Vector2(1.07813, 1.98438)
 energy = 0.5
-texture = ExtResource("8_yg4il")
-offset = Vector2(0, 130)
+texture = SubResource("GradientTexture2D_u86y8")
+offset = Vector2(30, 30)
 
 [connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
 

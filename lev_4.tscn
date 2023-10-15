@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://t2e47iun4cfj"]
+[gd_scene load_steps=34 format=3 uid="uid://d27f10s7ekrsm"]
 
 [ext_resource type="Script" path="res://lev_4.gd" id="1_nrrhy"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
@@ -10,8 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
 [ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
-[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="8_6r7vt"]
-[ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
+[ext_resource type="Texture2D" uid="uid://bqkp3718mjvhu" path="res://light/light.png" id="9_ejicj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16xrf"]
 size = Vector2(86.6428, 119.231)
@@ -5677,6 +5676,20 @@ shader_parameter/pixelSize = 2
 shader = ExtResource("5_532hd")
 shader_parameter/pixelSize = 2
 
+[sub_resource type="Gradient" id="Gradient_qov0a"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dnv4y"]
+gradient = SubResource("Gradient_qov0a")
+fill_from = Vector2(0.288991, 0.412844)
+fill_to = Vector2(0.756881, 0.683486)
+
+[sub_resource type="Gradient" id="Gradient_bd47k"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jt43d"]
+gradient = SubResource("Gradient_bd47k")
+fill_from = Vector2(0.577982, 0.252294)
+fill_to = Vector2(0.266055, 0.527523)
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_h0wpo"]
 polygon = PackedVector2Array(101, 668, 101, 698, 130, 698, 130, 684, 116, 684, 116, 668)
 
@@ -5791,28 +5804,28 @@ scale = Vector2(0.253906, 0.253906)
 texture = ExtResource("6_2frew")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(83, 575)
-scale = Vector2(0.570313, 0.5)
-energy = 0.2
+position = Vector2(83.1452, 579)
+scale = Vector2(0.927422, 2)
+energy = 0.5
 shadow_enabled = true
-texture = ExtResource("8_6r7vt")
-offset = Vector2(0, 130)
+texture = SubResource("GradientTexture2D_dnv4y")
+offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(208, 575)
-scale = Vector2(0.570313, 0.5)
-energy = 0.2
+position = Vector2(86.8841, 578.031)
+scale = Vector2(0.94207, 2.01563)
+energy = 0.5
 shadow_enabled = true
-texture = ExtResource("8_6r7vt")
-offset = Vector2(0, 130)
+texture = SubResource("GradientTexture2D_jt43d")
+offset = Vector2(30, 30)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_h0wpo")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(177, 658)
-scale = Vector2(0.181641, 0.167969)
-color = Color(0.188235, 0.72549, 0.501961, 1)
+position = Vector2(176, 661)
+scale = Vector2(0.115235, 0.116211)
+color = Color(0.411765, 0.988235, 0.721569, 1)
 energy = 2.47
 blend_mode = 2
 shadow_enabled = true
