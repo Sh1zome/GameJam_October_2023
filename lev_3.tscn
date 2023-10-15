@@ -1,21 +1,21 @@
-[gd_scene load_steps=35 format=3 uid="uid://bxngx0v0hyhju"]
+[gd_scene load_steps=36 format=3 uid="uid://bxngx0v0hyhju"]
 
 [ext_resource type="Script" path="res://lev_3.gd" id="1_8a57a"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_a2mho"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="2_7xv2b"]
 [ext_resource type="Texture2D" uid="uid://bktcu8f7y3f0s" path="res://Виталя/Текстуры/Окружение/Тачка со жрачкой.png" id="3_w665p"]
 [ext_resource type="Texture2D" uid="uid://b7fs2dkerd1dn" path="res://Виталя/Текстуры/Окружение/Скамеечка.png" id="4_nq4cs"]
-[ext_resource type="Texture2D" uid="uid://dwu5wk0ri6lxf" path="res://light/Тачка со жрачкой (1).png" id="4_q43r2"]
+[ext_resource type="Texture2D" path="res://light/Тачка со жрачкой (1).png" id="4_q43r2"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_4ods4"]
 [ext_resource type="Texture2D" uid="uid://cqmnf7i0pa8en" path="res://Виталя/Текстуры/Картины/Картина с евой.png" id="5_eob1j"]
 [ext_resource type="Texture2D" uid="uid://bnso0ys0cr3ou" path="res://Виталя/Текстуры/Картины/Новый Взгляд на ван гога.png" id="6_kdrej"]
 [ext_resource type="Texture2D" uid="uid://c5q2sng7crp8u" path="res://Виталя/Текстуры/Окружение/ТЫ ЩАС ЕБАНЁШЬСЯ.PNG" id="7_mmvn4"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
-[ext_resource type="Texture2D" uid="uid://bqkp3718mjvhu" path="res://light/light.png" id="9_p0rdu"]
-[ext_resource type="Texture2D" uid="uid://cv6i04mrte6rg" path="res://light/spot.png" id="12_m35of"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
+[ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_p0rdu"]
+[ext_resource type="Texture2D" uid="uid://c1xflliexqwid" path="res://light/spot.png" id="12_m35of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73x4r"]
-size = Vector2(33.7714, 84.9427)
+size = Vector2(58.9429, 84.9427)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_84vh8"]
 polygon = PackedVector2Array(153, 0, 160, 0, 165, 5, 165, 6, 166, 6, 166, 7, 164, 7, 158, 1, 156, 1, 152, 6, 152, 7, 150, 7, 150, 5, 151, 5, 151, 3, 152, 3, 152, 0)
@@ -5098,10 +5098,13 @@ polygon = PackedVector2Array(197, 695, 199, 693, 202, 694, 203, 695, 205, 697, 2
 polygon = PackedVector2Array(207, 699, 209, 699, 209, 698, 212, 698, 212, 699, 211, 699, 211, 702, 207, 702)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_76uni"]
-size = Vector2(8.5, 48)
+size = Vector2(34.75, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kiuae"]
 size = Vector2(82.2857, 101.429)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdjka"]
+size = Vector2(26.4572, 79.9715)
 
 [node name="Lev 3" type="Node2D"]
 position = Vector2(-5, 24)
@@ -5289,21 +5292,12 @@ scale = Vector2(0.546875, 0.546875)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Perehod2"]
 z_index = 100
-position = Vector2(391.314, -14.6285)
+position = Vector2(393.143, -14.6286)
 shape = SubResource("RectangleShape2D_73x4r")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(258.75, 664)
+position = Vector2(271.625, 663)
 shape = SubResource("RectangleShape2D_76uni")
-
-[node name="Perehod" type="Area2D" parent="StaticBody2D/CollisionShape2D"]
-position = Vector2(32, 672)
-scale = Vector2(0.546875, 0.546875)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D/Perehod"]
-z_index = 100
-position = Vector2(-23.7714, -36.5714)
-shape = SubResource("RectangleShape2D_73x4r")
 
 [node name="DoorActive" type="Area2D" parent="."]
 position = Vector2(32, 672)
@@ -5313,11 +5307,29 @@ scale = Vector2(0.546875, 0.546875)
 position = Vector2(113.371, 5.48569)
 shape = SubResource("RectangleShape2D_kiuae")
 
+[node name="DoorActive2" type="Area2D" parent="."]
+position = Vector2(32, 672)
+scale = Vector2(0.546875, 0.546875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorActive2"]
+position = Vector2(314.514, -148.114)
+shape = SubResource("RectangleShape2D_xdjka")
+
+[node name="GoTo5" type="Area2D" parent="."]
+position = Vector2(32, 672)
+scale = Vector2(0.546875, 0.546875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoTo5"]
+position = Vector2(457.143, -9.14282)
+shape = SubResource("RectangleShape2D_xdjka")
+
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 [connection signal="body_entered" from="StaticBody2D/Perehod2" to="." method="_on_perehod_2_body_entered"]
 [connection signal="body_exited" from="StaticBody2D/Perehod2" to="." method="_on_perehod_2_body_exited"]
-[connection signal="body_entered" from="StaticBody2D/CollisionShape2D/Perehod" to="." method="_on_perehod_body_entered"]
 [connection signal="body_entered" from="DoorActive" to="." method="_on_door_active_body_entered"]
+[connection signal="body_exited" from="DoorActive" to="." method="_on_door_active_body_exited"]
+[connection signal="body_entered" from="DoorActive2" to="." method="_on_door_active_2_body_entered"]
+[connection signal="body_entered" from="GoTo5" to="." method="_on_go_to_5_body_entered"]
 
 [editable path="PlayerAndUI"]
 [editable path="PlayerAndUI/PlayerHuman"]

@@ -1,12 +1,22 @@
+<<<<<<< HEAD
 [gd_scene load_steps=26 format=3 uid="uid://bkr2x65ad44kq"]
+=======
+[gd_scene load_steps=21 format=3 uid="uid://bkr2x65ad44kq"]
+>>>>>>> ca57613756ed877c606b51a5be61453234caf57f
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
+[ext_resource type="Script" path="res://lev_5.gd" id="1_xgtt5"]
 [ext_resource type="Texture2D" uid="uid://vdtghwf0coj8" path="res://Виталя/Текстуры/ДВЕРЬ.png" id="2_mh3al"]
 [ext_resource type="Texture2D" uid="uid://bldg7kospotea" path="res://Виталя/Текстуры/Экспонаты/Стеллажи.png" id="3_jej8y"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="4_m0f5h"]
 [ext_resource type="Texture2D" uid="uid://ivprcfponu2k" path="res://Виталя/Текстуры/Экспонаты/Ракета.png" id="4_wjx84"]
 [ext_resource type="Texture2D" uid="uid://cdofqnao24c56" path="res://Виталя/Текстуры/Экспонаты/Гуманоид с планеты жопа.png" id="5_7tt5m"]
 [ext_resource type="Texture2D" uid="uid://h7xdlxiu3wnv" path="res://Виталя/Текстуры/Экспонаты/telescop.png" id="6_6vngj"]
+<<<<<<< HEAD
+=======
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_kjn3m"]
+[ext_resource type="Texture2D" uid="uid://dwu2c2w2ok66p" path="res://light/Sprite-0001.png" id="8_yg4il"]
+>>>>>>> ca57613756ed877c606b51a5be61453234caf57f
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4y2q6"]
 texture = ExtResource("1_gcuxi")
@@ -5054,6 +5064,7 @@ shader_parameter/pixelSize = 2
 shader = ExtResource("4_m0f5h")
 shader_parameter/pixelSize = 2
 
+<<<<<<< HEAD
 [sub_resource type="Gradient" id="Gradient_h0u0c"]
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_7imd5"]
@@ -5081,8 +5092,25 @@ fill_to = Vector2(0.862385, 0.747706)
 gradient = SubResource("Gradient_ufekg")
 fill_from = Vector2(0.582569, 0.394495)
 fill_to = Vector2(0.178899, 0.674312)
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2a0ay"]
+size = Vector2(20, 99.6)
+>>>>>>> ca57613756ed877c606b51a5be61453234caf57f
 
 [node name="Lev_5" type="Node2D"]
+position = Vector2(-8, 20)
+script = ExtResource("1_xgtt5")
+
+[node name="PlayerAndUI" parent="." instance=ExtResource("7_kjn3m")]
+z_index = 3
+position = Vector2(-94, 672)
+
+[node name="PlayerHuman" parent="PlayerAndUI" index="0"]
+position = Vector2(-30, 3)
+
+[node name="Camera" parent="PlayerAndUI/PlayerHuman" index="2"]
+zoom = Vector2(4.7, 4.7)
+limit_right = 275
 
 [node name="основа" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_gv7st")
@@ -5109,6 +5137,7 @@ format = 2
 format = 2
 
 [node name="Дверь" type="TileMap" parent="."]
+position = Vector2(-18, -2)
 tile_set = SubResource("TileSet_e7644")
 format = 2
 
@@ -5138,6 +5167,18 @@ position = Vector2(81, 666)
 scale = Vector2(0.429688, 0.429688)
 texture = ExtResource("6_6vngj")
 
+[node name="BackTo4" type="Area2D" parent="."]
+position = Vector2(32, 672)
+scale = Vector2(0.546875, 0.546875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BackTo4"]
+position = Vector2(-23.7714, -21.9429)
+shape = SubResource("RectangleShape2D_2a0ay")
+
+[connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
+
+[editable path="PlayerAndUI"]
+[editable path="PlayerAndUI/PlayerHuman"]
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(145, 581)
 scale = Vector2(1, 1.96875)
