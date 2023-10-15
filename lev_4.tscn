@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d27f10s7ekrsm"]
+[gd_scene load_steps=22 format=3 uid="uid://d27f10s7ekrsm"]
 
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="2_vyy6q"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
 [ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
+[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="8_6r7vt"]
+[ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkdal"]
 texture = ExtResource("1_pyei7")
@@ -5661,6 +5663,12 @@ texture = ExtResource("2_vyy6q")
 [sub_resource type="TileSet" id="TileSet_wtvfh"]
 sources/0 = SubResource("TileSetAtlasSource_6mtp2")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_h0wpo"]
+polygon = PackedVector2Array(101, 668, 101, 698, 130, 698, 130, 684, 116, 684, 116, 668)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l5n3o"]
+polygon = PackedVector2Array(280.774, 53.5815, 286.28, 244.093, 363.355, 244.093, 363.355, 53.5815)
+
 [node name="lev_4" type="Node2D"]
 
 [node name="Основа" type="TileMap" parent="."]
@@ -5726,3 +5734,35 @@ texture = ExtResource("6_2frew")
 
 [node name="PlayerAndUI" parent="." instance=ExtResource("7_0m0yg")]
 position = Vector2(38, 671)
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(83, 575)
+scale = Vector2(0.570313, 0.5)
+energy = 0.2
+shadow_enabled = true
+texture = ExtResource("8_6r7vt")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(208, 575)
+scale = Vector2(0.570313, 0.5)
+energy = 0.2
+shadow_enabled = true
+texture = ExtResource("8_6r7vt")
+offset = Vector2(0, 130)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_h0wpo")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(177, 658)
+scale = Vector2(0.181641, 0.167969)
+color = Color(0.188235, 0.72549, 0.501961, 1)
+energy = 1.5
+shadow_enabled = true
+texture = ExtResource("9_ejicj")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(177, 658)
+scale = Vector2(0.181641, 0.167969)
+occluder = SubResource("OccluderPolygon2D_l5n3o")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c4pdrkhalwkik"]
+[gd_scene load_steps=33 format=3 uid="uid://c4pdrkhalwkik"]
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="8_7rw78"]
 [ext_resource type="PackedScene" uid="uid://dgwjlici6moar" path="res://slime.tscn" id="8_n78aq"]
+[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="10_2wt2l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nob7"]
 texture = ExtResource("4_5kto1")
@@ -3511,6 +3512,18 @@ texture = ExtResource("8_7rw78")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_e1rfd")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_q14ix"]
+polygon = PackedVector2Array(384, 628, 393, 631, 398, 638, 398, 650, 390, 658, 382, 658, 373, 651, 371, 643, 375, 634, 381, 630)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l66ks"]
+polygon = PackedVector2Array(110, 641, 114, 641, 116, 641, 116, 642, 117, 643, 118, 644, 119, 644, 119, 646, 120, 646, 120, 650, 119, 650, 119, 652, 118, 652, 118, 653, 117, 653, 117, 654, 116, 654, 116, 655, 114, 655, 114, 656, 111, 656, 110, 652, 108, 650, 107, 648, 107, 645, 107, 643, 107, 642, 108, 642, 108, 641)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ig07r"]
+polygon = PackedVector2Array(371, 595, 371, 592, 371, 593, 374, 593, 374, 594, 376, 594, 376, 596, 376, 595, 377, 595, 377, 596, 378, 596, 379, 596, 379, 597, 380, 597, 380, 599, 381, 599, 381, 600, 382, 600, 382, 602, 383, 602, 383, 605, 384, 605, 384, 611, 383, 611, 383, 614, 382, 614, 382, 616, 381, 616, 381, 617, 380, 617, 380, 619, 379, 619, 379, 620, 377, 620, 377, 621, 376, 621, 376, 622, 374, 622, 374, 623, 371, 623, 371, 624, 365, 624, 365, 623, 362, 623, 362, 622, 360, 620, 362, 622, 360, 622, 360, 621, 359, 621, 359, 620, 357, 620, 357, 619, 356, 619, 356, 617, 355, 617, 355, 616, 354, 616, 354, 614, 353, 614, 353, 611, 352, 611, 352, 605, 353, 605, 357, 606, 357, 605, 358, 605, 357, 603, 359, 602, 361, 603, 358, 602, 359, 600, 368, 605, 362, 599, 362, 597, 362, 596, 363, 597, 371, 604, 368, 597, 371, 598)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_57hcn"]
+polygon = PackedVector2Array(429, 608, 435, 608, 435, 609, 438, 609, 438, 610, 440, 610, 440, 611, 441, 611, 441, 612, 443, 612, 443, 613, 444, 613, 444, 615, 445, 615, 445, 616, 446, 616, 446, 618, 447, 618, 447, 621, 448, 621, 448, 627, 447, 627, 447, 630, 446, 630, 446, 632, 445, 632, 445, 633, 444, 633, 444, 635, 443, 635, 443, 636, 441, 636, 441, 637, 440, 637, 440, 638, 438, 638, 438, 639, 435, 639, 435, 640, 429, 640, 429, 639, 426, 639, 426, 638, 424, 638, 424, 637, 423, 637, 423, 636, 421, 636, 421, 635, 420, 635, 420, 633, 419, 633, 419, 632, 418, 632, 418, 631, 418, 630, 417, 630, 417, 627, 416, 627, 416, 621, 417, 621, 417, 618, 418, 618, 418, 616, 419, 616, 419, 615, 420, 615, 420, 613, 421, 613, 421, 612, 423, 612, 423, 611, 424, 611, 424, 610, 426, 610, 426, 609, 429, 609)
+
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_5sw6k")
 
@@ -3655,6 +3668,7 @@ layer_2/tile_data = PackedInt32Array()
 position = Vector2(431, 662)
 
 [node name="dark" type="ColorRect" parent="."]
+visible = false
 z_index = 10
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 15
@@ -3667,6 +3681,37 @@ offset_bottom = 848.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(149, 560)
+scale = Vector2(0.898964, 0.494247)
+energy = 0.28
+shadow_enabled = true
+texture = ExtResource("10_2wt2l")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(401, 559)
+scale = Vector2(0.898964, 0.494247)
+energy = 0.28
+shadow_enabled = true
+texture = ExtResource("10_2wt2l")
+offset = Vector2(0, 130)
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(-210, -20)
+occluder = SubResource("OccluderPolygon2D_q14ix")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_l66ks")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ig07r")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_57hcn")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 

@@ -1,13 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://bxngx0v0hyhju"]
+[gd_scene load_steps=24 format=3 uid="uid://bxngx0v0hyhju"]
 
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_a2mho"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="2_7xv2b"]
 [ext_resource type="Texture2D" uid="uid://bktcu8f7y3f0s" path="res://Виталя/Текстуры/Окружение/Тачка со жрачкой.png" id="3_w665p"]
 [ext_resource type="Texture2D" uid="uid://b7fs2dkerd1dn" path="res://Виталя/Текстуры/Окружение/Скамеечка.png" id="4_nq4cs"]
+[ext_resource type="Texture2D" uid="uid://dwu5wk0ri6lxf" path="res://light/Тачка со жрачкой (1).png" id="4_q43r2"]
 [ext_resource type="Texture2D" uid="uid://cqmnf7i0pa8en" path="res://Виталя/Текстуры/Картины/Картина с евой.png" id="5_eob1j"]
 [ext_resource type="Texture2D" uid="uid://bnso0ys0cr3ou" path="res://Виталя/Текстуры/Картины/Новый Взгляд на ван гога.png" id="6_kdrej"]
 [ext_resource type="Texture2D" uid="uid://c5q2sng7crp8u" path="res://Виталя/Текстуры/Окружение/ТЫ ЩАС ЕБАНЁШЬСЯ.PNG" id="7_mmvn4"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
+[ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_p0rdu"]
+[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="10_j4xvx"]
+[ext_resource type="Texture2D" uid="uid://c1xflliexqwid" path="res://light/spot.png" id="12_m35of"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_me4w2"]
 texture = ExtResource("1_a2mho")
@@ -5054,6 +5058,15 @@ texture = ExtResource("2_7xv2b")
 [sub_resource type="TileSet" id="TileSet_ys0jn"]
 sources/0 = SubResource("TileSetAtlasSource_b6wpc")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_84vh8"]
+polygon = PackedVector2Array(153, 0, 160, 0, 165, 5, 165, 6, 166, 6, 166, 7, 164, 7, 158, 1, 156, 1, 152, 6, 152, 7, 150, 7, 150, 5, 151, 5, 151, 3, 152, 3, 152, 0)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6fryf"]
+polygon = PackedVector2Array(197, 695, 199, 693, 202, 694, 203, 695, 205, 697, 207, 697, 207, 694, 201, 691, 196, 692, 195, 694, 194, 695, 196, 695, 196, 696, 197, 696)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kd1se"]
+polygon = PackedVector2Array(207, 699, 209, 699, 209, 698, 212, 698, 212, 699, 211, 699, 211, 702, 207, 702)
+
 [node name="Lev 3" type="Node2D"]
 
 [node name="Основа" type="TileMap" parent="."]
@@ -5089,7 +5102,23 @@ format = 2
 layer_0/z_index = 4
 layer_0/tile_data = PackedInt32Array(2621456, 0, 35, 2686992, 0, 36, 2752528, 0, 37)
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+position = Vector2(149.625, 657.5)
+scale = Vector2(0.0695801, 0.0673828)
+color = Color(1, 0.984314, 0.490196, 1)
+energy = 0.95
+shadow_enabled = true
+texture = ExtResource("9_p0rdu")
+
+[node name="ТачкаСоЖрачкой(1)" type="Sprite2D" parent="."]
+light_mask = 2
+position = Vector2(157, 664)
+scale = Vector2(0.566406, 0.558594)
+texture = ExtResource("4_q43r2")
+
 [node name="ТачкаСоЖрачкой" type="Sprite2D" parent="."]
+visible = false
 modulate = Color(0.686275, 0.686275, 0.686275, 1)
 position = Vector2(157, 664)
 scale = Vector2(0.546875, 0.546875)
@@ -5119,3 +5148,43 @@ texture = ExtResource("7_mmvn4")
 
 [node name="PlayerAndUI" parent="." instance=ExtResource("8_cyvp1")]
 position = Vector2(-123, 676)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="PlayerAndUI"]
+visible = false
+position = Vector2(0, 13)
+scale = Vector2(1, -1)
+occluder = SubResource("OccluderPolygon2D_84vh8")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(66.625, 577)
+scale = Vector2(0.370117, 0.492187)
+energy = 0.28
+shadow_enabled = true
+texture = ExtResource("10_j4xvx")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(193.875, 576)
+scale = Vector2(0.389649, 0.492187)
+energy = 0.28
+shadow_enabled = true
+texture = ExtResource("10_j4xvx")
+offset = Vector2(0, 130)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(0, 1391)
+scale = Vector2(1, -1)
+occluder = SubResource("OccluderPolygon2D_6fryf")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(0, -6)
+occluder = SubResource("OccluderPolygon2D_kd1se")
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(151.5, 659)
+scale = Vector2(0.367188, 0.53125)
+color = Color(0.835294, 0.811765, 0, 1)
+energy = 0.35
+range_item_cull_mask = 2
+shadow_enabled = true
+texture = ExtResource("12_m35of")
