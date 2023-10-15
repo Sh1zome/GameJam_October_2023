@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://ckfowd3y3lkdf"]
+[gd_scene load_steps=35 format=3 uid="uid://ckfowd3y3lkdf"]
 
 [ext_resource type="Script" path="res://Player/Human/dash_coldown.gd" id="1_jir8f"]
 [ext_resource type="Texture2D" uid="uid://b4lrh2j7v1g3e" path="res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png" id="2_47puo"]
@@ -7,8 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://dgmlr245vd0um" path="res://UX/Interface/Assets/Charge/1charhe.png" id="3_cpfq8"]
 [ext_resource type="Texture2D" uid="uid://kkiufdkksk1q" path="res://UX/Interface/Assets/Charge/2charge.png" id="4_gfp2o"]
 [ext_resource type="Texture2D" uid="uid://coifldrv7fvo0" path="res://Player/Human/UI_Flat_Frame_01_Standard.png" id="4_o23f1"]
+[ext_resource type="Texture2D" uid="uid://cqjnilcry47ui" path="res://UX/Interface/Assets/UI_Flat_Slot_01_Unavailable.png" id="5_c1dml"]
 [ext_resource type="Texture2D" uid="uid://dlm036s674nrh" path="res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Selected.png" id="5_icsv8"]
 [ext_resource type="Texture2D" uid="uid://c1d845x1v45xm" path="res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Available.png" id="6_g6dj5"]
+[ext_resource type="Texture2D" uid="uid://dxr1x0y3i36u2" path="res://UX/Interface/Assets/MenuIcon.png" id="6_lfqlo"]
+[ext_resource type="Texture2D" uid="uid://xoleaf6swoly" path="res://UX/Interface/Assets/3inAnimate.png" id="6_vwenp"]
+[ext_resource type="Texture2D" uid="uid://bw1jloe6luy4i" path="res://UX/Interface/Assets/imgonline-com-ua-Resize-ioyy8902fgOCje.png" id="7_d5852"]
+[ext_resource type="Texture2D" uid="uid://blp4um3is87l8" path="res://UX/Interface/Assets/2inAnim.png" id="8_a1vud"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="15_wprb8"]
 [ext_resource type="Resource" uid="uid://357kpahjo0db" path="res://Dialoges/Computer.tres" id="16_f7kst"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="17_jubmg"]
@@ -55,6 +60,46 @@ animations = [{
 "loop": false,
 "name": &"Animate",
 "speed": 10.0
+}]
+
+[sub_resource type="Theme" id="Theme_js8l8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mj7vl"]
+bg_color = Color(0.278431, 0.494118, 0.988235, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tdq16"]
+bg_color = Color(0.407843, 0.494118, 0.988235, 0.913725)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_08xe2"]
+bg_color = Color(0.517647, 0.67451, 0.996078, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4fwg"]
+atlas = ExtResource("6_vwenp")
+region = Rect2(0, 0, 38, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqqdx"]
+atlas = ExtResource("7_d5852")
+region = Rect2(0, 0, 35, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_by76v"]
+atlas = ExtResource("8_a1vud")
+region = Rect2(0, 0, 40, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8q62f"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_m4fwg")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_hqqdx")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_by76v")
+}],
+"loop": true,
+"name": &"Animate",
+"speed": 5.0
 }]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_agbgg"]
@@ -105,6 +150,50 @@ position = Vector2(87, 667)
 scale = Vector2(1.52344, 1.51432)
 texture = ExtResource("2_m1lve")
 
+[node name="MenuPannel" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 911.0
+offset_top = 648.0
+offset_right = 1266.0
+offset_bottom = 688.0
+
+[node name="BackgrondForMenuButton" type="Sprite2D" parent="CanvasLayer/MenuPannel"]
+position = Vector2(315.948, 19.8409)
+rotation = 0.774926
+scale = Vector2(2.25766, 2.38333)
+texture = ExtResource("5_c1dml")
+
+[node name="UiFlatSelect01a2" type="Sprite2D" parent="CanvasLayer/MenuPannel"]
+position = Vector2(316, 20)
+rotation = 0.776672
+scale = Vector2(2.25339, 2.39073)
+texture = ExtResource("2_m1lve")
+
+[node name="Button" type="Button" parent="CanvasLayer/MenuPannel"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = -10.0
+offset_right = 345.0
+offset_bottom = 48.0
+theme = SubResource("Theme_js8l8")
+theme_override_styles/normal = SubResource("StyleBoxFlat_mj7vl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tdq16")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_08xe2")
+
+[node name="UiFlatSelect01a1" type="AnimatedSprite2D" parent="CanvasLayer/MenuPannel"]
+position = Vector2(315.953, 19)
+scale = Vector2(2.00293, 2.125)
+sprite_frames = SubResource("SpriteFrames_8q62f")
+animation = &"Animate"
+autoplay = "Animate"
+frame_progress = 0.304262
+
+[node name="MenuIcon" type="Sprite2D" parent="CanvasLayer/MenuPannel"]
+position = Vector2(316, 19)
+scale = Vector2(2.82353, 2.82353)
+texture = ExtResource("6_lfqlo")
+
 [node name="Comp" type="Panel" parent="."]
 visible = false
 custom_minimum_size = Vector2(256, 128)
@@ -116,5 +205,3 @@ offset_bottom = 267.0
 script = ExtResource("15_wprb8")
 dialogue_file = ExtResource("16_f7kst")
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_agbgg"), SubResource("RichTextEffect_mbgky")])
-
-[connection signal="dialogue_signal" from="Comp" to="." method="_on_comp_dialogue_signal"]
