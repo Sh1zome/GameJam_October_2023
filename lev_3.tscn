@@ -5055,9 +5055,20 @@ texture = ExtResource("2_7xv2b")
 sources/0 = SubResource("TileSetAtlasSource_b6wpc")
 
 [node name="Lev 3" type="Node2D"]
+position = Vector2(2, 26)
 
 [node name="PlayerAndUI2" parent="." instance=ExtResource("1_4t0n2")]
-position = Vector2(204, 673)
+z_index = 3
+position = Vector2(-11, 710)
+
+[node name="PlayerHuman" parent="PlayerAndUI2" index="0"]
+position = Vector2(5, -31)
+up_direction = Vector2(1, -0.000333333)
+
+[node name="Camera" parent="PlayerAndUI2/PlayerHuman" index="2"]
+position = Vector2(29, -4)
+offset = Vector2(130, 0)
+limit_right = 160
 
 [node name="Основа" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_iqbie")
@@ -5119,3 +5130,6 @@ texture = ExtResource("6_kdrej")
 z_index = 4
 position = Vector2(203, 683)
 texture = ExtResource("7_mmvn4")
+
+[editable path="PlayerAndUI2"]
+[editable path="PlayerAndUI2/PlayerHuman"]
