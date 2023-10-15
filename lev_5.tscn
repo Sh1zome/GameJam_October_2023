@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://ivprcfponu2k" path="res://Виталя/Текстуры/Экспонаты/Ракета.png" id="4_wjx84"]
 [ext_resource type="Texture2D" uid="uid://cdofqnao24c56" path="res://Виталя/Текстуры/Экспонаты/Гуманоид с планеты жопа.png" id="5_7tt5m"]
 [ext_resource type="Texture2D" uid="uid://h7xdlxiu3wnv" path="res://Виталя/Текстуры/Экспонаты/telescop.png" id="6_6vngj"]
-[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_kjn3m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4y2q6"]
 texture = ExtResource("1_gcuxi")
@@ -5110,6 +5109,3 @@ material = SubResource("ShaderMaterial_ghbmg")
 position = Vector2(81, 666)
 scale = Vector2(0.429688, 0.429688)
 texture = ExtResource("6_6vngj")
-
-[node name="PlayerAndUI" parent="." instance=ExtResource("7_kjn3m")]
-position = Vector2(27, 674)
