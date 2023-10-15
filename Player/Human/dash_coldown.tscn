@@ -195,6 +195,7 @@ scale = Vector2(2.82353, 2.82353)
 texture = ExtResource("6_lfqlo")
 
 [node name="Comp" type="Panel" parent="."]
+visible = false
 custom_minimum_size = Vector2(256, 128)
 layout_mode = 0
 offset_left = 377.0

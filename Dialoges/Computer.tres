@@ -6,6 +6,7 @@
 script = ExtResource("1_ebw4k")
 starts = {
 "Computer": &"0_1",
+"RightDoor": &"0_3",
 "Table": &"0_2"
 }
 nodes = {
@@ -18,6 +19,11 @@ nodes = {
 "link": &"1_3",
 "offset": Vector2(511.043, 716.142),
 "start_id": "Table"
+},
+"0_3": {
+"link": &"1_4",
+"offset": Vector2(483.849, 970.251),
+"start_id": "RightDoor"
 },
 "1_1": {
 "dialogue": "В эти компьютеры можно вставить диск.
@@ -62,6 +68,36 @@ nodes = {
 "size": {
 "x": 200.0,
 "y": 261.0
+},
+"speaker": ""
+},
+"1_4": {
+"dialogue": "Открыть дверь?",
+"offset": Vector2(779.849, 926.751),
+"options": {
+0: {
+"link": &"1_5",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 233.0
+},
+"speaker": ""
+},
+"1_5": {
+"dialogue": "[shake]Дверь слишком тяжёлая...[/shake]",
+"offset": Vector2(1140, 940),
+"options": {
+"0": {
+"link": "END",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 233.0
 },
 "speaker": ""
 }

@@ -1,6 +1,6 @@
 extends Node2D
 
-
+@onready var dialog = $PlayerAndUI/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,3 +15,13 @@ func _on_perehod_body_entered(body):
 	if body.name == "PlayerHuman":
 		get_tree().change_scene_to_file("res://lev_2.tscn")
 		GloabalTreker.tp = true
+
+
+func _on_perehod_2_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.start("RightDoor")
+
+
+func _on_perehod_2_body_exited(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
