@@ -6,5 +6,5 @@ func _ready():
 func _on_perehod_body_entered(body):
 		if body.name == "PlayerHuman":
 			print("Чё?")
-			get_tree().change_scene_to_file("res://Виталя/level_2.tscn")
+			get_tree().change_scene_to_file("res://lev_2.tscn")
 		
