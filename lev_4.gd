@@ -31,9 +31,7 @@ func _on_backto_3_body_entered(body):
 		dialog.start("BackTo3")
 		GloabalTreker.tp = true;
 		
-		
-
-
+	
 func _on_box_1_body_exited(body):
 	if body.name == "PlayerHuman":
 		dialog.stop()
