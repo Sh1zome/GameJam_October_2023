@@ -1,8 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://0bgx0cwetnok"]
+[gd_scene load_steps=12 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
-[ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
+[ext_resource type="PackedScene" uid="uid://ciwayywiyy5ja" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
