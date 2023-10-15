@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dbescykif0gad"]
+[gd_scene load_steps=9 format=3 uid="uid://cn3j5qg53w46b"]
 
-[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="1_yex85"]
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_yex85"]
 [ext_resource type="Theme" uid="uid://crd0d5hasuokm" path="res://TESTTHEME.tres" id="2_0vqol"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="3_aa2gg"]
 [ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://Tutorial.tres" id="4_w4nw6"]
@@ -36,3 +36,5 @@ script = ExtResource("3_aa2gg")
 dialogue_file = ExtResource("4_w4nw6")
 max_options = 2
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_qnngi"), SubResource("RichTextEffect_ay0th")])
+
+[editable path="PlayerHuman"]

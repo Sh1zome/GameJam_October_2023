@@ -1,19 +1,17 @@
 extends CharacterBody2D
-
-
-const SPEED = 150
+var SPEED = GloabalTreker.PlayerSpeed
 const JUMP_VELOCITY = -300.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var sprite = $AnimatedSprite2D
 @onready var health_bar = $"../CanvasLayer/ProgressBar"
+
 var clickStat = 2
 var DashRight = false
 var DashColdown = false
 var DashColdownVisual = 3.5
-
 signal DashCd (new_DashCd)
 func _physics_process(delta):
-	health_bar.value = GloabalTreker.health 
+	health_bar.value = GloabalTreker.health
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	if Input.is_action_just_pressed("Up") and is_on_floor():

@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://cat5nxj3cw0tb"]
+[gd_scene load_steps=18 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
-[ext_resource type="PackedScene" uid="uid://ciwayywiyy5ja" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
+[ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
+[ext_resource type="Shader" path="res://pixelate.gdshader" id="4_t2fno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -3651,6 +3652,10 @@ texture = ExtResource("1_ojoin")
 [sub_resource type="TileSet" id="TileSet_eg2v5"]
 sources/0 = SubResource("TileSetAtlasSource_7ln5i")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gwfwp"]
+shader = ExtResource("4_t2fno")
+shader_parameter/pixelSize = 2
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wsu1"]
 texture = ExtResource("1_ojoin")
 16:6/0 = 0
@@ -4165,8 +4170,14 @@ sources/0 = SubResource("TileSetAtlasSource_4wsu1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgikk"]
 size = Vector2(20, 126)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3tft1"]
+size = Vector2(46, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idu6b"]
+size = Vector2(16, 12)
+
 [node name="Lev 2" type="Node2D"]
-position = Vector2(-14, 5)
+position = Vector2(-3, 3)
 script = ExtResource("1_07tsa")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4226,6 +4237,7 @@ texture = ExtResource("2_ileey")
 
 [node name="КартинаСЛуноходом2" type="Sprite2D" parent="."]
 modulate = Color(0.709804, 0.709804, 0.709804, 1)
+material = SubResource("ShaderMaterial_gwfwp")
 position = Vector2(182, 625)
 scale = Vector2(0.365597, 0.365597)
 texture = ExtResource("2_ileey")
@@ -4242,10 +4254,20 @@ position = Vector2(-8, 711)
 
 [node name="Camera" parent="PlayerAndUI2/PlayerHuman" index="2"]
 position = Vector2(43, -4)
-zoom = Vector2(4.5, 4.5)
+offset = Vector2(9, 0)
+zoom = Vector2(4.8, 4.8)
 limit_top = 565
 limit_right = 270
 limit_bottom = 720
+position_smoothing_speed = 0.0
+rotation_smoothing_speed = 0.0
+drag_right_margin = 1.0
+
+[node name="DashColdown" parent="PlayerAndUI2/CanvasLayer" index="0"]
+offset_left = 378.0
+offset_top = 72.0
+offset_right = -719.0
+offset_bottom = -484.0
 
 [node name="Perehod" type="Area2D" parent="."]
 position = Vector2(35, 688)
@@ -4268,7 +4290,32 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Perehod2" type="Area2D" parent="."]
+position = Vector2(35, 688)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perehod2"]
+position = Vector2(242, -47)
+shape = SubResource("RectangleShape2D_fgikk")
+
+[node name="Perehod3" type="Area2D" parent="."]
+position = Vector2(35, 688)
+
+[node name="Pcdetect" type="CollisionShape2D" parent="Perehod3"]
+position = Vector2(172.5, -23)
+shape = SubResource("RectangleShape2D_3tft1")
+
+[node name="Perehod4" type="Area2D" parent="."]
+position = Vector2(-53, 648)
+
+[node name="Table" type="CollisionShape2D" parent="Perehod4"]
+position = Vector2(189, -46)
+shape = SubResource("RectangleShape2D_idu6b")
+
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
+[connection signal="body_entered" from="Perehod2" to="." method="_on_perehod_2_body_entered"]
+[connection signal="body_entered" from="Perehod3" to="." method="_on_perehod_3_body_entered"]
+[connection signal="body_exited" from="Perehod3" to="." method="_on_perehod_3_body_exited"]
+[connection signal="body_entered" from="Perehod4" to="." method="_on_perehod_4_body_entered"]
 
 [editable path="PlayerAndUI2"]
 [editable path="PlayerAndUI2/PlayerHuman"]
