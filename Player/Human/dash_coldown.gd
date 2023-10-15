@@ -21,6 +21,8 @@ func _process(delta):
 
 
 func _on_comp_dialogue_signal(value):
+	if value == "nahod+":
+		GloabalTreker.nahod +=1
 	if value == "SSD":
 		if GloabalTreker.ssd == false:
 			pass
