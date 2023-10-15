@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_perehod_body_entered(body):
-	if body.name == "Player":
+	if body.name == "PlayerHuman":
 		print("test")
 		get_tree().change_scene_to_file("res://level_1.tscn")
 		GloabalTreker.tp = true;
