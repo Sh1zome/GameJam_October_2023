@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bynefa0fx3tcl"]
+[gd_scene load_steps=14 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
@@ -4253,6 +4253,20 @@ position = Vector2(35, 688)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Perehod"]
 position = Vector2(-25, -39)
 shape = SubResource("RectangleShape2D_fgikk")
+
+[node name="dark" type="ColorRect" parent="."]
+z_index = 10
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1508.0
+offset_top = -848.0
+offset_right = 1507.0
+offset_bottom = 848.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 

@@ -2761,7 +2761,11 @@ sources/0 = SubResource("TileSetAtlasSource_dosf7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1t3n"]
 size = Vector2(94, 19.5)
 
+<<<<<<< HEAD
+[node name="Level_3" type="Node2D"]
+=======
 [node name="Level_4" type="Node2D"]
+>>>>>>> 37c046d54f220552af64ae6ce70bb6b31aa5c197
 script = SubResource("GDScript_ylvlm")
 
 [node name="пол" type="TileMap" parent="."]
