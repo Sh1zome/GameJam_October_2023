@@ -56,6 +56,5 @@ offset_bottom = -480.0
 scale = Vector2(1, 1.02593)
 metadata/_edit_use_anchors_ = true
 
-[connection signal="DashCd" from="PlayerHuman" to="." method="_on_player_human_dash_cd"]
 [connection signal="timeout" from="DashTrack" to="PlayerHuman" method="_on_timer_timeout"]
 [connection signal="timeout" from="DashColdown" to="PlayerHuman" method="_on_dash_coldown_timeout"]

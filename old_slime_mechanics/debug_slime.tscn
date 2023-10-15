@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://blika61u01dpe"]
 
-[ext_resource type="Texture2D" uid="uid://dqt766at811my" path="res://old_slime_mechanics/icon.svg" id="1_or1ob"]
+[ext_resource type="Texture2D" uid="uid://dqt766at811my" path="res://icon.svg" id="1_or1ob"]
 [ext_resource type="PackedScene" uid="uid://d252m6u4nuah" path="res://old_slime_mechanics/slime.tscn" id="2_psjn6"]
 [ext_resource type="Script" path="res://old_slime_mechanics/slime.gd" id="2_qrbha"]
 
@@ -28,3 +28,7 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0
 [node name="Slime" parent="." instance=ExtResource("2_psjn6")]
 position = Vector2(329, 205)
 script = ExtResource("2_qrbha")
+softBody2D_path = NodePath("./SoftBody2D")
+sprite2D_path = NodePath("./Face")
+staticBody2D_path = NodePath("./pusher")
+speed = 400
