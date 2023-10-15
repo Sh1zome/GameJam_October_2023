@@ -45,6 +45,17 @@ scale = Vector2(3.57812, 3.57812)
 modulate = Color(0.501961, 1, 1, 1)
 position = Vector2(606, 221)
 scale = Vector2(3.76042, 3.76042)
-texture = ExtResource("7_cy4mv")
+texture = ExtResource("7_l5sy0")
+
+[node name="Splash" type="Sprite2D" parent="."]
+z_index = 20
+scale = Vector2(5, 5)
+texture = ExtResource("8_tpgxj")
+centered = false
+script = ExtResource("9_06wac")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_vlmdv")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
