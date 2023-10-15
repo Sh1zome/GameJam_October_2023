@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=18 format=3 uid="uid://bmtdaplo3mou0"]
-=======
 [gd_scene load_steps=17 format=3 uid="uid://d27f10s7ekrsm"]
->>>>>>> ececa124844ffcaf9833396e55cd3b51b44dad43
 
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="2_vyy6q"]
@@ -10,10 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://doby8exo7od1m" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 3.png" id="4_ouxja"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
-=======
->>>>>>> ececa124844ffcaf9833396e55cd3b51b44dad43
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkdal"]
 texture = ExtResource("1_pyei7")
