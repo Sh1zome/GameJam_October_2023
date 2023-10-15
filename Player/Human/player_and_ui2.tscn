@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bwo6chdqne5wk"]
 
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_rocan"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="1_rocan"]
 
 [node name="PlayerAndUI2" instance=ExtResource("1_rocan")]
 position = Vector2(1, -10)
