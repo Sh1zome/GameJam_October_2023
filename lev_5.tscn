@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bkr2x65ad44kq"]
+[gd_scene load_steps=31 format=3 uid="uid://boi40p8nayr4t"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Script" path="res://lev_5.gd" id="1_xgtt5"]
@@ -5081,6 +5081,19 @@ gradient = SubResource("Gradient_xliwf")
 fill_from = Vector2(0.275229, 0.389908)
 fill_to = Vector2(0.862385, 0.747706)
 
+[sub_resource type="Gradient" id="Gradient_hgak3"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u86y8"]
+gradient = SubResource("Gradient_hgak3")
+fill_from = Vector2(0.59633, 0.334862)
+fill_to = Vector2(0.123853, 0.706422)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y0p5o"]
+polygon = PackedVector2Array(196, 680, 196, 685, 194, 685, 194, 689, 184, 689, 184, 688, 180, 688, 180, 674, 182, 674, 182, 673, 184, 672, 184, 671, 185, 671, 185, 668, 187, 668, 187, 667, 189, 667, 188, 665, 190, 665, 190, 663, 191, 663, 192, 662, 193, 662, 193, 660, 234, 660, 234, 661, 234, 662, 235, 662, 235, 663, 237, 663, 237, 664, 239, 664, 239, 665, 240, 665, 240, 667, 242, 667, 242, 670, 243, 670, 243, 672, 245, 672, 245, 673, 247, 673, 247, 688, 243, 688, 243, 689, 232, 689, 232, 685, 231, 685, 231, 680, 229, 680, 228, 680, 228, 682, 226, 682, 225, 682, 225, 684, 225, 688, 226, 688, 226, 692, 225, 692, 225, 694, 223, 694, 223, 695, 220, 695, 220, 698, 207, 698, 207, 695, 204, 695, 204, 694, 202, 694, 202, 692, 201, 692, 201, 688, 202, 688, 202, 682, 200, 682, 199, 682, 199, 680)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sqr7t"]
+polygon = PackedVector2Array(97, 683, 92, 683, 93, 684, 93, 686, 84, 694, 80, 694, 68, 683, 70, 683, 70, 681, 65, 681, 65, 683, 66, 683, 79, 696, 79, 699, 84, 697, 94, 687, 94, 685, 96, 685)
+
 [node name="Lev_5" type="Node2D"]
 position = Vector2(-8, 20)
 script = ExtResource("1_xgtt5")
@@ -5160,35 +5173,46 @@ position = Vector2(-23.7714, -21.9429)
 shape = SubResource("RectangleShape2D_2a0ay")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(145, 581)
-scale = Vector2(1, 1.96875)
+position = Vector2(153.719, 581)
+scale = Vector2(1.14063, 1.96875)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_7imd5")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(81.1648, 580)
-scale = Vector2(0.905884, 2)
+position = Vector2(80.7273, 580)
+scale = Vector2(1.12463, 2)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_kbu68")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(211.375, 581)
-scale = Vector2(0.8125, 1.98438)
+position = Vector2(211.25, 581)
+scale = Vector2(0.875, 1.98438)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ruxm7")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D4" type="PointLight2D" parent="."]
-position = Vector2(215, 580)
-scale = Vector2(1, 1.98438)
+position = Vector2(215.156, 580)
+scale = Vector2(1.07813, 1.98438)
 energy = 0.5
-texture = ExtResource("8_yg4il")
-offset = Vector2(0, 130)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_u86y8")
+offset = Vector2(30, 30)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-1, 1375)
+scale = Vector2(1, -1)
+occluder = SubResource("OccluderPolygon2D_y0p5o")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder2D"]
+position = Vector2(1, 1366)
+scale = Vector2(1, -1)
+occluder = SubResource("OccluderPolygon2D_sqr7t")
 
 [connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
 

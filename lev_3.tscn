@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_p0rdu"]
 [ext_resource type="Texture2D" uid="uid://c1xflliexqwid" path="res://light/spot.png" id="12_m35of"]
 [ext_resource type="PackedScene" uid="uid://igmfatqwefse" path="res://Mobs/astronaut/astronaut.tscn" id="14_bcpp4"]
+[ext_resource type="Texture2D" uid="uid://bqkp3718mjvhu" path="res://light/light.png" id="9_p0rdu"]
+[ext_resource type="Texture2D" uid="uid://cv6i04mrte6rg" path="res://light/spot.png" id="12_m35of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73x4r"]
 size = Vector2(58.9429, 84.9427)
@@ -5089,7 +5091,7 @@ fill_to = Vector2(0.90367, 0.729358)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_dynfu"]
 gradient = SubResource("Gradient_v4x43")
-fill_from = Vector2(0.811927, 0.233945)
+fill_from = Vector2(0.793578, 0.408257)
 fill_to = Vector2(0.238532, 0.655963)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6fryf"]
@@ -5224,32 +5226,32 @@ position = Vector2(203, 683)
 texture = ExtResource("7_mmvn4")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(69.3075, 582)
-scale = Vector2(0.846268, 1.98438)
+position = Vector2(68.7188, 582)
+scale = Vector2(1.14063, 1.98438)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_77n24")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D5" type="PointLight2D" parent="."]
-position = Vector2(201.227, 582)
-scale = Vector2(0.886487, 1.98438)
+position = Vector2(200.906, 582)
+scale = Vector2(1.04687, 1.98438)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_77n24")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(72.1221, 581)
-scale = Vector2(0.56105, 1.95739)
+position = Vector2(72.7813, 581)
+scale = Vector2(0.890625, 1.95739)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_dynfu")
 offset = Vector2(30, 30)
 
 [node name="PointLight2D6" type="PointLight2D" parent="."]
-position = Vector2(204.15, 581)
-scale = Vector2(0.574767, 1.95739)
+position = Vector2(204.844, 581)
+scale = Vector2(0.921868, 1.95739)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_dynfu")
