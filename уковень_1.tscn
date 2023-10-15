@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://bniwejock1rb6"]
+[gd_scene load_steps=2 format=3 uid="uid://cr3kd2elxfcco"]
 
-[ext_resource type="PackedScene" path="res://человек.tscn" id="2_sp8wq"]
+[ext_resource type="PackedScene" uid="uid://b4hijwv1yqnwb" path="res://человек.tscn" id="2_sp8wq"]
 
 [node name="Уковень 1" type="Node2D"]
 

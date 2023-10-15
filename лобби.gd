@@ -1,9 +1,10 @@
 extends Node2D
 
+const GAME_SCENE_PATH : String = "res://level_1.tscn"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function 
+	ResourceLoader.load_threaded_request(GAME_SCENE_PATH)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,5 +17,5 @@ func _on_button_2_pressed():
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://level_1.tscn")
+	get_tree().change_scene_to_file(GAME_SCENE_PATH)
 	

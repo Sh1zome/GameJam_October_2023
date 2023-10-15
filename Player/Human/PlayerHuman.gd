@@ -39,7 +39,7 @@ func _physics_process(delta):
 		if DashColdown == false:
 			clickStat -= 1
 			if clickStat <= 0:
-				velocity.x =+ 2000
+				velocity.x =+ 1500
 				velocity.y -= 200
 				DashColdown = true
 				DashColdownVisual = 3.5
@@ -47,7 +47,7 @@ func _physics_process(delta):
 		if DashColdown == false:
 			clickStat -= 1
 			if clickStat <= 0:
-				velocity.x -= 2000
+				velocity.x -= 1500
 				velocity.y -= 200
 				DashColdown = true
 				DashColdownVisual = 3.5
