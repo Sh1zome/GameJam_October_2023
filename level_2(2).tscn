@@ -65,7 +65,7 @@ layer_4/z_index = 0
 layer_4/tile_data = PackedInt32Array()
 
 [node name="человек" parent="." instance=ExtResource("2_klydv")]
-position = Vector2(44, 659)
+position = Vector2(128, 666)
 
 [node name="Потолок" type="TileMap" parent="."]
 position = Vector2(32, 1120)

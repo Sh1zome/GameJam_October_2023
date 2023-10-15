@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=23 format=3 uid="uid://8jiudhihxs1g"]
 
 [ext_resource type="Script" path="res://Виталя/level_2.gd" id="1_adahb"]
@@ -221,6 +222,11 @@ texture_region_size = Vector2i(32, 32)
 4:14/0 = 0
 4:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:14/0/physics_layer_0/angular_velocity = 0.0
+=======
+[gd_scene load_steps=10 format=3 uid="uid://3vih16u2rxk"]
+
+[ext_resource type="PackedScene" uid="uid://dwtl78ignmaig" path="res://человек.tscn" id="2_bhkkx"]
+>>>>>>> 07ae64cc8e1a6e0a635c22371e583857414a0604
 
 [sub_resource type="TileSet" id="TileSet_tbick"]
 tile_size = Vector2i(32, 32)
@@ -247,12 +253,16 @@ tile_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_8sqde"]
 physics_layer_0/collision_layer = 1
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0533"]
 size = Vector2(35, 126)
 
 [node name="level_2" type="Node2D"]
 position = Vector2(-10, 4)
 script = ExtResource("1_adahb")
+=======
+[node name="level_" type="Node2D"]
+>>>>>>> 07ae64cc8e1a6e0a635c22371e583857414a0604
 
 [node name="пол" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tbick")
@@ -288,6 +298,9 @@ layer_4/y_sort_enabled = false
 layer_4/y_sort_origin = 0
 layer_4/z_index = 0
 layer_4/tile_data = PackedInt32Array()
+
+[node name="человек" parent="." instance=ExtResource("2_bhkkx")]
+position = Vector2(44, 659)
 
 [node name="Потолок" type="TileMap" parent="."]
 position = Vector2(32, 1120)
@@ -343,29 +356,3 @@ scale = Vector2(1.26125, 0.993967)
 tile_set = SubResource("TileSet_8sqde")
 format = 2
 layer_0/tile_data = PackedInt32Array(2621454, 458752, 30)
-
-[node name="PlayerAndUI2" parent="." instance=ExtResource("5_qytpn")]
-position = Vector2(18, 691)
-
-[node name="DashColdown" parent="PlayerAndUI2/CanvasLayer" index="0"]
-offset_left = 247.0
-offset_right = -850.0
-
-[node name="ProgressBar" parent="PlayerAndUI2/CanvasLayer" index="1"]
-offset_left = 123.0
-offset_top = 653.0
-offset_right = 246.0
-offset_bottom = 685.0
-
-[node name="PerehodNext" type="Area2D" parent="."]
-position = Vector2(317, 673)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PerehodNext"]
-position = Vector2(-25, -39)
-shape = SubResource("RectangleShape2D_m0533")
-
-[connection signal="body_entered" from="PerehodNext" to="." method="_on_perehod_next_body_entered"]
-[connection signal="body_entered" from="PerehodNext" to="." method="_on_perehod_body_entered"]
-
-[editable path="PlayerAndUI2"]
-[editable path="PlayerAndUI2/PlayerHuman"]
