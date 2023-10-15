@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://c4pdrkhalwkik"]
+[gd_scene load_steps=33 format=3 uid="uid://c4pdrkhalwkik"]
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="8_7rw78"]
 [ext_resource type="PackedScene" uid="uid://dgwjlici6moar" path="res://slime.tscn" id="8_n78aq"]
-[ext_resource type="Texture2D" uid="uid://dwu2c2w2ok66p" path="res://light/Sprite-0001.png" id="10_1n0x4"]
+[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="10_2wt2l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nob7"]
 texture = ExtResource("4_5kto1")
@@ -3685,6 +3685,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+<<<<<<< HEAD
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(150, 561)
 scale = Vector2(0.927734, 0.501953)
@@ -3717,6 +3718,38 @@ occluder = SubResource("OccluderPolygon2D_61thm")
 position = Vector2(0, 1363)
 scale = Vector2(1, -1)
 occluder = SubResource("OccluderPolygon2D_2jyeh")
+=======
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(149, 560)
+scale = Vector2(0.898964, 0.494247)
+energy = 0.28
+shadow_enabled = true
+texture = ExtResource("10_2wt2l")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(401, 559)
+scale = Vector2(0.898964, 0.494247)
+energy = 0.28
+shadow_enabled = true
+texture = ExtResource("10_2wt2l")
+offset = Vector2(0, 130)
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(-210, -20)
+occluder = SubResource("OccluderPolygon2D_q14ix")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_l66ks")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ig07r")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_57hcn")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+>>>>>>> b4e479a57be0910edd85e850c7d4fa56440966bd
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 

@@ -21,6 +21,9 @@ func _process(delta):
 
 
 func _on_comp_dialogue_signal(value):
+	if value == "nahod+":
+		print("PlayShake")
+		GloabalTreker.nahod +=1
 	if value == "SSD":
 		if GloabalTreker.ssd == false:
 			pass
@@ -29,3 +32,5 @@ func _on_comp_dialogue_signal(value):
 			
 	if value == "GoToScene4":
 		get_tree().change_scene_to_file("res://lev_4.tscn")
+	if value == "BackTo3":
+		get_tree().change_scene_to_file("res://lev_3.tscn")

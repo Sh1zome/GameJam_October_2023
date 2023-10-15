@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://d27f10s7ekrsm"]
+[gd_scene load_steps=30 format=3 uid="uid://d27f10s7ekrsm"]
 
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_ffnot"]
+[ext_resource type="Script" path="res://lev_4.gd" id="1_nrrhy"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="2_vyy6q"]
 [ext_resource type="Texture2D" uid="uid://doxglehfi4tqd" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 1.png" id="3_0s4wv"]
@@ -8,6 +8,12 @@
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
+[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="8_6r7vt"]
+[ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16xrf"]
+size = Vector2(86.6428, 119.231)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkdal"]
 texture = ExtResource("1_pyei7")
@@ -5670,10 +5676,36 @@ shader_parameter/pixelSize = 2
 shader = ExtResource("5_532hd")
 shader_parameter/pixelSize = 2
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_h0wpo"]
+polygon = PackedVector2Array(101, 668, 101, 698, 130, 698, 130, 684, 116, 684, 116, 668)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_l5n3o"]
+polygon = PackedVector2Array(280.774, 53.5815, 286.28, 244.093, 363.355, 244.093, 363.355, 53.5815)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_summ5"]
+size = Vector2(187.231, 186.185)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_irbkh"]
+size = Vector2(94.523, 129.97)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tdif2"]
+size = Vector2(129.308, 182.4)
+
 [node name="lev_4" type="Node2D"]
 position = Vector2(0, 16)
+script = ExtResource("1_nrrhy")
 
-[node name="PlayerAndUI" parent="." instance=ExtResource("1_ffnot")]
+[node name="Box1" type="Area2D" parent="."]
+position = Vector2(382.789, 796.086)
+scale = Vector2(0.253906, 0.253906)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box1"]
+z_index = 3
+position = Vector2(-1038.93, -445.921)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_16xrf")
+
+[node name="PlayerAndUI" parent="." instance=ExtResource("7_0m0yg")]
 z_index = 3
 position = Vector2(-124, 681)
 
@@ -5749,6 +5781,72 @@ material = SubResource("ShaderMaterial_hj5bg")
 position = Vector2(234, 628)
 scale = Vector2(0.253906, 0.253906)
 texture = ExtResource("6_2frew")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(83, 575)
+scale = Vector2(0.570313, 0.5)
+energy = 0.2
+shadow_enabled = true
+texture = ExtResource("8_6r7vt")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(208, 575)
+scale = Vector2(0.570313, 0.5)
+energy = 0.2
+shadow_enabled = true
+texture = ExtResource("8_6r7vt")
+offset = Vector2(0, 130)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_h0wpo")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(177, 658)
+scale = Vector2(0.181641, 0.167969)
+color = Color(0.188235, 0.72549, 0.501961, 1)
+energy = 2.47
+blend_mode = 2
+shadow_enabled = true
+texture = ExtResource("9_ejicj")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(177, 658)
+scale = Vector2(0.181641, 0.167969)
+occluder = SubResource("OccluderPolygon2D_l5n3o")
+
+[node name="Box2" type="Area2D" parent="."]
+position = Vector2(382.789, 796.086)
+scale = Vector2(0.253906, 0.253906)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box2"]
+position = Vector2(-783.831, -506.969)
+shape = SubResource("RectangleShape2D_summ5")
+
+[node name="Box3" type="Area2D" parent="."]
+position = Vector2(382.789, 796.086)
+scale = Vector2(0.253906, 0.253906)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box3"]
+position = Vector2(-578.123, -451.292)
+shape = SubResource("RectangleShape2D_irbkh")
+
+[node name="Backto3" type="Area2D" parent="."]
+position = Vector2(382.789, 796.086)
+scale = Vector2(0.253906, 0.253906)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backto3"]
+position = Vector2(-1224.03, -519.6)
+shape = SubResource("RectangleShape2D_tdif2")
+
+[connection signal="body_entered" from="Box1" to="." method="_on_box_1_body_entered"]
+[connection signal="body_exited" from="Box1" to="." method="_on_box_1_body_exited"]
+[connection signal="body_entered" from="Box2" to="." method="_on_box_2_body_entered"]
+[connection signal="body_exited" from="Box2" to="." method="_on_box_2_body_exited"]
+[connection signal="body_entered" from="Box3" to="." method="_on_box_3_body_entered"]
+[connection signal="body_exited" from="Box3" to="." method="_on_box_3_body_exited"]
+[connection signal="body_entered" from="Backto3" to="." method="_on_backto_3_body_entered"]
+[connection signal="body_exited" from="Backto3" to="." method="_on_backto_3_body_exited"]
 
 [editable path="PlayerAndUI"]
 [editable path="PlayerAndUI/PlayerHuman"]
