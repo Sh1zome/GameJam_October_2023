@@ -4,6 +4,9 @@ var tp = false
 var complete1 = false
 var health = 100
 var PlayerSpeed = 150
+#SaveList
+var ssd = true
+
 func _ready():
 	print(GloabalTreker.health)
 

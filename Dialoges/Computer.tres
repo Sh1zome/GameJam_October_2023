@@ -13,7 +13,7 @@ starts = {
 nodes = {
 "0_1": {
 "link": &"1_1",
-"offset": Vector2(500, 487),
+"offset": Vector2(360, 480),
 "start_id": "Computer"
 },
 "0_2": {
@@ -34,10 +34,10 @@ nodes = {
 "1_1": {
 "dialogue": "В эти компьютеры можно вставить диск.
 ",
-"offset": Vector2(770, 363.5),
+"offset": Vector2(600, 320),
 "options": {
 0: {
-"link": &"1_2",
+"link": &"5_1",
 "text": "Далее"
 }
 },
@@ -48,8 +48,8 @@ nodes = {
 "speaker": ""
 },
 "1_2": {
-"dialogue": "Так много мониторов...",
-"offset": Vector2(1082.15, 374.932),
+"dialogue": "Так много мониторов{{ssd}}..",
+"offset": Vector2(1520, 560),
 "options": {
 "0": {
 "link": "END",
@@ -66,8 +66,8 @@ nodes = {
 "dialogue": "Эти цифры напоминают мне мой атестат",
 "offset": Vector2(880, 660),
 "options": {
-"0": {
-"link": "END",
+0: {
+"link": &"4_2",
 "text": "Ага"
 }
 },
@@ -88,7 +88,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 233.0
+"y": 261.0
 },
 "speaker": ""
 },
@@ -103,7 +103,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 233.0
+"y": 261.0
 },
 "speaker": ""
 },
@@ -123,13 +123,48 @@ nodes = {
 },
 "speaker": ""
 },
+"1_7": {
+"dialogue": "SSD вставлен",
+"offset": Vector2(1580, 240),
+"options": {
+"0": {
+"link": "END",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 233.0
+},
+"speaker": ""
+},
 "3_1": {
 "link": "END",
 "offset": Vector2(1100, 1300),
 "signalValue": "GoToScene4"
+},
+"4_2": {
+"link": "END",
+"offset": Vector2(1160, 760),
+"type": 0,
+"value": "0",
+"variable": "ssd"
+},
+"5_1": {
+"false": &"1_2",
+"offset": Vector2(1220, 360),
+"operator": 0,
+"true": &"1_7",
+"value1": "{{ssd}}",
+"value2": "0"
 }
 }
-variables = {}
+variables = {
+"ssd": {
+"type": 2,
+"value": "1"
+}
+}
 comments = Array[String]([])
 strays = Array[String]([])
 characters = ""
