@@ -7,7 +7,7 @@ var health = 100
 var PlayerSpeed = 150
 var nahod = 0
 var openDoor = false
-#SaveList
+var artifact = false
 var ssd = true
 
 func _ready():

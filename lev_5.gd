@@ -16,3 +16,7 @@ func _process(delta):
 func _on_back_to_4_body_entered(body):
 	if body.name == "PlayerHuman":
 		get_tree().change_scene_to_file("res://lev_3.tscn")
+		
+
+
+

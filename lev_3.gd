@@ -17,7 +17,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if GloabalTreker.tp2 == true:
-		$PlayerAndUI.position.x = 170
+		$PlayerAndUI.position.x = 180
 		$PlayerAndUI.position.y = 700
 		GloabalTreker.tp2 == false
 		
@@ -73,3 +73,12 @@ func _on_door_active_2_body_entered(body):
 func _on_go_to_5_body_entered(body):
 	if body.name == "PlayerHuman":
 		get_tree().change_scene_to_file("res://lev_5.tscn")
+
+#Космонавт
+func _on_area_2d_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
+		if GloabalTreker.artifact == false:
+			dialog.start("Cosmonavt0")
+		else:
+			dialog.start("Cosmonavt1")
