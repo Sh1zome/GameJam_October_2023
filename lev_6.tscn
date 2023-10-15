@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [gd_scene load_steps=16 format=3 uid="uid://bvaw6fke06tg4"]
+=======
+[gd_scene load_steps=20 format=3 uid="uid://wt00wwcu0hg5"]
+>>>>>>> fd150f450e340a80ad090e5fac5aa6c50a00849e
 
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="1_tt0hf"]
 [ext_resource type="Texture2D" uid="uid://vsv1cvlkcv3m" path="res://Виталя/Текстуры/Корабли.png" id="2_kfqk5"]
@@ -1245,6 +1249,20 @@ texture = ExtResource("1_tt0hf")
 [sub_resource type="TileSet" id="TileSet_pctr1"]
 sources/0 = SubResource("TileSetAtlasSource_rwbaw")
 
+[sub_resource type="Gradient" id="Gradient_m3ad8"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_u8p0m"]
+gradient = SubResource("Gradient_m3ad8")
+fill_from = Vector2(0.380734, 0.408257)
+fill_to = Vector2(1, 0.752294)
+
+[sub_resource type="Gradient" id="Gradient_4l3oh"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rfo1l"]
+gradient = SubResource("Gradient_4l3oh")
+fill_from = Vector2(0.486239, 0.238532)
+fill_to = Vector2(0.12844, 0.408257)
+
 [node name="Lev_6" type="Node2D"]
 
 [node name="основа" type="TileMap" parent="."]
@@ -1321,3 +1339,17 @@ texture = ExtResource("8_b6krx")
 modulate = Color(0.796078, 0.796078, 0.796078, 0.968627)
 position = Vector2(100, 627)
 texture = ExtResource("9_r4i1g")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(146.75, 534)
+scale = Vector2(0.789063, 2.73047)
+energy = 0.5
+texture = SubResource("GradientTexture2D_u8p0m")
+offset = Vector2(0, 30)
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(197.75, 534)
+scale = Vector2(0.804687, 2.73438)
+energy = 0.5
+texture = SubResource("GradientTexture2D_rfo1l")
+offset = Vector2(0, 30)
