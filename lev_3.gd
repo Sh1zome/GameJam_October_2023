@@ -25,3 +25,8 @@ func _on_perehod_2_body_entered(body):
 func _on_perehod_2_body_exited(body):
 	if body.name == "PlayerHuman":
 		dialog.stop()
+
+
+func _on_door_active_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.start("MiddleDoor")

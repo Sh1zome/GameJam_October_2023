@@ -6,6 +6,7 @@
 script = ExtResource("1_ebw4k")
 starts = {
 "Computer": &"0_1",
+"MiddleDoor": &"0_4",
 "RightDoor": &"0_3",
 "Table": &"0_2"
 }
@@ -24,6 +25,11 @@ nodes = {
 "link": &"1_4",
 "offset": Vector2(483.849, 970.251),
 "start_id": "RightDoor"
+},
+"0_4": {
+"link": &"1_6",
+"offset": Vector2(480, 1220),
+"start_id": "MiddleDoor"
 },
 "1_1": {
 "dialogue": "В эти компьютеры можно вставить диск.
@@ -100,6 +106,27 @@ nodes = {
 "y": 233.0
 },
 "speaker": ""
+},
+"1_6": {
+"dialogue": "Дверь немного приокрыта...
+Зайти?",
+"offset": Vector2(760, 1220),
+"options": {
+0: {
+"link": &"3_1",
+"text": "Зайти"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(1100, 1300),
+"signalValue": "GoToScene4"
 }
 }
 variables = {}

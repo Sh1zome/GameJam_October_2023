@@ -18,3 +18,8 @@ func _process(delta):
 		InColdown.visible = false
 		OutColdown.visible = true
 		
+
+
+func _on_comp_dialogue_signal(value):
+	if value == "GoToScene4":
+		get_tree().change_scene_to_file("res://lev_4.tscn")
