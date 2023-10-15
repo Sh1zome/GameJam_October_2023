@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bm67bhvnsh5hp"]
+[gd_scene load_steps=22 format=3 uid="uid://cpl4qo84il7ra"]
 
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="1_w4ua1"]
 [ext_resource type="PackedScene" uid="uid://dbescykif0gad" path="res://Player/Human/player_and_ui_2.tscn" id="2_ncatb"]
@@ -2761,7 +2761,11 @@ sources/0 = SubResource("TileSetAtlasSource_dosf7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w1t3n"]
 size = Vector2(94, 19.5)
 
+<<<<<<< HEAD
 [node name="Level_3" type="Node2D"]
+=======
+[node name="Level_4" type="Node2D"]
+>>>>>>> 37c046d54f220552af64ae6ce70bb6b31aa5c197
 script = SubResource("GDScript_ylvlm")
 
 [node name="пол" type="TileMap" parent="."]

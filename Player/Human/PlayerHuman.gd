@@ -13,7 +13,7 @@ var DashColdownVisual = 3.5
 
 signal DashCd (new_DashCd)
 func _physics_process(delta):
-	#health_bar.value = GloabalTreker.health 
+	health_bar.value = GloabalTreker.health 
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	if Input.is_action_just_pressed("Up") and is_on_floor():
@@ -52,8 +52,7 @@ func _physics_process(delta):
 				DashColdown = true
 				DashColdownVisual = 3.5
 	if Input.is_action_just_pressed("ui_down"):
-		pass 
-		#GloabalTreker.health -= 10
+		GloabalTreker.health -= 10
 	move_and_slide()
 func _on_dash_track_timeout():
 	clickStat = 2

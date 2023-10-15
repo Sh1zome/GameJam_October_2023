@@ -12,6 +12,10 @@ func _ready():
 	dialog.start("TUTOR")
 
 func _process(delta):
+	if GloabalTreker.tp == true:
+		$PlayerAndUI.position.x = 360
+		$PlayerAndUI.position.y = 660
+		GloabalTreker.tp = false
 	timer = timer + (delta * 1)
 	if entered && timer >= 0.5:
 		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,0), delta * 2)
