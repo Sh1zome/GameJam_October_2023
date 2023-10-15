@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://0bgx0cwetnok"]
+[gd_scene load_steps=14 format=3 uid="uid://0bgx0cwetnok"]
 
+[ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
 [ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
@@ -4161,8 +4162,12 @@ texture = ExtResource("1_ojoin")
 [sub_resource type="TileSet" id="TileSet_8llfa"]
 sources/0 = SubResource("TileSetAtlasSource_4wsu1")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgikk"]
+size = Vector2(20, 126)
+
 [node name="Lev 2" type="Node2D"]
 position = Vector2(-14, 5)
+script = ExtResource("1_07tsa")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5as5a")
@@ -4233,7 +4238,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(2752517, 2228224, 16, 2818053, 2228224, 17, 2752518, 2293760, 16, 2818054, 2293760, 17)
 
 [node name="PlayerAndUI2" parent="." instance=ExtResource("3_yms1s")]
-position = Vector2(47, 661)
+position = Vector2(-8, 711)
 
 [node name="Camera" parent="PlayerAndUI2/PlayerHuman" index="2"]
 position = Vector2(43, -4)
@@ -4241,6 +4246,15 @@ zoom = Vector2(4.5, 4.5)
 limit_top = 565
 limit_right = 270
 limit_bottom = 720
+
+[node name="Perehod" type="Area2D" parent="."]
+position = Vector2(35, 688)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perehod"]
+position = Vector2(-25, -39)
+shape = SubResource("RectangleShape2D_fgikk")
+
+[connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 
 [editable path="PlayerAndUI2"]
 [editable path="PlayerAndUI2/PlayerHuman"]
