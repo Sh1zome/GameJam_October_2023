@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="2_7xv2b"]
 [ext_resource type="Texture2D" uid="uid://bktcu8f7y3f0s" path="res://Виталя/Текстуры/Окружение/Тачка со жрачкой.png" id="3_w665p"]
 [ext_resource type="Texture2D" uid="uid://b7fs2dkerd1dn" path="res://Виталя/Текстуры/Окружение/Скамеечка.png" id="4_nq4cs"]
-[ext_resource type="Texture2D" uid="uid://dwu5wk0ri6lxf" path="res://light/Тачка со жрачкой (1).png" id="4_q43r2"]
+[ext_resource type="Texture2D" path="res://light/Тачка со жрачкой (1).png" id="4_q43r2"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_4ods4"]
 [ext_resource type="Texture2D" uid="uid://cqmnf7i0pa8en" path="res://Виталя/Текстуры/Картины/Картина с евой.png" id="5_eob1j"]
 [ext_resource type="Texture2D" uid="uid://bnso0ys0cr3ou" path="res://Виталя/Текстуры/Картины/Новый Взгляд на ван гога.png" id="6_kdrej"]
