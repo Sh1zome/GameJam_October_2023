@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cat5nxj3cw0tb"]
+[gd_scene load_steps=14 format=3 uid="uid://bynefa0fx3tcl"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
@@ -4255,6 +4255,7 @@ position = Vector2(-25, -39)
 shape = SubResource("RectangleShape2D_fgikk")
 
 [node name="dark" type="ColorRect" parent="."]
+visible = false
 z_index = 10
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 15

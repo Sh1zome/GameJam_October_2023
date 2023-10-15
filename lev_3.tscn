@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bq1bca8xgmyfh"]
+[gd_scene load_steps=16 format=3 uid="uid://bq1bca8xgmyfh"]
 
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_a2mho"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="2_7xv2b"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cqmnf7i0pa8en" path="res://Виталя/Текстуры/Картины/Картина с евой.png" id="5_eob1j"]
 [ext_resource type="Texture2D" uid="uid://bnso0ys0cr3ou" path="res://Виталя/Текстуры/Картины/Новый Взгляд на ван гога.png" id="6_kdrej"]
 [ext_resource type="Texture2D" uid="uid://c5q2sng7crp8u" path="res://Виталя/Текстуры/Окружение/ТЫ ЩАС ЕБАНЁШЬСЯ.PNG" id="7_mmvn4"]
-[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_me4w2"]
 texture = ExtResource("1_a2mho")
@@ -5116,6 +5115,3 @@ texture = ExtResource("6_kdrej")
 z_index = 4
 position = Vector2(203, 683)
 texture = ExtResource("7_mmvn4")
-
-[node name="PlayerAndUI" parent="." instance=ExtResource("8_cyvp1")]
-position = Vector2(-123, 676)

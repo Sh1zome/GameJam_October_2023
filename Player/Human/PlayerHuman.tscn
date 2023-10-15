@@ -364,8 +364,8 @@ scale = Vector2(0.882844, 0.882071)
 sprite_frames = SubResource("SpriteFrames_ofrvw")
 animation = &"attack"
 autoplay = "Idle"
-frame = 1
-frame_progress = 0.360238
+frame = 2
+frame_progress = 0.991504
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(161.5, -5.375)
