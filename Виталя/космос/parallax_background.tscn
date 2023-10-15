@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c346y8ww55n8x"]
+
+[ext_resource type="Script" path="res://ParallaxBackground.gd" id="1_jq4tr"]
+[ext_resource type="Texture2D" uid="uid://c5k78ublac6qh" path="res://Виталя/Foozle_2DS0015_Void_EnvironmentPack/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png" id="2_j7c0n"]
+[ext_resource type="Texture2D" uid="uid://dvsrhol05owmi" path="res://Виталя/Foozle_2DS0015_Void_EnvironmentPack/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 02 - Stars.png" id="3_h4t1q"]
+[ext_resource type="Texture2D" uid="uid://be6prrrpuhex7" path="res://Виталя/Foozle_2DS0015_Void_EnvironmentPack/Foozle_2DS0015_Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 03 - Stars.png" id="4_dyv2o"]
+
+[node name="Паралакс" type="ParallaxBackground"]
+script = ExtResource("1_jq4tr")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 0.667)
+
+[node name="StarryBackground-Layer01-Void" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(5728, 358)
+scale = Vector2(1.98889, 1.98889)
+texture = ExtResource("2_j7c0n")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 0.6)
+
+[node name="StarryBackground-Layer02-Stars" type="Sprite2D" parent="ParallaxLayer2"]
+modulate = Color(1, 1, 1, 0.541176)
+position = Vector2(5817.79, 361.5)
+scale = Vector2(2.01986, 2.00833)
+texture = ExtResource("3_h4t1q")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.4, 0.571)
+
+[node name="StarryBackground-Layer03-Stars" type="Sprite2D" parent="ParallaxLayer3"]
+modulate = Color(1, 1, 1, 0.584314)
+position = Vector2(5748, 359.75)
+scale = Vector2(1.99583, 1.99583)
+texture = ExtResource("4_dyv2o")

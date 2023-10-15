@@ -1,0 +1,145 @@
+[gd_scene load_steps=15 format=3 uid="uid://bjwog7uwny2cp"]
+
+[ext_resource type="Script" path="res://UX/Interface/Tutorial.gd" id="1_pgiag"]
+[ext_resource type="Theme" uid="uid://crd0d5hasuokm" path="res://TESTTHEME.tres" id="2_jly6l"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="3_gmq6a"]
+[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://Tutorial.tres" id="4_cvwb1"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_o2il1"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_7h34a"]
+[ext_resource type="Texture2D" uid="uid://cf2wcktgorrup" path="res://Player/Human/UI_Flat_Textfield_01.png" id="7_7ywsj"]
+[ext_resource type="Texture2D" uid="uid://dc6vy3ocnvkd8" path="res://UX/w.png" id="8_bc638"]
+[ext_resource type="Texture2D" uid="uid://6rlwij2rosmc" path="res://UX/Interface/d.png" id="9_eiswf"]
+[ext_resource type="Texture2D" uid="uid://blj1ssmy1vfej" path="res://UX/Interface/a.png" id="10_y13xs"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_qnngi"]
+script = ExtResource("5_o2il1")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_ay0th"]
+script = ExtResource("6_7h34a")
+
+[sub_resource type="LabelSettings" id="LabelSettings_7l82i"]
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jwcms"]
+font_size = 12
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 213.0
+offset_top = 315.0
+offset_right = 507.0
+offset_bottom = 466.0
+script = ExtResource("1_pgiag")
+
+[node name="DialogueBox" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 0
+offset_left = 59.0
+offset_top = -118.0
+offset_right = 381.0
+offset_bottom = 39.0
+theme = ExtResource("2_jly6l")
+script = ExtResource("3_gmq6a")
+dialogue_file = ExtResource("4_cvwb1")
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_qnngi"), SubResource("RichTextEffect_ay0th")])
+
+[node name="ButtonForMove" type="CanvasLayer" parent="."]
+
+[node name="W" type="Sprite2D" parent="ButtonForMove"]
+position = Vector2(798, 602)
+scale = Vector2(1, 1.00275)
+texture = ExtResource("7_7ywsj")
+
+[node name="W2" type="Sprite2D" parent="ButtonForMove/W"]
+position = Vector2(1, -0.997559)
+scale = Vector2(0.0732422, 0.07012)
+texture = ExtResource("8_bc638")
+
+[node name="Dash" type="Label" parent="ButtonForMove"]
+offset_left = 645.0
+offset_top = 565.0
+offset_right = 685.0
+offset_bottom = 588.0
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Sprite2D" parent="ButtonForMove/Dash"]
+position = Vector2(195, 37)
+scale = Vector2(1, 1.00275)
+texture = ExtResource("7_7ywsj")
+
+[node name="D2" type="Sprite2D" parent="ButtonForMove/Dash/D"]
+position = Vector2(0, -0.99707)
+scale = Vector2(0.0683594, 0.0683594)
+texture = ExtResource("9_eiswf")
+
+[node name="A" type="Sprite2D" parent="ButtonForMove/Dash"]
+position = Vector2(125, 38)
+texture = ExtResource("7_7ywsj")
+
+[node name="A2" type="Sprite2D" parent="ButtonForMove/Dash/A"]
+position = Vector2(0, -1)
+scale = Vector2(0.0683594, 0.0683594)
+texture = ExtResource("10_y13xs")
+
+[node name="Label" type="Label" parent="ButtonForMove/Dash"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.275
+anchor_top = -0.336957
+anchor_right = -0.275
+anchor_bottom = -0.336957
+offset_left = 94.0
+offset_top = 30.75
+offset_right = 134.0
+offset_bottom = 56.75
+text = "2x"
+label_settings = SubResource("LabelSettings_7l82i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="ButtonForMove/Dash"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.15
+anchor_top = -0.380435
+anchor_right = -0.15
+anchor_bottom = -0.380435
+offset_left = 152.0
+offset_top = 34.75
+offset_right = 178.0
+offset_bottom = 57.75
+text = "или"
+label_settings = SubResource("LabelSettings_jwcms")
+metadata/_edit_use_anchors_ = true
+
+[node name="A&D" type="Label" parent="ButtonForMove"]
+offset_left = 624.0
+offset_top = 565.0
+offset_right = 664.0
+offset_bottom = 588.0
+metadata/_edit_use_anchors_ = true
+
+[node name="D" type="Sprite2D" parent="ButtonForMove/A&D"]
+position = Vector2(195, 37)
+scale = Vector2(1, 1.00275)
+texture = ExtResource("7_7ywsj")
+
+[node name="D2" type="Sprite2D" parent="ButtonForMove/A&D/D"]
+position = Vector2(0, -0.99707)
+scale = Vector2(0.0683594, 0.0683594)
+texture = ExtResource("9_eiswf")
+
+[node name="A" type="Sprite2D" parent="ButtonForMove/A&D"]
+position = Vector2(158, 37)
+texture = ExtResource("7_7ywsj")
+
+[node name="A2" type="Sprite2D" parent="ButtonForMove/A&D/A"]
+position = Vector2(0, -1)
+scale = Vector2(0.0683594, 0.0683594)
+texture = ExtResource("10_y13xs")
+
+[connection signal="dialogue_signal" from="DialogueBox" to="." method="_on_dialogue_box_dialogue_signal"]

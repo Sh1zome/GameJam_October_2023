@@ -1,0 +1,87 @@
+[gd_scene load_steps=12 format=3 uid="uid://bbbxs1iy5a3fv"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="2_0sm8c"]
+[ext_resource type="Theme" uid="uid://du336a60o3of8" path="res://Tutor/TESTTHEME.tres" id="2_jlhqe"]
+[ext_resource type="Resource" uid="uid://cunreq3xqciw6" path="res://MainTree.tres" id="3_m1bqp"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="4_ppcps"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="5_fanvg"]
+
+[sub_resource type="GDScript" id="GDScript_5dwr2"]
+script/source = "extends Control
+
+@onready var dialoge_box = $DialogueBox
+@onready var particles = $CPUParticles2D
+
+func _ready():
+	dialoge_box.start(\"START\")
+	print($DialogueBox.variables)
+"
+
+[sub_resource type="Gradient" id="Gradient_hojxt"]
+offsets = PackedFloat32Array(0, 0.622517, 0.754967)
+colors = PackedColorArray(0, 0, 0, 1, 0.701774, 0.86787, 7.70092e-07, 1, 1, 1, 1, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_66ras"]
+load_path = "res://.godot/imported/Blue_Nebula_08-512x512.png-c9dc23971cda137dc5127810c03b67f7.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nmfav"]
+texture = SubResource("CompressedTexture2D_66ras")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_grsmb"]
+script = ExtResource("4_ppcps")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_d8d7n"]
+script = ExtResource("5_fanvg")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 149.0
+offset_right = 997.0
+offset_bottom = 461.0
+script = SubResource("GDScript_5dwr2")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(252, 26)
+amount = 5
+preprocess = 1.0
+speed_scale = 2.44
+explosiveness = 0.1
+lifetime_randomness = 0.23
+gravity = Vector2(-400, 980)
+scale_amount_min = 0.0
+scale_amount_max = 20.04
+split_scale = true
+scale_curve_x = null
+scale_curve_y = null
+color = Color(1, 1, 0.109804, 1)
+color_ramp = SubResource("Gradient_hojxt")
+
+[node name="DialogueBox" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = -49.5
+offset_right = 320.0
+offset_bottom = 113.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_jlhqe")
+theme_override_styles/panel = SubResource("StyleBoxTexture_nmfav")
+script = ExtResource("2_0sm8c")
+dialogue_file = ExtResource("3_m1bqp")
+start_id = "START"
+max_options = 2
+options_alignment = 0
+skip_input_action = ""
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_grsmb"), SubResource("RichTextEffect_d8d7n")])

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtmb0mftycg0c"]
+
+[sub_resource type="GDScript" id="GDScript_tony2"]
+script/source = "extends ParallaxBackground
+
+var spead = 100
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	scroll_offset.x -= spead * delta   
+  
+"
+
+[node name="планета" type="ParallaxBackground"]
+script = SubResource("GDScript_tony2")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]

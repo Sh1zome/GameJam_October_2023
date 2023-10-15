@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciwayywiyy5ja"]
+
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="1_rocan"]
+
+[node name="PlayerAndUI2" instance=ExtResource("1_rocan")]
+position = Vector2(1, -10)
+
+[node name="PlayerHuman" parent="." index="0"]
+position = Vector2(6, -29)
+
+[node name="AnimatedSprite2D" parent="PlayerHuman" index="0"]
+position = Vector2(49.1883, -7.8303)
+
+[node name="CollisionShape2D" parent="PlayerHuman" index="1"]
+position = Vector2(47.6883, -6.2053)
+
+[node name="Camera" parent="PlayerHuman" index="2"]
+position = Vector2(48, -5)
+limit_right = 310
+
+[node name="GPUParticles2D" parent="PlayerHuman" index="3"]
+position = Vector2(48, -17)
+
+[node name="ProgressBar" parent="CanvasLayer" index="1"]
+offset_left = 124.0
+offset_top = 652.0
+offset_right = 247.0
+offset_bottom = 684.0
+
+[editable path="PlayerHuman"]

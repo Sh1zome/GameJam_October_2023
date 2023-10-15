@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3s7gsmgxtgg1"]
+
+[ext_resource type="PackedScene" uid="uid://dv8b8adh14rnc" path="res://Player/Human/PlayerHuman.tscn" id="1_5e2ag"]
+[ext_resource type="PackedScene" uid="uid://ckfowd3y3lkdf" path="res://Player/Human/dash_coldown.tscn" id="4_0dvcd"]
+
+[node name="PlayerAndUI" type="Node2D"]
+
+[node name="PlayerHuman" parent="." instance=ExtResource("1_5e2ag")]
+
+[node name="DashTrack" type="Timer" parent="."]
+wait_time = 0.4
+autostart = true
+
+[node name="DashColdown" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DashColdown" parent="CanvasLayer" instance=ExtResource("4_0dvcd")]
+offset_left = 250.0
+offset_top = 65.0
+offset_right = -847.0
+offset_bottom = -491.0
+scale = Vector2(1, 1.02593)
+metadata/_edit_use_anchors_ = true
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+offset_left = 154.0
+offset_top = 649.0
+offset_right = 277.0
+offset_bottom = 681.0
+
+[connection signal="timeout" from="DashTrack" to="PlayerHuman" method="_on_dash_track_timeout"]
+[connection signal="timeout" from="DashColdown" to="PlayerHuman" method="_on_dash_coldown_timeout"]
