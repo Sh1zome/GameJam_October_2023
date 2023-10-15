@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://c4pdrkhalwkik"]
+[gd_scene load_steps=33 format=3 uid="uid://c4pdrkhalwkik"]
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="8_7rw78"]
 [ext_resource type="PackedScene" uid="uid://dgwjlici6moar" path="res://slime.tscn" id="8_n78aq"]
+[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="10_2wt2l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nob7"]
 texture = ExtResource("4_5kto1")
@@ -3511,6 +3512,21 @@ texture = ExtResource("8_7rw78")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_e1rfd")
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_yav0p"]
+polygon = PackedVector2Array(109, 624, 113, 624, 113, 625, 115, 625, 115, 626, 116, 626, 116, 627, 117, 627, 117, 628, 118, 628, 118, 630, 119, 630, 119, 634, 118, 634, 118, 636, 117, 636, 117, 637, 116, 637, 116, 638, 115, 638, 115, 639, 113, 639, 113, 640, 109, 640, 109, 639, 107, 639, 107, 638, 106, 638, 106, 637, 105, 637, 105, 636, 104, 636, 104, 634, 103, 634, 103, 630, 104, 630, 104, 628, 105, 628, 105, 627, 106, 627, 106, 626, 107, 626, 107, 625, 109, 625)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_qaabh"]
+polygon = PackedVector2Array(172, 608, 179, 608, 179, 609, 181, 609, 181, 610, 183, 610, 183, 611, 184, 611, 184, 612, 186, 612, 186, 613, 187, 613, 187, 615, 188, 615, 188, 616, 189, 616, 189, 618, 190, 618, 190, 621, 191, 621, 191, 627, 190, 627, 190, 630, 189, 630, 189, 632, 188, 632, 188, 633, 187, 633, 187, 635, 186, 635, 186, 636, 184, 636, 184, 637, 183, 637, 183, 638, 181, 638, 181, 639, 178, 639, 178, 640, 172, 640, 172, 639, 169, 639, 169, 638, 167, 638, 167, 637, 166, 637, 166, 636, 164, 636, 164, 635, 163, 635, 163, 633, 162, 633, 162, 632, 161, 632, 161, 630, 160, 630, 160, 627, 159, 627, 159, 621, 160, 621, 160, 618, 161, 618, 161, 616, 162, 616, 162, 615, 163, 615, 163, 613, 164, 613, 164, 612, 166, 612, 166, 611, 167, 611, 167, 610, 169, 610, 169, 609, 172, 609)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xvy1m"]
+polygon = PackedVector2Array(364, 592, 370, 592, 370, 593, 373, 593, 373, 594, 375, 594, 375, 595, 376, 595, 376, 596, 378, 596, 378, 597, 379, 597, 379, 599, 380, 599, 380, 600, 381, 600, 381, 602, 382, 602, 382, 605, 383, 605, 383, 611, 382, 611, 382, 614, 381, 614, 381, 616, 380, 616, 380, 617, 379, 617, 379, 619, 378, 619, 378, 620, 376, 620, 376, 621, 375, 621, 375, 622, 373, 622, 373, 623, 370, 623, 370, 624, 364, 624, 364, 623, 361, 623, 361, 622, 359, 622, 359, 621, 358, 621, 358, 620, 356, 620, 356, 619, 355, 619, 355, 617, 354, 617, 354, 616, 353, 616, 353, 614, 352, 614, 352, 611, 351, 611, 351, 605, 352, 605, 352, 602, 353, 602, 353, 600, 354, 600, 354, 599, 355, 599, 355, 597, 356, 597, 356, 596, 358, 596, 358, 595, 359, 595, 359, 594, 361, 594, 361, 593, 364, 593)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_61thm"]
+polygon = PackedVector2Array(428, 592, 434, 592, 434, 593, 437, 593, 437, 594, 439, 594, 439, 595, 440, 595, 440, 596, 442, 596, 442, 597, 443, 597, 443, 599, 444, 599, 444, 600, 445, 600, 445, 602, 446, 602, 446, 605, 447, 605, 447, 611, 446, 611, 446, 614, 445, 614, 445, 616, 444, 616, 444, 617, 443, 617, 443, 619, 442, 619, 442, 620, 440, 620, 440, 621, 439, 621, 439, 622, 437, 622, 437, 623, 434, 623, 434, 624, 428, 624, 428, 623, 425, 623, 425, 622, 423, 622, 423, 621, 422, 621, 422, 620, 420, 620, 420, 619, 419, 619, 419, 617, 418, 617, 418, 616, 417, 616, 417, 614, 416, 614, 416, 611, 415, 611, 415, 605, 416, 605, 416, 602, 417, 602, 417, 600, 418, 600, 418, 599, 419, 599, 419, 597, 420, 597, 420, 596, 422, 596, 422, 595, 423, 595, 423, 594, 425, 594, 425, 593, 428, 593)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_2jyeh"]
+polygon = PackedVector2Array(376, 635, 376, 674, 377, 674, 377, 675, 378, 675, 378, 676, 379, 676, 379, 677, 380, 677, 380, 678, 381, 678, 381, 679, 382, 679, 382, 680, 383, 680, 383, 681, 384, 681, 384, 682, 352, 682, 352, 681, 353, 681, 353, 680, 355, 680, 355, 679, 356, 679, 356, 677, 357, 677, 357, 676, 358, 676, 358, 675, 359, 675, 360, 675, 360, 673, 360, 673, 361, 673, 361, 661, 362, 661, 362, 660, 363, 660, 363, 658, 364, 658, 364, 656, 363, 656, 363, 654, 362, 654, 362, 653, 361, 653, 361, 652, 360, 652, 360, 635, 362, 635, 362, 636, 362, 637, 363, 637, 363, 638, 364, 638, 365, 639, 365, 640, 364, 641, 365, 641, 365, 642, 366, 642, 366, 643, 367, 643, 367, 643, 368, 642, 368, 642, 370, 642, 371, 642, 370, 641, 370, 640, 368, 640, 368, 639, 368, 639, 367, 638, 366, 638, 366, 637, 365, 637, 365, 635, 369, 635, 369, 636, 370, 636, 370, 637, 370, 637, 371, 637, 371, 637, 371, 638, 372, 638, 372, 638, 372, 639, 372, 639, 373, 639, 373, 635)
+
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_5sw6k")
 
@@ -3668,6 +3684,72 @@ offset_bottom = 848.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
+<<<<<<< HEAD
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(150, 561)
+scale = Vector2(0.927734, 0.501953)
+energy = 0.15
+shadow_enabled = true
+texture = ExtResource("10_1n0x4")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(406, 560)
+scale = Vector2(0.927734, 0.501953)
+energy = 0.15
+shadow_enabled = true
+texture = ExtResource("10_1n0x4")
+offset = Vector2(0, 130)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_yav0p")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_qaabh")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_xvy1m")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_61thm")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+position = Vector2(0, 1363)
+scale = Vector2(1, -1)
+occluder = SubResource("OccluderPolygon2D_2jyeh")
+=======
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(149, 560)
+scale = Vector2(0.898964, 0.494247)
+energy = 0.28
+shadow_enabled = true
+texture = ExtResource("10_2wt2l")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(401, 559)
+scale = Vector2(0.898964, 0.494247)
+energy = 0.28
+shadow_enabled = true
+texture = ExtResource("10_2wt2l")
+offset = Vector2(0, 130)
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(-210, -20)
+occluder = SubResource("OccluderPolygon2D_q14ix")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_l66ks")
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_ig07r")
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_57hcn")
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
+>>>>>>> b4e479a57be0910edd85e850c7d4fa56440966bd
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 
