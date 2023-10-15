@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bxngx0v0hyhju"]
+[gd_scene load_steps=35 format=3 uid="uid://bxngx0v0hyhju"]
 
 [ext_resource type="Script" path="res://lev_3.gd" id="1_8a57a"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_a2mho"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://c5q2sng7crp8u" path="res://Виталя/Текстуры/Окружение/ТЫ ЩАС ЕБАНЁШЬСЯ.PNG" id="7_mmvn4"]
 [ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
 [ext_resource type="Texture2D" uid="uid://bqkp3718mjvhu" path="res://light/light.png" id="9_p0rdu"]
-[ext_resource type="Texture2D" uid="uid://dwu2c2w2ok66p" path="res://light/Sprite-0001.png" id="10_j4xvx"]
 [ext_resource type="Texture2D" uid="uid://cv6i04mrte6rg" path="res://light/spot.png" id="12_m35of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73x4r"]
@@ -5078,6 +5077,20 @@ shader_parameter/pixelSize = 2
 shader = ExtResource("5_4ods4")
 shader_parameter/pixelSize = 2
 
+[sub_resource type="Gradient" id="Gradient_6cuww"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_77n24"]
+gradient = SubResource("Gradient_6cuww")
+fill_from = Vector2(0.330275, 0.454128)
+fill_to = Vector2(0.90367, 0.729358)
+
+[sub_resource type="Gradient" id="Gradient_v4x43"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dynfu"]
+gradient = SubResource("Gradient_v4x43")
+fill_from = Vector2(0.811927, 0.233945)
+fill_to = Vector2(0.238532, 0.655963)
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6fryf"]
 polygon = PackedVector2Array(197, 695, 199, 693, 202, 694, 203, 695, 205, 697, 207, 697, 207, 694, 201, 691, 196, 692, 195, 694, 194, 695, 196, 695, 196, 696, 197, 696)
 
@@ -5204,20 +5217,20 @@ position = Vector2(203, 683)
 texture = ExtResource("7_mmvn4")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(64, 574.992)
-scale = Vector2(0.370117, 0.496154)
-energy = 0.28
+position = Vector2(69.3075, 582)
+scale = Vector2(0.846268, 1.98438)
+energy = 0.5
 shadow_enabled = true
-texture = ExtResource("10_j4xvx")
-offset = Vector2(0, 130)
+texture = SubResource("GradientTexture2D_77n24")
+offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(193.875, 576)
-scale = Vector2(0.389649, 0.492187)
-energy = 0.28
+position = Vector2(72.1221, 581)
+scale = Vector2(0.56105, 1.95739)
+energy = 0.5
 shadow_enabled = true
-texture = ExtResource("10_j4xvx")
-offset = Vector2(0, 130)
+texture = SubResource("GradientTexture2D_dynfu")
+offset = Vector2(30, 30)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 position = Vector2(0, 1391)
@@ -5281,7 +5294,7 @@ position = Vector2(32, 672)
 scale = Vector2(0.546875, 0.546875)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorActive"]
-position = Vector2(101.486, -22.4285)
+position = Vector2(113.371, 5.48569)
 shape = SubResource("RectangleShape2D_kiuae")
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
