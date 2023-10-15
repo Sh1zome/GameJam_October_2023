@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UX/Interface/Tutorial.gd" id="1_pgiag"]
 [ext_resource type="Theme" uid="uid://crd0d5hasuokm" path="res://TESTTHEME.tres" id="2_jly6l"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="3_gmq6a"]
-[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://Tutorial.tres" id="4_cvwb1"]
+[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://UX/Interface/Tutorial.tres" id="4_cvwb1"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_o2il1"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_7h34a"]
 [ext_resource type="Texture2D" uid="uid://cf2wcktgorrup" path="res://Player/Human/UI_Flat_Textfield_01.png" id="7_7ywsj"]
