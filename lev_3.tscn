@@ -11,9 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bnso0ys0cr3ou" path="res://Виталя/Текстуры/Картины/Новый Взгляд на ван гога.png" id="6_kdrej"]
 [ext_resource type="Texture2D" uid="uid://c5q2sng7crp8u" path="res://Виталя/Текстуры/Окружение/ТЫ ЩАС ЕБАНЁШЬСЯ.PNG" id="7_mmvn4"]
 [ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
-[ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_p0rdu"]
-[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="10_j4xvx"]
-[ext_resource type="Texture2D" uid="uid://c1xflliexqwid" path="res://light/spot.png" id="12_m35of"]
+[ext_resource type="Texture2D" uid="uid://bqkp3718mjvhu" path="res://light/light.png" id="9_p0rdu"]
+[ext_resource type="Texture2D" uid="uid://dwu2c2w2ok66p" path="res://light/Sprite-0001.png" id="10_j4xvx"]
+[ext_resource type="Texture2D" uid="uid://cv6i04mrte6rg" path="res://light/spot.png" id="12_m35of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73x4r"]
 size = Vector2(33.7714, 84.9427)
@@ -5204,8 +5204,8 @@ position = Vector2(203, 683)
 texture = ExtResource("7_mmvn4")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(64, 582)
-scale = Vector2(0.370117, 0.492187)
+position = Vector2(64, 574.992)
+scale = Vector2(0.370117, 0.496154)
 energy = 0.28
 shadow_enabled = true
 texture = ExtResource("10_j4xvx")
