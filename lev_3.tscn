@@ -5224,9 +5224,25 @@ shadow_enabled = true
 texture = SubResource("GradientTexture2D_77n24")
 offset = Vector2(-30, 30)
 
+[node name="PointLight2D5" type="PointLight2D" parent="."]
+position = Vector2(201.227, 582)
+scale = Vector2(0.886487, 1.98438)
+energy = 0.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_77n24")
+offset = Vector2(-30, 30)
+
 [node name="PointLight2D3" type="PointLight2D" parent="."]
 position = Vector2(72.1221, 581)
 scale = Vector2(0.56105, 1.95739)
+energy = 0.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_dynfu")
+offset = Vector2(30, 30)
+
+[node name="PointLight2D6" type="PointLight2D" parent="."]
+position = Vector2(204.15, 581)
+scale = Vector2(0.574767, 1.95739)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_dynfu")
