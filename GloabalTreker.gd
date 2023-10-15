@@ -1,9 +1,8 @@
 extends Node
 
-
+var tp = false
 var health = 100
 func _ready():
-	
 	print(GloabalTreker.health)
 
 
