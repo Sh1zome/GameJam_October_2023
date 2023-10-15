@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dwtl78ignmaig"]
+[gd_scene load_steps=32 format=3 uid="uid://b4hijwv1yqnwb"]
 
 [ext_resource type="Script" path="res://человек.gd" id="1_jg8bn"]
 [ext_resource type="Texture2D" uid="uid://dy757csujp8cl" path="res://Виталя/Планета/char_blue.png" id="2_vqhdi"]
