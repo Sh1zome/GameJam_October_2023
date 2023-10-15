@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="1_yex85"]
 [ext_resource type="Theme" uid="uid://crd0d5hasuokm" path="res://TESTTHEME.tres" id="2_0vqol"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="3_aa2gg"]
-[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://UX/Interface/Tutorial.tres" id="4_w4nw6"]
+[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://Tutorial.tres" id="4_w4nw6"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_hyb3q"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_nior0"]
 

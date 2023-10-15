@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://лобби.gd" id="1_0mhn5"]
 [ext_resource type="PackedScene" uid="uid://c2cth1l2xj3tv" path="res://Виталя/космос/Collectabls.tscn" id="2_u03pm"]
 [ext_resource type="PackedScene" uid="uid://c346y8ww55n8x" path="res://Виталя/космос/parallax_background.tscn" id="3_4ph3j"]
-[ext_resource type="PackedScene" uid="uid://1hl1wln8372f" path="res://battle_of_the.tscn" id="3_ssdbm"]
+[ext_resource type="PackedScene" uid="uid://cb5stdrswuoog" path="res://battle_of_the.tscn" id="3_ssdbm"]
 [ext_resource type="PackedScene" uid="uid://kplaoterj3dw" path="res://Виталя/Планета/планета слизи.tscn" id="4_n3h78"]
 [ext_resource type="Script" path="res://Button.gd" id="4_xpl63"]
 [ext_resource type="FontFile" uid="uid://jcd2bdklhtqc" path="res://Duskey Rough.ttf" id="5_isc4g"]

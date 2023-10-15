@@ -3,13 +3,12 @@
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
 [ext_resource type="PackedScene" uid="uid://dtmb0mftycg0c" path="res://Paralax.tscn" id="2_ols3x"]
-[ext_resource type="PackedScene" path="res://Player/Human/player_and_ui.tscn" id="2_w1i3t"]
 [ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="2_w1i3t"]
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="4_5kto1"]
 [ext_resource type="Texture2D" uid="uid://due8taewbgcps" path="res://Виталя/Планета/верёвка.png" id="5_1dleq"]
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="8_7rw78"]
-[ext_resource type="PackedScene" path="res://slime.tscn" id="8_n78aq"]
+[ext_resource type="PackedScene" uid="uid://dgwjlici6moar" path="res://slime.tscn" id="8_n78aq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nob7"]
 texture = ExtResource("4_5kto1")
