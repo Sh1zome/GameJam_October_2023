@@ -1,10 +1,36 @@
-[gd_scene load_steps=20 format=3 uid="uid://d1qk1d8io8i1v"]
+[gd_scene load_steps=22 format=3 uid="uid://d1qk1d8io8i1v"]
 
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="1_w4ua1"]
-[ext_resource type="PackedScene" uid="uid://dwtl78ignmaig" path="res://человек.tscn" id="2_aj5la"]
+[ext_resource type="PackedScene" uid="uid://dbescykif0gad" path="res://Player/Human/player_and_ui_2.tscn" id="2_ncatb"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="3_6fc3o"]
 [ext_resource type="Texture2D" uid="uid://c1e6rs674gcyl" path="res://Виталя/Планета/всетекстуры (3).png" id="4_a6ytm"]
 [ext_resource type="Texture2D" uid="uid://baafssqj5ufqb" path="res://Виталя/Планета/всетекстуры (7).png" id="5_rbw6m"]
+
+[sub_resource type="GDScript" id="GDScript_ylvlm"]
+script/source = "extends Node2D
+
+@onready var dialog = $PlayerAndUI2/CanvasLayer/Computer/DialogueBox
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+
+
+
+	
+
+
+func _on_perehod_body_entered(body):
+	if body.name == \"PlayerHuman\":
+		
+		print(\"test\")
+			
+		
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p6vos"]
 texture = ExtResource("1_w4ua1")
@@ -2739,7 +2765,11 @@ texture = ExtResource("5_rbw6m")
 [sub_resource type="TileSet" id="TileSet_cmr3s"]
 sources/0 = SubResource("TileSetAtlasSource_dosf7")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w1t3n"]
+size = Vector2(50, 19.5)
+
 [node name="Level_3" type="Node2D"]
+script = SubResource("GDScript_ylvlm")
 
 [node name="пол" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_77hn7")
@@ -2776,8 +2806,13 @@ layer_4/y_sort_origin = 0
 layer_4/z_index = 0
 layer_4/tile_data = PackedInt32Array()
 
-[node name="человек" parent="." instance=ExtResource("2_aj5la")]
-position = Vector2(44, 659)
+[node name="PlayerAndUI2" parent="." instance=ExtResource("2_ncatb")]
+z_index = 3
+position = Vector2(-109, 662)
+
+[node name="Camera" parent="PlayerAndUI2/PlayerHuman" index="2"]
+position = Vector2(162, -3)
+limit_right = 320
 
 [node name="Потолок" type="TileMap" parent="."]
 position = Vector2(32, 1120)
@@ -2818,8 +2853,6 @@ position = Vector2(-72, 1)
 tile_set = SubResource("TileSet_a8nq0")
 format = 2
 
-[node name="Node" type="Node" parent="."]
-
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_cmr3s")
 format = 2
@@ -2832,3 +2865,16 @@ layer_1/y_sort_enabled = false
 layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array()
+
+[node name="Perehod" type="Area2D" parent="."]
+position = Vector2(208, 656)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perehod"]
+position = Vector2(-32, -7)
+shape = SubResource("RectangleShape2D_w1t3n")
+
+[connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
+
+[editable path="PlayerAndUI2"]
+[editable path="PlayerAndUI2/PlayerHuman"]
+[editable path="PlayerAndUI2/CanvasLayer/DashColdown"]
