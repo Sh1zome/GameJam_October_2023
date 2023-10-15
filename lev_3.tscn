@@ -1,6 +1,5 @@
 [gd_scene load_steps=17 format=3 uid="uid://bxngx0v0hyhju"]
 
-[ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="1_4t0n2"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_a2mho"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="2_7xv2b"]
 [ext_resource type="Texture2D" uid="uid://bktcu8f7y3f0s" path="res://Виталя/Текстуры/Окружение/Тачка со жрачкой.png" id="3_w665p"]
@@ -8,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cqmnf7i0pa8en" path="res://Виталя/Текстуры/Картины/Картина с евой.png" id="5_eob1j"]
 [ext_resource type="Texture2D" uid="uid://bnso0ys0cr3ou" path="res://Виталя/Текстуры/Картины/Новый Взгляд на ван гога.png" id="6_kdrej"]
 [ext_resource type="Texture2D" uid="uid://c5q2sng7crp8u" path="res://Виталя/Текстуры/Окружение/ТЫ ЩАС ЕБАНЁШЬСЯ.PNG" id="7_mmvn4"]
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_me4w2"]
 texture = ExtResource("1_a2mho")
@@ -5055,20 +5055,20 @@ texture = ExtResource("2_7xv2b")
 sources/0 = SubResource("TileSetAtlasSource_b6wpc")
 
 [node name="Lev 3" type="Node2D"]
-position = Vector2(2, 26)
+position = Vector2(-5, 24)
 
-[node name="PlayerAndUI2" parent="." instance=ExtResource("1_4t0n2")]
+[node name="PlayerAndUI" parent="." instance=ExtResource("8_cyvp1")]
 z_index = 3
-position = Vector2(-11, 710)
+position = Vector2(0, 634)
 
-[node name="PlayerHuman" parent="PlayerAndUI2" index="0"]
-position = Vector2(5, -31)
-up_direction = Vector2(1, -0.000333333)
+[node name="PlayerHuman" parent="PlayerAndUI" index="0"]
+position = Vector2(-113, 38)
 
-[node name="Camera" parent="PlayerAndUI2/PlayerHuman" index="2"]
-position = Vector2(29, -4)
-offset = Vector2(130, 0)
-limit_right = 160
+[node name="Camera" parent="PlayerAndUI/PlayerHuman" index="2"]
+zoom = Vector2(4.6, 4.6)
+limit_right = 275
+limit_bottom = 745
+script = null
 
 [node name="Основа" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_iqbie")
@@ -5131,5 +5131,5 @@ z_index = 4
 position = Vector2(203, 683)
 texture = ExtResource("7_mmvn4")
 
-[editable path="PlayerAndUI2"]
-[editable path="PlayerAndUI2/PlayerHuman"]
+[editable path="PlayerAndUI"]
+[editable path="PlayerAndUI/PlayerHuman"]

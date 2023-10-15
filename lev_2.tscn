@@ -4166,7 +4166,7 @@ sources/0 = SubResource("TileSetAtlasSource_4wsu1")
 size = Vector2(20, 126)
 
 [node name="Lev 2" type="Node2D"]
-position = Vector2(-14, 5)
+position = Vector2(-3, 3)
 script = ExtResource("1_07tsa")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4242,10 +4242,14 @@ position = Vector2(-8, 711)
 
 [node name="Camera" parent="PlayerAndUI2/PlayerHuman" index="2"]
 position = Vector2(43, -4)
-zoom = Vector2(4.5, 4.5)
+offset = Vector2(9, 0)
+zoom = Vector2(4.8, 4.8)
 limit_top = 565
 limit_right = 270
 limit_bottom = 720
+position_smoothing_speed = 0.0
+rotation_smoothing_speed = 0.0
+drag_right_margin = 1.0
 
 [node name="Perehod" type="Area2D" parent="."]
 position = Vector2(35, 688)

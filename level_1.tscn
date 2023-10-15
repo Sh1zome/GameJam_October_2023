@@ -3610,7 +3610,7 @@ layer_0/tile_data = PackedInt32Array(2424831, 393216, 27, 2752511, 393216, 32, 2
 
 [node name="PlayerAndUI" parent="." instance=ExtResource("2_w1i3t")]
 z_index = 3
-position = Vector2(36, 620)
+position = Vector2(-114, 666)
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = 5
@@ -3621,7 +3621,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1245195, 0, 0, 1310731, 0, 1, 1245196, 65536, 0, 1310732, 65536, 1)
 
 [node name="Perehod" type="Area2D" parent="."]
-position = Vector2(591, 663)
+position = Vector2(586, 662)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Perehod"]
 position = Vector2(-25, -39)

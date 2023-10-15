@@ -1,7 +1,9 @@
 extends Node
 
 var tp = false
+var complete1 = false
 var health = 100
+var PlayerSpeed = 150
 func _ready():
 	print(GloabalTreker.health)
 

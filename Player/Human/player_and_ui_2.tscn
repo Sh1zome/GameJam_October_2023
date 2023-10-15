@@ -36,3 +36,5 @@ script = ExtResource("3_aa2gg")
 dialogue_file = ExtResource("4_w4nw6")
 max_options = 2
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_qnngi"), SubResource("RichTextEffect_ay0th")])
+
+[editable path="PlayerHuman"]
