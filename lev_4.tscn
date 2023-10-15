@@ -8,9 +8,9 @@
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
-[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
-[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="8_6r7vt"]
-[ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
+[ext_resource type="Texture2D" uid="uid://dwu2c2w2ok66p" path="res://light/Sprite-0001.png" id="8_6r7vt"]
+[ext_resource type="Texture2D" uid="uid://bqkp3718mjvhu" path="res://light/light.png" id="9_ejicj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16xrf"]
 size = Vector2(86.6428, 119.231)
@@ -5702,7 +5702,6 @@ scale = Vector2(0.253906, 0.253906)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Box1"]
 z_index = 3
 position = Vector2(-1038.93, -445.921)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_16xrf")
 
 [node name="PlayerAndUI" parent="." instance=ExtResource("7_0m0yg")]
