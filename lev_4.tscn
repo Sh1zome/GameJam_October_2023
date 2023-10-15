@@ -8,7 +8,7 @@
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
 [ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="8_6r7vt"]
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
 
@@ -5804,7 +5804,8 @@ occluder = SubResource("OccluderPolygon2D_h0wpo")
 position = Vector2(177, 658)
 scale = Vector2(0.181641, 0.167969)
 color = Color(0.188235, 0.72549, 0.501961, 1)
-energy = 1.5
+energy = 2.47
+blend_mode = 2
 shadow_enabled = true
 texture = ExtResource("9_ejicj")
 
