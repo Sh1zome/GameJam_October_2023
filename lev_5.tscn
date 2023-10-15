@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://boi40p8nayr4t"]
+[gd_scene load_steps=30 format=3 uid="uid://boi40p8nayr4t"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Script" path="res://lev_5.gd" id="1_xgtt5"]
@@ -5087,6 +5087,9 @@ gradient = SubResource("Gradient_hgak3")
 fill_from = Vector2(0.59633, 0.334862)
 fill_to = Vector2(0.123853, 0.706422)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_y0p5o"]
+polygon = PackedVector2Array(196, 680, 196, 685, 194, 685, 194, 689, 184, 689, 184, 688, 180, 688, 180, 674, 182, 674, 182, 673, 184, 672, 184, 671, 185, 671, 185, 668, 187, 668, 187, 667, 189, 667, 188, 665, 190, 665, 190, 663, 191, 663, 192, 662, 193, 662, 193, 660, 234, 660, 234, 661, 234, 662, 235, 662, 235, 663, 237, 663, 237, 664, 239, 664, 239, 665, 240, 665, 240, 667, 242, 667, 242, 670, 243, 670, 243, 672, 245, 672, 245, 673, 247, 673, 247, 688, 243, 688, 243, 689, 232, 689, 232, 685, 231, 685, 231, 680, 229, 680, 228, 680, 228, 682, 226, 682, 225, 682, 225, 684, 225, 688, 226, 688, 226, 692, 225, 692, 225, 694, 223, 694, 223, 695, 220, 695, 220, 698, 207, 698, 207, 695, 204, 695, 204, 694, 202, 694, 202, 692, 201, 692, 201, 688, 202, 688, 202, 682, 200, 682, 199, 682, 199, 680)
+
 [node name="Lev_5" type="Node2D"]
 position = Vector2(-8, 20)
 script = ExtResource("1_xgtt5")
@@ -5193,8 +5196,14 @@ offset = Vector2(-30, 30)
 position = Vector2(215.156, 580)
 scale = Vector2(1.07813, 1.98438)
 energy = 0.5
+shadow_enabled = true
 texture = SubResource("GradientTexture2D_u86y8")
 offset = Vector2(30, 30)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource("OccluderPolygon2D_y0p5o")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder2D"]
 
 [connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
 
