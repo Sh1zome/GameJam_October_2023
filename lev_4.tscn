@@ -1,9 +1,14 @@
+<<<<<<< HEAD
+[gd_scene load_steps=22 format=3 uid="uid://d27f10s7ekrsm"]
+=======
 [gd_scene load_steps=30 format=3 uid="uid://d27f10s7ekrsm"]
+>>>>>>> 508c81ab1333eba0133bd6b712268ac9678bc97e
 
 [ext_resource type="Script" path="res://lev_4.gd" id="1_nrrhy"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="2_vyy6q"]
 [ext_resource type="Texture2D" uid="uid://doxglehfi4tqd" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 1.png" id="3_0s4wv"]
+[ext_resource type="PackedScene" uid="uid://igmfatqwefse" path="res://Mobs/astronaut/astronaut.tscn" id="3_6ajvc"]
 [ext_resource type="Texture2D" uid="uid://doby8exo7od1m" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 3.png" id="4_ouxja"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
@@ -5730,6 +5735,14 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 0
 layer_1/tile_data = PackedInt32Array(2555907, 458752, 13, 2621443, 458752, 14, 2686979, 458752, 15, 2752515, 458752, 16, 2555908, 524288, 13, 2621444, 524288, 14, 2686980, 524288, 15, 2752516, 524288, 16, 2555909, 589824, 13, 2621445, 589824, 14, 2686981, 589824, 15, 2752517, 589824, 16)
 
+[node name="astronaut" parent="." instance=ExtResource("3_6ajvc")]
+z_index = 3
+position = Vector2(206, 680)
+
+[node name="Timer" type="Timer" parent="astronaut"]
+wait_time = 3.0
+autostart = true
+
 [node name="Потолок" type="TileMap" parent="."]
 position = Vector2(32, 1152)
 rotation = -3.14157
@@ -5781,6 +5794,9 @@ position = Vector2(234, 628)
 scale = Vector2(0.253906, 0.253906)
 texture = ExtResource("6_2frew")
 
+<<<<<<< HEAD
+[connection signal="timeout" from="astronaut/Timer" to="astronaut" method="_on_timer_timeout"]
+=======
 [node name="PointLight2D2" type="PointLight2D" parent="."]
 position = Vector2(83, 575)
 scale = Vector2(0.570313, 0.5)
@@ -5846,6 +5862,7 @@ shape = SubResource("RectangleShape2D_tdif2")
 [connection signal="body_exited" from="Box3" to="." method="_on_box_3_body_exited"]
 [connection signal="body_entered" from="Backto3" to="." method="_on_backto_3_body_entered"]
 [connection signal="body_exited" from="Backto3" to="." method="_on_backto_3_body_exited"]
+>>>>>>> 508c81ab1333eba0133bd6b712268ac9678bc97e
 
 [editable path="PlayerAndUI"]
 [editable path="PlayerAndUI/PlayerHuman"]
