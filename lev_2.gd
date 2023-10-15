@@ -6,15 +6,21 @@ var timer = 0
 var exit_timer = 0
 var entered = false
 var exited = false
-
+@onready var dialog = $PlayerAndUI2/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
+
 func _ready():
 	entered = true
-	pass # Replace with function body.
+
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if GloabalTreker.tp == true:
+		$PlayerAndUI2.position.x = 170
+		$PlayerAndUI2.position.y = 690
+		GloabalTreker.tp == false
 		
 	timer = timer + (delta * 1)
 	
@@ -38,3 +44,27 @@ func _on_perehod_body_entered(body):
 		exited = true
 		
 		
+
+
+func _on_perehod_2_body_entered(body):
+	if body.name == "PlayerHuman":
+		get_tree().change_scene_to_file("res://lev_3.tscn")
+
+#Трогает комп
+func _on_perehod_3_body_entered(body):
+	dialog.stop()
+	if body.name == "PlayerHuman":
+		dialog.start("Computer")
+
+
+func _on_perehod_3_body_exited(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
+
+#Трогает Табличку
+func _on_perehod_4_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.start("Table")
+	
+		
+

@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://ckfowd3y3lkdf"]
+[gd_scene load_steps=35 format=3 uid="uid://ckfowd3y3lkdf"]
 
 [ext_resource type="Script" path="res://Player/Human/dash_coldown.gd" id="1_jir8f"]
 [ext_resource type="Texture2D" uid="uid://b4lrh2j7v1g3e" path="res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png" id="2_47puo"]
@@ -14,6 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://xoleaf6swoly" path="res://UX/Interface/Assets/3inAnimate.png" id="6_vwenp"]
 [ext_resource type="Texture2D" uid="uid://bw1jloe6luy4i" path="res://UX/Interface/Assets/imgonline-com-ua-Resize-ioyy8902fgOCje.png" id="7_d5852"]
 [ext_resource type="Texture2D" uid="uid://blp4um3is87l8" path="res://UX/Interface/Assets/2inAnim.png" id="8_a1vud"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="15_wprb8"]
+[ext_resource type="Resource" uid="uid://357kpahjo0db" path="res://Dialoges/Computer.tres" id="16_f7kst"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="17_jubmg"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="18_nxj0u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ynocm"]
 atlas = ExtResource("2_47puo")
@@ -97,6 +101,12 @@ animations = [{
 "name": &"Animate",
 "speed": 5.0
 }]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_agbgg"]
+script = ExtResource("17_jubmg")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_mbgky"]
+script = ExtResource("18_nxj0u")
 
 [node name="Interface" type="Control"]
 layout_mode = 3
@@ -183,3 +193,14 @@ frame_progress = 0.304262
 position = Vector2(316, 19)
 scale = Vector2(2.82353, 2.82353)
 texture = ExtResource("6_lfqlo")
+
+[node name="Comp" type="Panel" parent="."]
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 0
+offset_left = 377.0
+offset_top = 139.0
+offset_right = 633.0
+offset_bottom = 267.0
+script = ExtResource("15_wprb8")
+dialogue_file = ExtResource("16_f7kst")
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_agbgg"), SubResource("RichTextEffect_mbgky")])
