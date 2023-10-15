@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://wt00wwcu0hg5"]
+[gd_scene load_steps=21 format=3 uid="uid://wt00wwcu0hg5"]
 
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="1_tt0hf"]
 [ext_resource type="Texture2D" uid="uid://vsv1cvlkcv3m" path="res://Виталя/Текстуры/Корабли.png" id="2_kfqk5"]
@@ -1259,6 +1259,9 @@ gradient = SubResource("Gradient_4l3oh")
 fill_from = Vector2(0.486239, 0.238532)
 fill_to = Vector2(0.12844, 0.408257)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_r6pkm"]
+polygon = PackedVector2Array(158, 693, 158, 690, 159, 690, 159, 689, 161, 689, 161, 688, 162, 688, 162, 686, 163, 686, 164, 685, 165, 685, 165, 683, 166, 683, 166, 682, 167, 682, 168, 681, 169, 681, 169, 680, 174, 680, 174, 681, 175, 681, 176, 681, 176, 680, 177, 680, 177, 681, 178, 681, 178, 681, 179, 682, 180, 682, 180, 683, 180, 683, 181, 684, 182, 684, 183, 685, 183, 686, 184, 686, 184, 687, 184, 688, 185, 688, 185, 688, 185, 689, 186, 689, 186, 689, 187, 690, 188, 690, 188, 690, 188, 691, 188, 692, 188, 693, 188, 694, 188, 695, 189, 695, 189, 696, 190, 696, 191, 696, 158, 696, 158, 695, 157, 695, 157, 693)
+
 [node name="Lev_6" type="Node2D"]
 
 [node name="основа" type="TileMap" parent="."]
@@ -1351,3 +1354,8 @@ energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_rfo1l")
 offset = Vector2(0, 30)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(-1, 1390)
+scale = Vector2(1, -1)
+occluder = SubResource("OccluderPolygon2D_r6pkm")
