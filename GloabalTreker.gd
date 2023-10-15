@@ -1,10 +1,12 @@
 extends Node
 
 var tp = false
+var tp2 = false
 var complete1 = false
 var health = 100
 var PlayerSpeed = 150
 var nahod = 0
+var openDoor = false
 #SaveList
 var ssd = true
 
@@ -13,6 +15,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if health <= 0:
 		$"res://Player/Human/player_and_ui.tscn".queue_free()
+	
+		
 		

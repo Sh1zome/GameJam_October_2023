@@ -16,6 +16,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if GloabalTreker.tp2 == true:
+		$PlayerAndUI.position.x = 170
+		$PlayerAndUI.position.y = 700
+		GloabalTreker.tp2 == false
+		
 	timer = timer + (delta * 1)
 	
 	if entered && timer >= 0.5:
@@ -29,7 +34,6 @@ func _process(delta):
 			if lvl2:
 				get_tree().change_scene_to_file("res://lev_2.tscn")
 
-
 func _on_perehod_body_entered(body):
 	if body.name == "PlayerHuman":
 		entered = false
@@ -40,6 +44,7 @@ func _on_perehod_body_entered(body):
 
 func _on_perehod_2_body_entered(body):
 	if body.name == "PlayerHuman":
+		dialog.stop()
 		dialog.start("RightDoor")
 
 
@@ -50,4 +55,21 @@ func _on_perehod_2_body_exited(body):
 
 func _on_door_active_body_entered(body):
 	if body.name == "PlayerHuman":
+		dialog.stop()
 		dialog.start("MiddleDoor")
+
+
+func _on_door_active_body_exited(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
+
+
+func _on_door_active_2_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
+		dialog.start("ByAuthor")
+
+
+func _on_go_to_5_body_entered(body):
+	if body.name == "PlayerHuman":
+		get_tree().change_scene_to_file("res://lev_5.tscn")

@@ -18,10 +18,9 @@ func _process(delta):
 		InColdown.visible = false
 		OutColdown.visible = true
 		
-
-
 func _on_comp_dialogue_signal(value):
 	if value == "nahod+":
+		GloabalTreker.openDoor = true
 		print("PlayShake")
 		GloabalTreker.nahod +=1
 	if value == "SSD":
@@ -34,3 +33,5 @@ func _on_comp_dialogue_signal(value):
 		get_tree().change_scene_to_file("res://lev_4.tscn")
 	if value == "BackTo3":
 		get_tree().change_scene_to_file("res://lev_3.tscn")
+	if value == "GoTo5" && GloabalTreker.openDoor == true:
+		get_tree().change_scene_to_file("res://lev_5.tscn")

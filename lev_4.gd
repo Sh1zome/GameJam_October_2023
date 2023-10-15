@@ -9,6 +9,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
+		
 
 #Коробка 1
 func _on_box_1_body_entered(body):
