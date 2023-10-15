@@ -6,6 +6,8 @@ var timer = 0
 var exit_timer = 0
 var entered = false
 var exited = false
+var lvl1 = false
+var lvl3 = false
 @onready var dialog = $PlayerAndUI2/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
 
@@ -31,10 +33,14 @@ func _process(delta):
 		exit_timer = exit_timer + (delta * 1)
 		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,1), delta * 10)
 		
-		if exit_timer >= 0.35:
+	if exit_timer >= 0.35:
+		if lvl1:
 			GloabalTreker.tp = true;
 			get_tree().change_scene_to_file("res://level_1.tscn")
-	pass
+		if lvl3:
+			GloabalTreker.tp = true;
+			get_tree().change_scene_to_file("res://lev_3.tscn")
+			
 
 
 func _on_perehod_body_entered(body):
@@ -42,9 +48,16 @@ func _on_perehod_body_entered(body):
 		print("test")
 		entered = false
 		exited = true
+		lvl1 = true
+		
+		
+
+
 func _on_perehod_2_body_entered(body):
 	if body.name == "PlayerHuman":
-		get_tree().change_scene_to_file("res://lev_3.tscn")
+		entered = false
+		exited = true
+		lvl3 = true
 
 #Трогает комп
 func _on_perehod_3_body_entered(body):
