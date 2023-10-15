@@ -1,5 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://bxngx0v0hyhju"]
+[gd_scene load_steps=25 format=3 uid="uid://bxngx0v0hyhju"]
 
+[ext_resource type="Script" path="res://lev_3.gd" id="1_8a57a"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_a2mho"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="2_7xv2b"]
 [ext_resource type="Texture2D" uid="uid://bktcu8f7y3f0s" path="res://Виталя/Текстуры/Окружение/Тачка со жрачкой.png" id="3_w665p"]
@@ -12,6 +13,13 @@
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_p0rdu"]
 [ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="10_j4xvx"]
 [ext_resource type="Texture2D" uid="uid://c1xflliexqwid" path="res://light/spot.png" id="12_m35of"]
+[ext_resource type="Shader" path="res://pixelate.gdshader" id="5_4ods4"]
+[ext_resource type="Texture2D" uid="uid://cqmnf7i0pa8en" path="res://Виталя/Текстуры/Картины/Картина с евой.png" id="5_eob1j"]
+[ext_resource type="Texture2D" uid="uid://bnso0ys0cr3ou" path="res://Виталя/Текстуры/Картины/Новый Взгляд на ван гога.png" id="6_kdrej"]
+[ext_resource type="Texture2D" uid="uid://c5q2sng7crp8u" path="res://Виталя/Текстуры/Окружение/ТЫ ЩАС ЕБАНЁШЬСЯ.PNG" id="7_mmvn4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_73x4r"]
+size = Vector2(33.7714, 84.9427)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_me4w2"]
 texture = ExtResource("1_a2mho")
@@ -5066,8 +5074,52 @@ polygon = PackedVector2Array(197, 695, 199, 693, 202, 694, 203, 695, 205, 697, 2
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_kd1se"]
 polygon = PackedVector2Array(207, 699, 209, 699, 209, 698, 212, 698, 212, 699, 211, 699, 211, 702, 207, 702)
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v048b"]
+shader = ExtResource("5_4ods4")
+shader_parameter/pixelSize = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_05lnk"]
+shader = ExtResource("5_4ods4")
+shader_parameter/pixelSize = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yg37g"]
+shader = ExtResource("5_4ods4")
+shader_parameter/pixelSize = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_76uni"]
+size = Vector2(8.5, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kiuae"]
+size = Vector2(82.2857, 101.429)
 
 [node name="Lev 3" type="Node2D"]
+position = Vector2(-5, 24)
+script = ExtResource("1_8a57a")
+
+[node name="Perehod" type="Area2D" parent="."]
+position = Vector2(32, 672)
+scale = Vector2(0.546875, 0.546875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perehod"]
+z_index = 100
+position = Vector2(-23.7714, -36.5714)
+shape = SubResource("RectangleShape2D_73x4r")
+
+[node name="PlayerAndUI" parent="." instance=ExtResource("8_cyvp1")]
+z_index = 3
+position = Vector2(0, 634)
+
+[node name="PlayerHuman" parent="PlayerAndUI" index="0"]
+position = Vector2(-113, 38)
+
+[node name="AnimatedSprite2D" parent="PlayerAndUI/PlayerHuman" index="0"]
+position = Vector2(164, -7)
+
+[node name="Camera" parent="PlayerAndUI/PlayerHuman" index="2"]
+zoom = Vector2(4.6, 4.6)
+limit_right = 275
+limit_bottom = 745
+script = null
 
 [node name="Основа" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_iqbie")
@@ -5120,6 +5172,7 @@ texture = ExtResource("4_q43r2")
 [node name="ТачкаСоЖрачкой" type="Sprite2D" parent="."]
 visible = false
 modulate = Color(0.686275, 0.686275, 0.686275, 1)
+material = SubResource("ShaderMaterial_v048b")
 position = Vector2(157, 664)
 scale = Vector2(0.546875, 0.546875)
 texture = ExtResource("3_w665p")
@@ -5131,12 +5184,14 @@ texture = ExtResource("4_nq4cs")
 
 [node name="КартинаСЕвой" type="Sprite2D" parent="."]
 modulate = Color(0.72549, 0.72549, 0.72549, 1)
+material = SubResource("ShaderMaterial_05lnk")
 position = Vector2(43, 633)
 scale = Vector2(0.53125, 0.53125)
 texture = ExtResource("5_eob1j")
 
 [node name="НовыйВзглядНаВанГога" type="Sprite2D" parent="."]
 modulate = Color(0.709804, 0.709804, 0.709804, 1)
+material = SubResource("ShaderMaterial_yg37g")
 position = Vector2(216, 619)
 scale = Vector2(0.300781, 0.300781)
 texture = ExtResource("6_kdrej")
@@ -5188,3 +5243,57 @@ energy = 0.35
 range_item_cull_mask = 2
 shadow_enabled = true
 texture = ExtResource("12_m35of")
+[node name="dark" type="ColorRect" parent="."]
+z_index = 10
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1508.0
+offset_top = -848.0
+offset_right = 1507.0
+offset_bottom = 848.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Perehod2" type="Area2D" parent="StaticBody2D"]
+position = Vector2(32, 672)
+scale = Vector2(0.546875, 0.546875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/Perehod2"]
+z_index = 100
+position = Vector2(391.314, -14.6285)
+shape = SubResource("RectangleShape2D_73x4r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(258.75, 664)
+shape = SubResource("RectangleShape2D_76uni")
+
+[node name="Perehod" type="Area2D" parent="StaticBody2D/CollisionShape2D"]
+position = Vector2(32, 672)
+scale = Vector2(0.546875, 0.546875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/CollisionShape2D/Perehod"]
+z_index = 100
+position = Vector2(-23.7714, -36.5714)
+shape = SubResource("RectangleShape2D_73x4r")
+
+[node name="DoorActive" type="Area2D" parent="."]
+position = Vector2(32, 672)
+scale = Vector2(0.546875, 0.546875)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorActive"]
+position = Vector2(101.486, -22.4285)
+shape = SubResource("RectangleShape2D_kiuae")
+
+[connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
+[connection signal="body_entered" from="StaticBody2D/Perehod2" to="." method="_on_perehod_2_body_entered"]
+[connection signal="body_exited" from="StaticBody2D/Perehod2" to="." method="_on_perehod_2_body_exited"]
+[connection signal="body_entered" from="StaticBody2D/CollisionShape2D/Perehod" to="." method="_on_perehod_body_entered"]
+[connection signal="body_entered" from="DoorActive" to="." method="_on_door_active_body_entered"]
+
+[editable path="PlayerAndUI"]
+[editable path="PlayerAndUI/PlayerHuman"]

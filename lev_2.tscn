@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://0bgx0cwetnok"]
+[gd_scene load_steps=18 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
 [ext_resource type="PackedScene" uid="uid://ciwayywiyy5ja" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
 [ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="5_63pyf"]
+[ext_resource type="Shader" path="res://pixelate.gdshader" id="4_t2fno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -3652,6 +3653,10 @@ texture = ExtResource("1_ojoin")
 [sub_resource type="TileSet" id="TileSet_eg2v5"]
 sources/0 = SubResource("TileSetAtlasSource_7ln5i")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gwfwp"]
+shader = ExtResource("4_t2fno")
+shader_parameter/pixelSize = 2
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wsu1"]
 texture = ExtResource("1_ojoin")
 16:6/0 = 0
@@ -4171,9 +4176,14 @@ polygon = PackedVector2Array(-371.791, 188.391, -280.419, 188.391, -280.419, 249
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7gifo"]
 polygon = PackedVector2Array(-23, 263, -15, 263, -15, 262, -13, 262, -13, 260, -12, 260, -12, 259, -11, 259, -11, 255, -10, 255, -10, 255, -9, 254, -9, 252, -11, 252, -11, 248, -12, 248, -12, 247, -13, 247, -13, 246, -17, 246, -17, 245, -18, 245, -18, 242, -17, 241, -16, 240, -14, 239, -14, 238, -13, 238, -13, 237, -15, 237, -15, 239, -16, 240, -17, 241, -19, 241, -20, 241, -21, 241, -22, 240, -23, 239, -24, 239, -25, 238, -25, 237, -24, 237, -23, 237, -23, 238, -23, 239, -22, 239, -21, 240, -20, 241, -21, 241, -21, 242, -20, 242, -20, 245, -21, 245, -21, 246, -25, 246, -25, 247, -26, 247, -26, 248, -27, 248, -27, 252, -29, 252, -29, 255, -28, 255, -27, 256, -27, 256, -26, 256, -26, 259, -25, 259, -25, 262, -23, 262)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3tft1"]
+size = Vector2(46, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idu6b"]
+size = Vector2(16, 12)
 
 [node name="Lev 2" type="Node2D"]
-position = Vector2(-14, 5)
+position = Vector2(-3, 3)
 script = ExtResource("1_07tsa")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -4233,6 +4243,7 @@ texture = ExtResource("2_ileey")
 
 [node name="КартинаСЛуноходом2" type="Sprite2D" parent="."]
 modulate = Color(0.709804, 0.709804, 0.709804, 1)
+material = SubResource("ShaderMaterial_gwfwp")
 position = Vector2(182, 625)
 scale = Vector2(0.365597, 0.365597)
 texture = ExtResource("2_ileey")
@@ -4249,10 +4260,20 @@ position = Vector2(-8, 711)
 
 [node name="Camera" parent="PlayerAndUI2/PlayerHuman" index="2"]
 position = Vector2(43, -4)
-zoom = Vector2(4.5, 4.5)
+offset = Vector2(9, 0)
+zoom = Vector2(4.8, 4.8)
 limit_top = 565
 limit_right = 270
 limit_bottom = 720
+position_smoothing_speed = 0.0
+rotation_smoothing_speed = 0.0
+drag_right_margin = 1.0
+
+[node name="DashColdown" parent="PlayerAndUI2/CanvasLayer" index="0"]
+offset_left = 378.0
+offset_top = 72.0
+offset_right = -719.0
+offset_bottom = -484.0
 
 [node name="LightOccluder2D" parent="PlayerAndUI2/PlayerHuman" index="5"]
 position = Vector2(-110, -2)
@@ -4288,8 +4309,47 @@ occluder = SubResource("OccluderPolygon2D_vd6mf")
 [node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
 position = Vector2(213, 457)
 occluder = SubResource("OccluderPolygon2D_7gifo")
+[node name="dark" type="ColorRect" parent="."]
+visible = false
+z_index = 10
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1508.0
+offset_top = -848.0
+offset_right = 1507.0
+offset_bottom = 848.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Perehod2" type="Area2D" parent="."]
+position = Vector2(35, 688)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Perehod2"]
+position = Vector2(242, -47)
+shape = SubResource("RectangleShape2D_fgikk")
+
+[node name="Perehod3" type="Area2D" parent="."]
+position = Vector2(35, 688)
+
+[node name="Pcdetect" type="CollisionShape2D" parent="Perehod3"]
+position = Vector2(172.5, -23)
+shape = SubResource("RectangleShape2D_3tft1")
+
+[node name="Perehod4" type="Area2D" parent="."]
+position = Vector2(-53, 648)
+
+[node name="Table" type="CollisionShape2D" parent="Perehod4"]
+position = Vector2(189, -46)
+shape = SubResource("RectangleShape2D_idu6b")
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
+[connection signal="body_entered" from="Perehod2" to="." method="_on_perehod_2_body_entered"]
+[connection signal="body_entered" from="Perehod3" to="." method="_on_perehod_3_body_entered"]
+[connection signal="body_exited" from="Perehod3" to="." method="_on_perehod_3_body_exited"]
+[connection signal="body_entered" from="Perehod4" to="." method="_on_perehod_4_body_entered"]
 
 [editable path="PlayerAndUI2"]
 [editable path="PlayerAndUI2/PlayerHuman"]

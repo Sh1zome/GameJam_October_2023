@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dv8b8adh14rnc"]
+[gd_scene load_steps=51 format=3 uid="uid://dv8b8adh14rnc"]
 
 [ext_resource type="Texture2D" uid="uid://d2lt2yoyy6kts" path="res://Player/Human/Assets/Asset Pack-V1/Sprite Sheets/player land 48x48.png" id="1_dww7d"]
 [ext_resource type="Script" path="res://Player/Human/PlayerHuman.gd" id="1_iux1n"]
@@ -367,6 +367,8 @@ scale = Vector2(0.882844, 0.882071)
 sprite_frames = SubResource("SpriteFrames_ofrvw")
 animation = &"Idle"
 autoplay = "Idle"
+frame = 2
+frame_progress = 0.991504
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(161.5, -5.375)
@@ -376,7 +378,7 @@ shape = SubResource("RectangleShape2D_iw06q")
 position = Vector2(163, -3)
 zoom = Vector2(4, 4)
 limit_left = 0
-limit_right = 577
+limit_right = 575
 limit_bottom = 735
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
