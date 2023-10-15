@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://d27f10s7ekrsm"]
 
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_ffnot"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="1_ffnot"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="2_vyy6q"]
 [ext_resource type="Texture2D" uid="uid://doxglehfi4tqd" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 1.png" id="3_0s4wv"]

@@ -6,6 +6,7 @@ var timer = 0
 var exit_timer = 0
 var entered = false
 var exited = false
+var lvl2 = false
 
 @onready var dialog = $PlayerAndUI/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
@@ -25,13 +26,15 @@ func _process(delta):
 		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,1), delta * 10)
 		
 		if exit_timer >= 0.35:
-			get_tree().change_scene_to_file("res://lev_2.tscn")
+			if lvl2:
+				get_tree().change_scene_to_file("res://lev_2.tscn")
 
 
 func _on_perehod_body_entered(body):
 	if body.name == "PlayerHuman":
 		entered = false
 		exited = true
+		lvl2 = true
 		GloabalTreker.tp = true
 
 
