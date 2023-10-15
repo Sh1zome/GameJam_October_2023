@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_ebw4k")
 starts = {
+"BackTo3": &"0_7",
 "Box1": &"0_5",
 "Box2": &"0_6",
 "Computer": &"0_1",
@@ -42,6 +43,11 @@ nodes = {
 "link": &"1_14",
 "offset": Vector2(447.737, 1849.58),
 "start_id": "Box2"
+},
+"0_7": {
+"link": &"1_17",
+"offset": Vector2(680, 2400),
+"start_id": "BackTo3"
 },
 "1_1": {
 "dialogue": "В эти компьютеры можно вставить диск.
@@ -170,6 +176,21 @@ nodes = {
 },
 "speaker": ""
 },
+"1_17": {
+"dialogue": "Вернуться?",
+"offset": Vector2(926.549, 2373.71),
+"options": {
+0: {
+"link": &"3_3",
+"text": "Вернуться"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
 "1_2": {
 "dialogue": "Так много мониторов...",
 "offset": Vector2(1540, 280),
@@ -219,8 +240,8 @@ nodes = {
 "dialogue": "[shake]Дверь слишком тяжёлая...[/shake]",
 "offset": Vector2(1140, 940),
 "options": {
-0: {
-"link": &"4_1",
+"0": {
+"link": "END",
 "text": ""
 }
 },
@@ -313,12 +334,10 @@ nodes = {
 "offset": Vector2(1220, 1940),
 "signalValue": "nahod+"
 },
-"4_1": {
+"3_3": {
 "link": "END",
-"offset": Vector2(1560, 1000),
-"type": 1,
-"value": "1",
-"variable": "ssd"
+"offset": Vector2(1220, 2460),
+"signalValue": "BackTo3"
 },
 "5_1": {
 "false": &"1_2",

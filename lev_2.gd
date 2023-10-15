@@ -67,8 +67,7 @@ func _on_perehod_3_body_entered(body):
 	if GloabalTreker.nahod == 1 :
 		#СЮДА ПЕРЕХОД НА КАТСЦЕНУ
 		print("playCatscene")
-
-
+		
 func _on_perehod_3_body_exited(body):
 	if body.name == "PlayerHuman":
 		dialog.stop()

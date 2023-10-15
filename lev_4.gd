@@ -27,8 +27,10 @@ func _on_box_3_body_entered(body):
 #Возвращение
 func _on_backto_3_body_entered(body):
 	if body.name == "PlayerHuman":
+		dialog.start("BackTo3")
 		GloabalTreker.tp = true;
-		get_tree().change_scene_to_file("res://lev_3.tscn")
+		
+		
 
 
 func _on_box_1_body_exited(body):
