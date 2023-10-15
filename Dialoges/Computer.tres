@@ -5,7 +5,8 @@
 [resource]
 script = ExtResource("1_ebw4k")
 starts = {
-"Computer": &"0_1"
+"Computer": &"0_1",
+"Table": &"0_2"
 }
 nodes = {
 "0_1": {
@@ -13,13 +14,49 @@ nodes = {
 "offset": Vector2(500, 487),
 "start_id": "Computer"
 },
+"0_2": {
+"link": &"1_3",
+"offset": Vector2(511.043, 716.142),
+"start_id": "Table"
+},
 "1_1": {
-"dialogue": "ТЕст",
+"dialogue": "В эти компьютеры можно вставить диск.
+",
 "offset": Vector2(770, 363.5),
+"options": {
+0: {
+"link": &"1_2",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_2": {
+"dialogue": "Так много мониторов...",
+"offset": Vector2(1082.15, 374.932),
 "options": {
 "0": {
 "link": "END",
-"text": "11"
+"text": "ОК"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_3": {
+"dialogue": "Эти цифры напоминают мне мой атестат",
+"offset": Vector2(880, 660),
+"options": {
+"0": {
+"link": "END",
+"text": "Ага"
 }
 },
 "size": {
