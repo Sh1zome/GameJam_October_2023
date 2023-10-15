@@ -351,8 +351,8 @@ anim_offset_max = 0.9431
 sub_emitter_mode = 1
 sub_emitter_frequency = 75.52
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_myvc7"]
-polygon = PackedVector2Array(160, -15, 163, -15, 163, -14, 163, -14, 164, -14, 164, -13, 165, -13, 165, -10, 164, -10, 164, -9, 163, -9, 163, -8, 162, -6, 162, -5, 163, -5, 163, -4, 162, -4, 162, -3, 162, -3, 161, -2, 162, -1, 163, 0, 164, 1, 164, 2, 165, 3, 166, 3, 167, 4, 167, 5, 168, 6, 168, 6, 169, 7, 166, 7, 165, 6, 164, 4, 163, 3, 162, 2, 161, 1, 159, 1, 158, 2, 157, 3, 156, 4, 156, 5, 156, 6, 155, 7, 154, 7, 153, 7, 153, 5, 154, 5, 154, 4, 155, 4, 155, 2, 155, 0, 157, -1, 157, -2, 157, -4, 156, -5, 156, -5, 155, -5, 154, -4, 154, -3, 154, -3, 155, -2, 154, -1, 154, -1, 155, 0, 154, 0, 153, 0, 153, -1, 153, -2, 152, -3, 152, -4, 152, -5, 153, -6, 154, -7, 155, -8, 156, -9, 158, -9, 159, -9, 158, -10, 158, -11, 158, -13, 159, -13, 159, -14, 160, -14)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qie41"]
+size = Vector2(23, 25)
 
 [node name="PlayerHuman" type="CharacterBody2D"]
 position = Vector2(-3, 0)
@@ -364,8 +364,8 @@ scale = Vector2(0.882844, 0.882071)
 sprite_frames = SubResource("SpriteFrames_ofrvw")
 animation = &"attack"
 autoplay = "Idle"
-frame = 2
-frame_progress = 0.991504
+frame = 1
+frame_progress = 0.360238
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(161.5, -5.375)
@@ -375,7 +375,7 @@ shape = SubResource("RectangleShape2D_iw06q")
 position = Vector2(163, -3)
 zoom = Vector2(4, 4)
 limit_left = 0
-limit_right = 575
+limit_right = 577
 limit_bottom = 735
 position_smoothing_enabled = true
 position_smoothing_speed = 4.0
@@ -396,7 +396,9 @@ amount = 5
 sub_emitter = NodePath(".")
 process_material = SubResource("ParticleProcessMaterial_ufxl8")
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-position = Vector2(2, 13)
-scale = Vector2(1, -1)
-occluder = SubResource("OccluderPolygon2D_myvc7")
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(180.5, -5.5)
+shape = SubResource("RectangleShape2D_qie41")
+disabled = true

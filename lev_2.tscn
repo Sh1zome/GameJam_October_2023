@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
 [ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="4_t2fno"]
-[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="5_63pyf"]
+[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="6_2d6lh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -4288,7 +4288,7 @@ position = Vector2(90.6875, 576)
 scale = Vector2(0.416504, 0.493653)
 energy = 0.28
 shadow_enabled = true
-texture = ExtResource("5_63pyf")
+texture = ExtResource("6_2d6lh")
 offset = Vector2(0, 130)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
@@ -4296,7 +4296,7 @@ position = Vector2(210.688, 575)
 scale = Vector2(0.408691, 0.493653)
 energy = 0.28
 shadow_enabled = true
-texture = ExtResource("5_63pyf")
+texture = ExtResource("6_2d6lh")
 offset = Vector2(0, 130)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
@@ -4344,14 +4344,14 @@ position = Vector2(-53, 648)
 position = Vector2(189, -46)
 shape = SubResource("RectangleShape2D_idu6b")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="PointLight2D3" type="PointLight2D" parent="."]
 position = Vector2(78, 573)
 scale = Vector2(0.527344, 0.511719)
 energy = 0.15
 texture = ExtResource("6_2d6lh")
 offset = Vector2(0, 130)
 
-[node name="PointLight2D2" type="PointLight2D" parent="."]
+[node name="PointLight2D4" type="PointLight2D" parent="."]
 position = Vector2(216, 572)
 scale = Vector2(0.527344, 0.511719)
 energy = 0.15

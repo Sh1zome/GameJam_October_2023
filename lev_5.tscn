@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bkr2x65ad44kq"]
+[gd_scene load_steps=22 format=3 uid="uid://bkr2x65ad44kq"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Script" path="res://lev_5.gd" id="1_xgtt5"]
@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://ivprcfponu2k" path="res://Виталя/Текстуры/Экспонаты/Ракета.png" id="4_wjx84"]
 [ext_resource type="Texture2D" uid="uid://cdofqnao24c56" path="res://Виталя/Текстуры/Экспонаты/Гуманоид с планеты жопа.png" id="5_7tt5m"]
 [ext_resource type="Texture2D" uid="uid://h7xdlxiu3wnv" path="res://Виталя/Текстуры/Экспонаты/telescop.png" id="6_6vngj"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_kjn3m"]
-[ext_resource type="Texture2D" uid="uid://dwu2c2w2ok66p" path="res://light/Sprite-0001.png" id="8_yg4il"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_kjn3m"]
+[ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="8_yg4il"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4y2q6"]
 texture = ExtResource("1_gcuxi")
@@ -5138,10 +5138,6 @@ scale = Vector2(0.546875, 0.546875)
 position = Vector2(-23.7714, -21.9429)
 shape = SubResource("RectangleShape2D_2a0ay")
 
-[connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
-
-[editable path="PlayerAndUI"]
-[editable path="PlayerAndUI/PlayerHuman"]
 [node name="PointLight2D" type="PointLight2D" parent="."]
 texture = ExtResource("8_yg4il")
 
@@ -5160,3 +5156,8 @@ energy = 0.15
 shadow_enabled = true
 texture = ExtResource("8_yg4il")
 offset = Vector2(0, 130)
+
+[connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
+
+[editable path="PlayerAndUI"]
+[editable path="PlayerAndUI/PlayerHuman"]
