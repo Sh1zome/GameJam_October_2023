@@ -1,12 +1,12 @@
-[gd_scene load_steps=17 format=3 uid="uid://d27f10s7ekrsm"]
+[gd_scene load_steps=20 format=3 uid="uid://d27f10s7ekrsm"]
 
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="2_vyy6q"]
 [ext_resource type="Texture2D" uid="uid://doxglehfi4tqd" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 1.png" id="3_0s4wv"]
 [ext_resource type="Texture2D" uid="uid://doby8exo7od1m" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 3.png" id="4_ouxja"]
+[ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkdal"]
 texture = ExtResource("1_pyei7")
@@ -5661,6 +5661,14 @@ texture = ExtResource("2_vyy6q")
 [sub_resource type="TileSet" id="TileSet_wtvfh"]
 sources/0 = SubResource("TileSetAtlasSource_6mtp2")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ivkb5"]
+shader = ExtResource("5_532hd")
+shader_parameter/pixelSize = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hj5bg"]
+shader = ExtResource("5_532hd")
+shader_parameter/pixelSize = 2
+
 [node name="lev_4" type="Node2D"]
 
 [node name="Основа" type="TileMap" parent="."]
@@ -5687,7 +5695,7 @@ layer_0/tile_data = PackedInt32Array(2293760, 1048576, 24, 2359296, 0, 21, 22937
 z_index = 7
 tile_set = SubResource("TileSet_ownx6")
 format = 2
-layer_0/tile_data = PackedInt32Array(2490367, 393216, 27, 2818047, 393216, 32, 2424832, 458752, 27, 2490368, 458752, 28, 2555904, 458752, 29, 2621440, 458752, 30, 2686976, 458752, 31, 2752512, 458752, 32, 2424833, 524288, 27, 2490369, 524288, 28, 2555905, 524288, 29, 2621441, 524288, 30, 2686977, 524288, 31, 2752513, 524288, 32, 2424847, 851968, 27, 2752527, 851968, 32, 2424848, 917504, 27, 2490384, 917504, 28, 2555920, 917504, 29, 2621456, 917504, 30, 2686992, 917504, 31, 2752528, 917504, 32, 2424849, 983040, 27, 2490385, 983040, 28, 2555921, 983040, 29, 2621457, 983040, 30, 2686993, 983040, 31, 2752529, 983040, 32)
+layer_0/tile_data = PackedInt32Array(2490367, 393216, 27, 2818047, 393216, 32, 2424832, 458752, 27, 2490368, 458752, 28, 2555904, 458752, 29, 2621440, 458752, 30, 2686976, 458752, 31, 2752512, 458752, 32, 2424833, 524288, 27, 2490369, 524288, 28, 2555905, 524288, 29, 2621441, 524288, 30, 2686977, 524288, 31, 2752513, 524288, 32, 2424847, 851968, 27, 2752527, 851968, 32, 2424848, 917504, 27, 2490384, 917504, 28, 2555920, 917504, 29, 2621456, 917504, 30, 2686992, 917504, 31, 2752528, 917504, 32, 2424849, 983040, 27, 2490385, 983040, 28, 2555921, 983040, 29, 2621457, 983040, 30, 2686993, 983040, 31, 2752529, 983040, 32, 2752514, 589824, 32)
 
 [node name="декор П" type="TileMap" parent="."]
 z_index = 4
@@ -5697,6 +5705,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(2752516, 2097152, 16, 2818052, 2097152, 17, 2752524, 2424832, 16, 2818060, 2424832, 17, 2818053, 2162688, 16)
 
 [node name="Декор" type="TileMap" parent="."]
+position = Vector2(0, 3)
 tile_set = SubResource("TileSet_wtvfh")
 format = 2
 layer_0/modulate = Color(0.792157, 0.792157, 0.792157, 1)
@@ -5714,12 +5723,14 @@ texture = ExtResource("4_ouxja")
 
 [node name="ЧёрнаяГрязь" type="Sprite2D" parent="."]
 modulate = Color(0.513726, 0.513726, 0.513726, 1)
+material = SubResource("ShaderMaterial_ivkb5")
 position = Vector2(112, 618)
 scale = Vector2(0.515625, 0.515625)
 texture = ExtResource("5_mo8vn")
 
 [node name="Галактика" type="Sprite2D" parent="."]
 modulate = Color(0.576471, 0.576471, 0.576471, 1)
+material = SubResource("ShaderMaterial_hj5bg")
 position = Vector2(234, 628)
 scale = Vector2(0.253906, 0.253906)
 texture = ExtResource("6_2frew")

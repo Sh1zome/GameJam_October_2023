@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://0bgx0cwetnok"]
+[gd_scene load_steps=18 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
-[ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
+[ext_resource type="PackedScene" uid="uid://ciwayywiyy5ja" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
+[ext_resource type="Shader" path="res://pixelate.gdshader" id="4_t2fno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -3651,6 +3652,10 @@ texture = ExtResource("1_ojoin")
 [sub_resource type="TileSet" id="TileSet_eg2v5"]
 sources/0 = SubResource("TileSetAtlasSource_7ln5i")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gwfwp"]
+shader = ExtResource("4_t2fno")
+shader_parameter/pixelSize = 2
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wsu1"]
 texture = ExtResource("1_ojoin")
 16:6/0 = 0
@@ -4232,6 +4237,7 @@ texture = ExtResource("2_ileey")
 
 [node name="КартинаСЛуноходом2" type="Sprite2D" parent="."]
 modulate = Color(0.709804, 0.709804, 0.709804, 1)
+material = SubResource("ShaderMaterial_gwfwp")
 position = Vector2(182, 625)
 scale = Vector2(0.365597, 0.365597)
 texture = ExtResource("2_ileey")
