@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Player/Human/dash_coldown.gd" id="1_jir8f"]
 [ext_resource type="Texture2D" uid="uid://b4lrh2j7v1g3e" path="res://UX/Interface/Assets/Charge/UI_Flat_Slot_01_Unavailable.png" id="2_47puo"]
-[ext_resource type="PackedScene" uid="uid://7xcjog5ae4ho" path="res://tutorial.tscn" id="2_bjav1"]
+[ext_resource type="PackedScene" uid="uid://bjwog7uwny2cp" path="res://tutorial.tscn" id="2_bjav1"]
 [ext_resource type="Texture2D" uid="uid://brptfd35n213c" path="res://Player/Human/UI_Flat_Select_01a1.png" id="2_m1lve"]
 [ext_resource type="Texture2D" uid="uid://dgmlr245vd0um" path="res://UX/Interface/Assets/Charge/1charhe.png" id="3_cpfq8"]
 [ext_resource type="Texture2D" uid="uid://kkiufdkksk1q" path="res://UX/Interface/Assets/Charge/2charge.png" id="4_gfp2o"]

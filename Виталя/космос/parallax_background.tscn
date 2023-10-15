@@ -12,24 +12,25 @@ script = ExtResource("1_jq4tr")
 motion_scale = Vector2(0.2, 0.667)
 
 [node name="StarryBackground-Layer01-Void" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(5760, 360)
-scale = Vector2(2, 2)
+modulate = Color(0.294118, 1, 0.364706, 1)
+position = Vector2(5728, 358)
+scale = Vector2(1.98889, 1.98889)
 texture = ExtResource("2_j7c0n")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.3, 0.6)
 
 [node name="StarryBackground-Layer02-Stars" type="Sprite2D" parent="ParallaxLayer2"]
-modulate = Color(1, 1, 1, 0.537255)
-position = Vector2(5793, 360)
-scale = Vector2(2.01148, 2)
+modulate = Color(0.72549, 1, 0.607843, 1)
+position = Vector2(5817.79, 361.5)
+scale = Vector2(2.01986, 2.00833)
 texture = ExtResource("3_h4t1q")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
 motion_scale = Vector2(0.4, 0.571)
 
 [node name="StarryBackground-Layer03-Stars" type="Sprite2D" parent="ParallaxLayer3"]
-modulate = Color(1, 1, 1, 0.694118)
-position = Vector2(5756, 360.25)
-scale = Vector2(1.99861, 1.99861)
+modulate = Color(0.662745, 1, 0.180392, 1)
+position = Vector2(5748, 359.75)
+scale = Vector2(1.99583, 1.99583)
 texture = ExtResource("4_dyv2o")

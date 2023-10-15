@@ -1,5 +1,38 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2ysm761bk5v2"]
+[gd_scene load_steps=9 format=3 uid="uid://dbescykif0gad"]
 
 [ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_yex85"]
+[ext_resource type="Theme" uid="uid://crd0d5hasuokm" path="res://TESTTHEME.tres" id="2_0vqol"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="3_aa2gg"]
+[ext_resource type="Resource" uid="uid://cll2xsy85sfyo" path="res://Tutorial.tres" id="4_w4nw6"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="5_hyb3q"]
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="6_nior0"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_qnngi"]
+script = ExtResource("5_hyb3q")
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_ay0th"]
+script = ExtResource("6_nior0")
 
 [node name="PlayerAndUI2" instance=ExtResource("1_yex85")]
+
+[node name="Computer" type="Control" parent="CanvasLayer" index="0"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 250.0
+offset_top = 65.0
+offset_right = 290.0
+offset_bottom = 105.0
+
+[node name="DialogueBox" type="Panel" parent="CanvasLayer/Computer" index="0"]
+visible = false
+custom_minimum_size = Vector2(256, 128)
+layout_mode = 0
+offset_left = 204.0
+offset_top = 82.0
+offset_right = 526.0
+offset_bottom = 210.0
+theme = ExtResource("2_0vqol")
+script = ExtResource("3_aa2gg")
+dialogue_file = ExtResource("4_w4nw6")
+max_options = 2
+custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_qnngi"), SubResource("RichTextEffect_ay0th")])
