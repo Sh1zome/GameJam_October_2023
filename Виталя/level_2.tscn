@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-[gd_scene load_steps=10 format=3 uid="uid://3vih16u2rxk"]
-
-[ext_resource type="PackedScene" uid="uid://dwtl78ignmaig" path="res://человек.tscn" id="2_bhkkx"]
-=======
 [gd_scene load_steps=23 format=3 uid="uid://8jiudhihxs1g"]
 
 [ext_resource type="Script" path="res://Виталя/level_2.gd" id="1_adahb"]
@@ -226,7 +221,6 @@ texture_region_size = Vector2i(32, 32)
 4:14/0 = 0
 4:14/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:14/0/physics_layer_0/angular_velocity = 0.0
->>>>>>> eae974497eeb192324314dfae435687736dbaafe
 
 [sub_resource type="TileSet" id="TileSet_tbick"]
 tile_size = Vector2i(32, 32)
@@ -253,16 +247,12 @@ tile_size = Vector2i(32, 32)
 [sub_resource type="TileSet" id="TileSet_8sqde"]
 physics_layer_0/collision_layer = 1
 
-<<<<<<< HEAD
-[node name="level_" type="Node2D"]
-=======
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m0533"]
 size = Vector2(35, 126)
 
 [node name="level_2" type="Node2D"]
 position = Vector2(-10, 4)
 script = ExtResource("1_adahb")
->>>>>>> eae974497eeb192324314dfae435687736dbaafe
 
 [node name="пол" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_tbick")
