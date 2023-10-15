@@ -3685,40 +3685,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-<<<<<<< HEAD
-[node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(150, 561)
-scale = Vector2(0.927734, 0.501953)
-energy = 0.15
-shadow_enabled = true
-texture = ExtResource("10_1n0x4")
-offset = Vector2(0, 130)
-
-[node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(406, 560)
-scale = Vector2(0.927734, 0.501953)
-energy = 0.15
-shadow_enabled = true
-texture = ExtResource("10_1n0x4")
-offset = Vector2(0, 130)
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_yav0p")
-
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_qaabh")
-
-[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_xvy1m")
-
-[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_61thm")
-
-[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
-position = Vector2(0, 1363)
-scale = Vector2(1, -1)
-occluder = SubResource("OccluderPolygon2D_2jyeh")
-=======
 [node name="PointLight2D2" type="PointLight2D" parent="."]
 position = Vector2(149, 560)
 scale = Vector2(0.898964, 0.494247)
@@ -3749,7 +3715,6 @@ occluder = SubResource("OccluderPolygon2D_ig07r")
 occluder = SubResource("OccluderPolygon2D_57hcn")
 
 [node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
->>>>>>> b4e479a57be0910edd85e850c7d4fa56440966bd
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 

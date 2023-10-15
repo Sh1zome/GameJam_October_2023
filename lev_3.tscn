@@ -1,22 +1,18 @@
-<<<<<<< HEAD
-[gd_scene load_steps=33 format=3 uid="uid://bxngx0v0hyhju"]
-=======
-[gd_scene load_steps=35 format=3 uid="uid://bxngx0v0hyhju"]
->>>>>>> fd150f450e340a80ad090e5fac5aa6c50a00849e
+[gd_scene load_steps=36 format=3 uid="uid://bxngx0v0hyhju"]
 
 [ext_resource type="Script" path="res://lev_3.gd" id="1_8a57a"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_a2mho"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="2_7xv2b"]
 [ext_resource type="Texture2D" uid="uid://bktcu8f7y3f0s" path="res://Виталя/Текстуры/Окружение/Тачка со жрачкой.png" id="3_w665p"]
 [ext_resource type="Texture2D" uid="uid://b7fs2dkerd1dn" path="res://Виталя/Текстуры/Окружение/Скамеечка.png" id="4_nq4cs"]
-[ext_resource type="Texture2D" uid="uid://dwu5wk0ri6lxf" path="res://light/Тачка со жрачкой (1).png" id="4_q43r2"]
+[ext_resource type="Texture2D" path="res://light/Тачка со жрачкой (1).png" id="4_q43r2"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_4ods4"]
 [ext_resource type="Texture2D" uid="uid://cqmnf7i0pa8en" path="res://Виталя/Текстуры/Картины/Картина с евой.png" id="5_eob1j"]
 [ext_resource type="Texture2D" uid="uid://bnso0ys0cr3ou" path="res://Виталя/Текстуры/Картины/Новый Взгляд на ван гога.png" id="6_kdrej"]
 [ext_resource type="Texture2D" uid="uid://c5q2sng7crp8u" path="res://Виталя/Текстуры/Окружение/ТЫ ЩАС ЕБАНЁШЬСЯ.PNG" id="7_mmvn4"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
-[ext_resource type="Texture2D" uid="uid://bqkp3718mjvhu" path="res://light/light.png" id="9_p0rdu"]
-[ext_resource type="Texture2D" uid="uid://cv6i04mrte6rg" path="res://light/spot.png" id="12_m35of"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="8_cyvp1"]
+[ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_p0rdu"]
+[ext_resource type="Texture2D" uid="uid://c1xflliexqwid" path="res://light/spot.png" id="12_m35of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73x4r"]
 size = Vector2(58.9429, 84.9427)
