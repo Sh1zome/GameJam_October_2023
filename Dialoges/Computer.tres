@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_ebw4k")
 starts = {
+"Box1": &"0_5",
 "Computer": &"0_1",
 "MiddleDoor": &"0_4",
 "RightDoor": &"0_3",
@@ -13,12 +14,12 @@ starts = {
 nodes = {
 "0_1": {
 "link": &"1_1",
-"offset": Vector2(360, 480),
+"offset": Vector2(500, 487),
 "start_id": "Computer"
 },
 "0_2": {
 "link": &"1_3",
-"offset": Vector2(511.043, 716.142),
+"offset": Vector2(729.338, 705.173),
 "start_id": "Table"
 },
 "0_3": {
@@ -31,13 +32,33 @@ nodes = {
 "offset": Vector2(480, 1220),
 "start_id": "MiddleDoor"
 },
+"0_5": {
+"link": &"1_8",
+"offset": Vector2(556.915, 1582.71),
+"start_id": "Box1"
+},
 "1_1": {
 "dialogue": "В эти компьютеры можно вставить диск.
 ",
-"offset": Vector2(600, 320),
+"offset": Vector2(800, 260),
 "options": {
 0: {
 "link": &"5_1",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 233.0
+},
+"speaker": ""
+},
+"1_10": {
+"dialogue": "1",
+"offset": Vector2(1540, 1200),
+"options": {
+"0": {
+"link": "END",
 "text": "Далее"
 }
 },
@@ -47,9 +68,55 @@ nodes = {
 },
 "speaker": ""
 },
+"1_11": {
+"dialogue": "2",
+"offset": Vector2(1560, 1460),
+"options": {
+"0": {
+"link": "END",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_13": {
+"dialogue": "4",
+"offset": Vector2(1600, 1960),
+"options": {
+"0": {
+"link": "END",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_14": {
+"dialogue": "Вы чувствуете что вы ближе к находке..
+",
+"offset": Vector2(1640, 1720),
+"options": {
+"0": {
+"link": "END",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.001
+},
+"speaker": ""
+},
 "1_2": {
-"dialogue": "Так много мониторов{{ssd}}..",
-"offset": Vector2(1520, 560),
+"dialogue": "Так много мониторов...",
+"offset": Vector2(1540, 280),
 "options": {
 "0": {
 "link": "END",
@@ -64,10 +131,10 @@ nodes = {
 },
 "1_3": {
 "dialogue": "Эти цифры напоминают мне мой атестат",
-"offset": Vector2(880, 660),
+"offset": Vector2(1080, 580),
 "options": {
-0: {
-"link": &"4_2",
+"0": {
+"link": "END",
 "text": "Ага"
 }
 },
@@ -96,8 +163,8 @@ nodes = {
 "dialogue": "[shake]Дверь слишком тяжёлая...[/shake]",
 "offset": Vector2(1140, 940),
 "options": {
-"0": {
-"link": "END",
+0: {
+"link": &"4_1",
 "text": ""
 }
 },
@@ -124,8 +191,8 @@ nodes = {
 "speaker": ""
 },
 "1_7": {
-"dialogue": "SSD вставлен",
-"offset": Vector2(1580, 240),
+"dialogue": "Диск вставлен",
+"offset": Vector2(1477.62, -34.553),
 "options": {
 "0": {
 "link": "END",
@@ -138,22 +205,64 @@ nodes = {
 },
 "speaker": ""
 },
+"1_8": {
+"dialogue": "Проверить комод?",
+"offset": Vector2(830.281, 1504.31),
+"options": {
+0: {
+"link": &"1_9",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 233.0
+},
+"speaker": ""
+},
+"1_9": {
+"dialogue": "Какой ящик проверить?",
+"offset": Vector2(1140, 1480),
+"options": {
+0: {
+"link": &"1_10",
+"text": "1"
+},
+1: {
+"link": &"1_11",
+"text": "2"
+},
+2: {
+"link": &"1_14",
+"text": "3"
+},
+3: {
+"link": &"1_13",
+"text": "4"
+}
+},
+"size": {
+"x": 200.0,
+"y": 317.0
+},
+"speaker": ""
+},
 "3_1": {
 "link": "END",
 "offset": Vector2(1100, 1300),
 "signalValue": "GoToScene4"
 },
-"4_2": {
+"4_1": {
 "link": "END",
-"offset": Vector2(1160, 760),
-"type": 0,
-"value": "0",
+"offset": Vector2(1560, 1000),
+"type": 1,
+"value": "1",
 "variable": "ssd"
 },
 "5_1": {
 "false": &"1_2",
-"offset": Vector2(1220, 360),
-"operator": 0,
+"offset": Vector2(1045.09, 78.0521),
+"operator": 2,
 "true": &"1_7",
 "value1": "{{ssd}}",
 "value2": "0"
@@ -162,7 +271,7 @@ nodes = {
 variables = {
 "ssd": {
 "type": 2,
-"value": "1"
+"value": "0"
 }
 }
 comments = Array[String]([])
