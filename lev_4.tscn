@@ -1,20 +1,27 @@
-[gd_scene load_steps=31 format=3 uid="uid://d27f10s7ekrsm"]
+[gd_scene load_steps=38 format=3 uid="uid://d27f10s7ekrsm"]
 
 [ext_resource type="Script" path="res://lev_4.gd" id="1_nrrhy"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="2_vyy6q"]
 [ext_resource type="Texture2D" uid="uid://doxglehfi4tqd" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 1.png" id="3_0s4wv"]
 [ext_resource type="PackedScene" uid="uid://igmfatqwefse" path="res://Mobs/astronaut/astronaut.tscn" id="3_6ajvc"]
+[ext_resource type="Shader" path="res://wiggle.gdshader" id="3_ybwlg"]
 [ext_resource type="Texture2D" uid="uid://doby8exo7od1m" path="res://Виталя/Текстуры/Окружение/Жвачка файф версия 3.png" id="4_ouxja"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
 [ext_resource type="Texture2D" uid="uid://biy8oqu5yytmf" path="res://light/Sprite-0001.png" id="8_6r7vt"]
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
+[ext_resource type="AudioStream" uid="uid://cu2a3hgoenryt" path="res://kamni.mp3" id="14_xebj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16xrf"]
 size = Vector2(86.6428, 119.231)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2it4t"]
+shader = ExtResource("3_ybwlg")
+shader_parameter/Strength = 0.0
+shader_parameter/RandomOffset = 1.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lkdal"]
 texture = ExtResource("1_pyei7")
@@ -1567,6 +1574,11 @@ texture = ExtResource("1_pyei7")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lkdal")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ghsk6"]
+shader = ExtResource("3_ybwlg")
+shader_parameter/Strength = 0.0
+shader_parameter/RandomOffset = 1.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lttqo"]
 texture = ExtResource("1_pyei7")
 16:6/0 = 0
@@ -3113,6 +3125,11 @@ texture = ExtResource("1_pyei7")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lttqo")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5e6i6"]
+shader = ExtResource("3_ybwlg")
+shader_parameter/Strength = 0.0
+shader_parameter/RandomOffset = 1.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ln3t0"]
 texture = ExtResource("1_pyei7")
 16:6/0 = 0
@@ -4647,6 +4664,11 @@ texture = ExtResource("1_pyei7")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_ln3t0")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1bjqr"]
+shader = ExtResource("3_ybwlg")
+shader_parameter/Strength = 0.0
+shader_parameter/RandomOffset = 1.0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yndku"]
 texture = ExtResource("1_pyei7")
 16:6/0 = 0
@@ -5157,6 +5179,11 @@ texture = ExtResource("1_pyei7")
 
 [sub_resource type="TileSet" id="TileSet_qeh7u"]
 sources/0 = SubResource("TileSetAtlasSource_yndku")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vom61"]
+shader = ExtResource("3_ybwlg")
+shader_parameter/Strength = 0.0
+shader_parameter/RandomOffset = 1.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6mtp2"]
 texture = ExtResource("2_vyy6q")
@@ -5719,6 +5746,7 @@ drag_right_margin = 1.0
 drag_bottom_margin = 1.0
 
 [node name="Основа" type="TileMap" parent="."]
+material = SubResource("ShaderMaterial_2it4t")
 tile_set = SubResource("TileSet_hpns0")
 format = 2
 layer_0/name = "Основа"
@@ -5740,6 +5768,7 @@ wait_time = 3.0
 autostart = true
 
 [node name="Потолок" type="TileMap" parent="."]
+material = SubResource("ShaderMaterial_ghsk6")
 position = Vector2(32, 1152)
 rotation = -3.14157
 tile_set = SubResource("TileSet_ji3v1")
@@ -5748,18 +5777,21 @@ layer_0/tile_data = PackedInt32Array(2293760, 1048576, 24, 2359296, 0, 21, 22937
 
 [node name="КОЛОННЫ" type="TileMap" parent="."]
 z_index = 7
+material = SubResource("ShaderMaterial_5e6i6")
 tile_set = SubResource("TileSet_ownx6")
 format = 2
 layer_0/tile_data = PackedInt32Array(2490367, 393216, 27, 2818047, 393216, 32, 2424832, 458752, 27, 2490368, 458752, 28, 2555904, 458752, 29, 2621440, 458752, 30, 2686976, 458752, 31, 2752512, 458752, 32, 2424833, 524288, 27, 2490369, 524288, 28, 2555905, 524288, 29, 2621441, 524288, 30, 2686977, 524288, 31, 2752513, 524288, 32, 2424847, 851968, 27, 2752527, 851968, 32, 2424848, 917504, 27, 2490384, 917504, 28, 2555920, 917504, 29, 2621456, 917504, 30, 2686992, 917504, 31, 2752528, 917504, 32, 2424849, 983040, 27, 2490385, 983040, 28, 2555921, 983040, 29, 2621457, 983040, 30, 2686993, 983040, 31, 2752529, 983040, 32, 2752514, 589824, 32)
 
 [node name="декор П" type="TileMap" parent="."]
 z_index = 4
+material = SubResource("ShaderMaterial_1bjqr")
 position = Vector2(36, -5)
 tile_set = SubResource("TileSet_qeh7u")
 format = 2
 layer_0/tile_data = PackedInt32Array(2752516, 2097152, 16, 2818052, 2097152, 17, 2752524, 2424832, 16, 2818060, 2424832, 17, 2818053, 2162688, 16)
 
 [node name="Декор" type="TileMap" parent="."]
+material = SubResource("ShaderMaterial_vom61")
 position = Vector2(0, 3)
 tile_set = SubResource("TileSet_wtvfh")
 format = 2
@@ -5846,6 +5878,10 @@ scale = Vector2(0.253906, 0.253906)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Backto3"]
 position = Vector2(-1224.03, -519.6)
 shape = SubResource("RectangleShape2D_tdif2")
+
+[node name="kamni" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(74, 645)
+stream = ExtResource("14_xebj4")
 
 [connection signal="body_entered" from="Box1" to="." method="_on_box_1_body_entered"]
 [connection signal="body_exited" from="Box1" to="." method="_on_box_1_body_exited"]
