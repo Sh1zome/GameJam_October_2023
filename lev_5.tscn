@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://peeniisyc0tj"]
+[gd_scene load_steps=19 format=3 uid="uid://bkr2x65ad44kq"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Texture2D" uid="uid://vdtghwf0coj8" path="res://Виталя/Текстуры/ДВЕРЬ.png" id="2_mh3al"]
 [ext_resource type="Texture2D" uid="uid://bldg7kospotea" path="res://Виталя/Текстуры/Экспонаты/Стеллажи.png" id="3_jej8y"]
+[ext_resource type="Shader" path="res://pixelate.gdshader" id="4_m0f5h"]
 [ext_resource type="Texture2D" uid="uid://ivprcfponu2k" path="res://Виталя/Текстуры/Экспонаты/Ракета.png" id="4_wjx84"]
 [ext_resource type="Texture2D" uid="uid://cdofqnao24c56" path="res://Виталя/Текстуры/Экспонаты/Гуманоид с планеты жопа.png" id="5_7tt5m"]
 [ext_resource type="Texture2D" uid="uid://h7xdlxiu3wnv" path="res://Виталя/Текстуры/Экспонаты/telescop.png" id="6_6vngj"]
@@ -5045,6 +5046,14 @@ texture = ExtResource("2_mh3al")
 [sub_resource type="TileSet" id="TileSet_e7644"]
 sources/0 = SubResource("TileSetAtlasSource_jgdwl")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cl3so"]
+shader = ExtResource("4_m0f5h")
+shader_parameter/pixelSize = 2
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ghbmg"]
+shader = ExtResource("4_m0f5h")
+shader_parameter/pixelSize = 2
+
 [node name="Lev_5" type="Node2D"]
 
 [node name="основа" type="TileMap" parent="."]
@@ -5082,19 +5091,21 @@ texture = ExtResource("3_jej8y")
 
 [node name="Ракета" type="Sprite2D" parent="."]
 modulate = Color(0.65098, 0.65098, 0.65098, 1)
-position = Vector2(214, 648)
+material = SubResource("ShaderMaterial_cl3so")
+position = Vector2(214, 650)
 scale = Vector2(0.757813, 0.757813)
 texture = ExtResource("4_wjx84")
 
 [node name="ГуманоидСПланетыЖопа" type="Sprite2D" parent="."]
 modulate = Color(0.65098, 0.65098, 0.65098, 1)
-position = Vector2(145, 660)
+position = Vector2(145, 661)
 scale = Vector2(0.570313, 0.570313)
 texture = ExtResource("5_7tt5m")
 
 [node name="Telescop" type="Sprite2D" parent="."]
 modulate = Color(0.956863, 0.956863, 0.956863, 1)
 z_index = 4
-position = Vector2(82, 668)
+material = SubResource("ShaderMaterial_ghbmg")
+position = Vector2(81, 666)
 scale = Vector2(0.429688, 0.429688)
 texture = ExtResource("6_6vngj")
