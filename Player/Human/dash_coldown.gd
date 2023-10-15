@@ -21,7 +21,6 @@ func _process(delta):
 
 
 func _on_comp_dialogue_signal(value):
-	print(dialog.test)
 	if value == "SSD":
 		if GloabalTreker.ssd == false:
 			pass
