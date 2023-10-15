@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bkr2x65ad44kq"]
+[gd_scene load_steps=19 format=3 uid="uid://bkr2x65ad44kq"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Texture2D" uid="uid://vdtghwf0coj8" path="res://Виталя/Текстуры/ДВЕРЬ.png" id="2_mh3al"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ivprcfponu2k" path="res://Виталя/Текстуры/Экспонаты/Ракета.png" id="4_wjx84"]
 [ext_resource type="Texture2D" uid="uid://cdofqnao24c56" path="res://Виталя/Текстуры/Экспонаты/Гуманоид с планеты жопа.png" id="5_7tt5m"]
 [ext_resource type="Texture2D" uid="uid://h7xdlxiu3wnv" path="res://Виталя/Текстуры/Экспонаты/telescop.png" id="6_6vngj"]
+[ext_resource type="Texture2D" uid="uid://dwu2c2w2ok66p" path="res://light/Sprite-0001.png" id="8_yg4il"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4y2q6"]
 texture = ExtResource("1_gcuxi")
@@ -5109,3 +5110,22 @@ material = SubResource("ShaderMaterial_ghbmg")
 position = Vector2(81, 666)
 scale = Vector2(0.429688, 0.429688)
 texture = ExtResource("6_6vngj")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+texture = ExtResource("8_yg4il")
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(82, 576)
+scale = Vector2(0.488281, 0.492188)
+energy = 0.15
+shadow_enabled = true
+texture = ExtResource("8_yg4il")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(211, 576)
+scale = Vector2(0.488281, 0.492188)
+energy = 0.15
+shadow_enabled = true
+texture = ExtResource("8_yg4il")
+offset = Vector2(0, 130)
