@@ -1340,6 +1340,7 @@ texture = ExtResource("9_r4i1g")
 position = Vector2(146.75, 534)
 scale = Vector2(0.789063, 2.73047)
 energy = 0.5
+shadow_enabled = true
 texture = SubResource("GradientTexture2D_u8p0m")
 offset = Vector2(0, 30)
 
@@ -1347,5 +1348,6 @@ offset = Vector2(0, 30)
 position = Vector2(197.75, 534)
 scale = Vector2(0.804687, 2.73438)
 energy = 0.5
+shadow_enabled = true
 texture = SubResource("GradientTexture2D_rfo1l")
 offset = Vector2(0, 30)

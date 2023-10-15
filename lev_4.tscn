@@ -5704,6 +5704,20 @@ shader_parameter/pixelSize = 2
 shader = ExtResource("5_532hd")
 shader_parameter/pixelSize = 2
 
+[sub_resource type="Gradient" id="Gradient_qov0a"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dnv4y"]
+gradient = SubResource("Gradient_qov0a")
+fill_from = Vector2(0.288991, 0.412844)
+fill_to = Vector2(0.756881, 0.683486)
+
+[sub_resource type="Gradient" id="Gradient_bd47k"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jt43d"]
+gradient = SubResource("Gradient_bd47k")
+fill_from = Vector2(0.577982, 0.252294)
+fill_to = Vector2(0.266055, 0.527523)
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_h0wpo"]
 polygon = PackedVector2Array(101, 668, 101, 698, 130, 698, 130, 684, 116, 684, 116, 668)
 
@@ -5823,28 +5837,28 @@ scale = Vector2(0.253906, 0.253906)
 texture = ExtResource("6_2frew")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(83, 575)
-scale = Vector2(0.570313, 0.5)
-energy = 0.2
+position = Vector2(83.1452, 579)
+scale = Vector2(0.927422, 2)
+energy = 0.5
 shadow_enabled = true
-texture = ExtResource("8_6r7vt")
-offset = Vector2(0, 130)
+texture = SubResource("GradientTexture2D_dnv4y")
+offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(208, 575)
-scale = Vector2(0.570313, 0.5)
-energy = 0.2
+position = Vector2(86.8841, 578.031)
+scale = Vector2(0.94207, 2.01563)
+energy = 0.5
 shadow_enabled = true
-texture = ExtResource("8_6r7vt")
-offset = Vector2(0, 130)
+texture = SubResource("GradientTexture2D_jt43d")
+offset = Vector2(30, 30)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_h0wpo")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(177, 658)
-scale = Vector2(0.181641, 0.167969)
-color = Color(0.188235, 0.72549, 0.501961, 1)
+position = Vector2(176, 661)
+scale = Vector2(0.115235, 0.116211)
+color = Color(0.411765, 0.988235, 0.721569, 1)
 energy = 2.47
 blend_mode = 2
 shadow_enabled = true
@@ -5885,6 +5899,7 @@ stream = ExtResource("14_xebj4")
 
 [connection signal="body_entered" from="Box1" to="." method="_on_box_1_body_entered"]
 [connection signal="body_exited" from="Box1" to="." method="_on_box_1_body_exited"]
+[connection signal="timeout" from="astronaut/Timer" to="astronaut" method="_on_timer_timeout"]
 [connection signal="body_entered" from="Box2" to="." method="_on_box_2_body_entered"]
 [connection signal="body_exited" from="Box2" to="." method="_on_box_2_body_exited"]
 [connection signal="body_entered" from="Box3" to="." method="_on_box_3_body_entered"]
