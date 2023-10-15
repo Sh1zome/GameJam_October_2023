@@ -3654,6 +3654,20 @@ layer_2/tile_data = PackedInt32Array()
 [node name="slime" parent="." instance=ExtResource("8_n78aq")]
 position = Vector2(431, 662)
 
+[node name="dark" type="ColorRect" parent="."]
+z_index = 10
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1508.0
+offset_top = -848.0
+offset_right = 1507.0
+offset_bottom = 848.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 
 [editable path="PlayerAndUI"]
