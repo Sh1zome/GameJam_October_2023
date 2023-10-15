@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
 [ext_resource type="PackedScene" uid="uid://dtmb0mftycg0c" path="res://Paralax.tscn" id="2_ols3x"]
-[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="2_w1i3t"]
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="2_w1i3t"]
 [ext_resource type="Texture2D" uid="uid://c2a1arhntovs4" path="res://Виталя/Планета/всетекстуры (1).png" id="4_5kto1"]
 [ext_resource type="Texture2D" uid="uid://due8taewbgcps" path="res://Виталя/Планета/верёвка.png" id="5_1dleq"]
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
@@ -3685,21 +3685,6 @@ energy = 0.28
 shadow_enabled = true
 texture = ExtResource("10_2wt2l")
 offset = Vector2(0, 130)
-
-[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
-position = Vector2(-210, -20)
-occluder = SubResource("OccluderPolygon2D_q14ix")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_l66ks")
-
-[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_ig07r")
-
-[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_57hcn")
-
-[node name="LightOccluder2D5" type="LightOccluder2D" parent="."]
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 
