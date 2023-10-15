@@ -13,9 +13,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if nahod == 1:
-		print("PlayCatScene")
-		nahod == 5
 	if health <= 0:
 		$"res://Player/Human/player_and_ui.tscn".queue_free()
 		
