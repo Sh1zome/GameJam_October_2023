@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://cat5nxj3cw0tb"]
+[gd_scene load_steps=19 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
 [ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="4_t2fno"]
+[ext_resource type="Texture2D" uid="uid://dwu2c2w2ok66p" path="res://light/Sprite-0001.png" id="6_2d6lh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -4311,6 +4312,20 @@ position = Vector2(-53, 648)
 [node name="Table" type="CollisionShape2D" parent="Perehod4"]
 position = Vector2(189, -46)
 shape = SubResource("RectangleShape2D_idu6b")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(78, 573)
+scale = Vector2(0.527344, 0.511719)
+energy = 0.15
+texture = ExtResource("6_2d6lh")
+offset = Vector2(0, 130)
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(216, 572)
+scale = Vector2(0.527344, 0.511719)
+energy = 0.15
+texture = ExtResource("6_2d6lh")
+offset = Vector2(0, 130)
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 [connection signal="body_entered" from="Perehod2" to="." method="_on_perehod_2_body_entered"]

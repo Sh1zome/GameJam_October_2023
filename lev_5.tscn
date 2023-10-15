@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bkr2x65ad44kq"]
+[gd_scene load_steps=18 format=3 uid="uid://bkr2x65ad44kq"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Texture2D" uid="uid://vdtghwf0coj8" path="res://Виталя/Текстуры/ДВЕРЬ.png" id="2_mh3al"]
