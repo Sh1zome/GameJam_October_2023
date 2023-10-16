@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://wt00wwcu0hg5"]
+[gd_scene load_steps=23 format=3 uid="uid://wt00wwcu0hg5"]
 
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_88kkq"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="1_tt0hf"]
 [ext_resource type="Texture2D" uid="uid://vsv1cvlkcv3m" path="res://Виталя/Текстуры/Корабли.png" id="2_kfqk5"]
 [ext_resource type="Texture2D" uid="uid://ds14fh2eg78rc" path="res://Виталя/Текстуры/ОВЕЦ СНОВ 1.PNG" id="3_ga1aw"]
@@ -9,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://do3eol2w3uryk" path="res://Виталя/Текстуры/артефакт.png" id="7_qvi1y"]
 [ext_resource type="Texture2D" uid="uid://r3f0hftsoqrg" path="res://Виталя/Текстуры/рАЗЪЁБАННЫЙ КОРОЛЬ СЛИЗИ.PNG" id="8_b6krx"]
 [ext_resource type="Texture2D" uid="uid://bt8hvi7iwf7qo" path="res://Виталя/Текстуры/ЖЁСТКОЕ ПОРЕВО СО СЛИЗНЯМИ.PNG" id="9_r4i1g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ifbpe"]
+size = Vector2(351, 24)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stn41"]
 texture = ExtResource("1_tt0hf")
@@ -1263,6 +1267,24 @@ fill_to = Vector2(0.12844, 0.408257)
 polygon = PackedVector2Array(158, 693, 158, 690, 159, 690, 159, 689, 161, 689, 161, 688, 162, 688, 162, 686, 163, 686, 164, 685, 165, 685, 165, 683, 166, 683, 166, 682, 167, 682, 168, 681, 169, 681, 169, 680, 174, 680, 174, 681, 175, 681, 176, 681, 176, 680, 177, 680, 177, 681, 178, 681, 178, 681, 179, 682, 180, 682, 180, 683, 180, 683, 181, 684, 182, 684, 183, 685, 183, 686, 184, 686, 184, 687, 184, 688, 185, 688, 185, 688, 185, 689, 186, 689, 186, 689, 187, 690, 188, 690, 188, 690, 188, 691, 188, 692, 188, 693, 188, 694, 188, 695, 189, 695, 189, 696, 190, 696, 191, 696, 158, 696, 158, 695, 157, 695, 157, 693)
 
 [node name="Lev_6" type="Node2D"]
+position = Vector2(-1, 23)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = 3
+position = Vector2(14, 706)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(162, -5)
+shape = SubResource("RectangleShape2D_ifbpe")
+
+[node name="PlayerAndUI" parent="." instance=ExtResource("1_88kkq")]
+z_index = 3
+position = Vector2(-108, 647)
+
+[node name="Camera" parent="PlayerAndUI/PlayerHuman" index="2"]
+limit_top = 525
+limit_right = 325
+limit_bottom = 725
 
 [node name="основа" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ajvgx")
@@ -1359,3 +1381,6 @@ offset = Vector2(0, 30)
 position = Vector2(-1, 1390)
 scale = Vector2(1, -1)
 occluder = SubResource("OccluderPolygon2D_r6pkm")
+
+[editable path="PlayerAndUI"]
+[editable path="PlayerAndUI/PlayerHuman"]

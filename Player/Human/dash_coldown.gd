@@ -25,6 +25,7 @@ func _on_comp_dialogue_signal(value):
 	if value == "nahod+":	
 		GloabalTreker.nahod +=1
 		GloabalTreker.playCamni = true
+		print("ppp")
 	if value == "ssd":
 		GloabalTreker.openDoor = true
 		
