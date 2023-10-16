@@ -10,6 +10,9 @@ var openDoor = false
 var artifact = false
 var ssd = true
 var playCamni = true
+var goToLvl5 = false
+var BackToLvl3 = false
+var goToLvl4 = false
 
 func _ready():
 	print(GloabalTreker.health)

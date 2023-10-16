@@ -30,10 +30,13 @@ func _on_comp_dialogue_signal(value):
 		GloabalTreker.openDoor = true
 		
 	if value == "GoToScene4":
+		GloabalTreker.goToLvl4 = true
 		get_tree().change_scene_to_file("res://lev_4.tscn")
 		print("TEST")
 	if value == "BackTo3":
+		GloabalTreker.BackToLvl3 = true
 		get_tree().change_scene_to_file("res://lev_3.tscn")
 	if value == "GoTo5" && GloabalTreker.openDoor == true:
+		GloabalTreker.goToLvl5 = true
 		get_tree().change_scene_to_file("res://lev_5.tscn")
 		

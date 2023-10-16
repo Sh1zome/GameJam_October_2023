@@ -2,8 +2,15 @@ extends Node2D
 @onready var dialog = $PlayerAndUI/CanvasLayer/DashColdown/Comp
 var tryaska = false
 var timer = 0
+@onready var dark = $dark
+
+var timerD = 0
+var exit_timer = 0
+var entered = false
+var exited = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	entered = true
 	pass # Replace with function body.
 
 
@@ -27,6 +34,19 @@ func _process(delta):
 			$"КОЛОННЫ".get_material().set_shader_parameter("Strength", 0)
 			$"декор П".get_material().set_shader_parameter("Strength", 0)
 			$"Декор".get_material().set_shader_parameter("Strength", 0)
+	
+	timerD = timerD + (delta * 1)
+	if entered && timerD >= 0.5:
+		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,0), delta * 10)
+		
+	elif exited:
+		exit_timer = exit_timer + (delta * 1)
+		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,1), delta * 10)
+		
+	if exit_timer >= 0.35:
+		if GloabalTreker.BackToLvl3:
+			GloabalTreker.tp = true;
+			get_tree().change_scene_to_file("res://lev_3.tscn")
 			
 #Коробка 1
 func _on_box_1_body_entered(body):

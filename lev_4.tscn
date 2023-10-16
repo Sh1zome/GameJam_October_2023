@@ -9,7 +9,7 @@
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
 [ext_resource type="AudioStream" uid="uid://cu2a3hgoenryt" path="res://kamni.mp3" id="14_xebj4"]
 
@@ -5886,6 +5886,20 @@ shape = SubResource("RectangleShape2D_tdif2")
 [node name="kamni" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(74, 645)
 stream = ExtResource("14_xebj4")
+
+[node name="dark" type="ColorRect" parent="."]
+z_index = 10
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1508.0
+offset_top = -848.0
+offset_right = 1507.0
+offset_bottom = 848.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="body_entered" from="Box1" to="." method="_on_box_1_body_entered"]
 [connection signal="body_exited" from="Box1" to="." method="_on_box_1_body_exited"]
