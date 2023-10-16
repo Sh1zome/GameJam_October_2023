@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://bmicm8bpkqjfe"]
+
+[ext_resource type="Texture2D" uid="uid://cwiadr0sigtng" path="res://Виталя/сцена/Сцена 1.png" id="1_34tpc"]
+[ext_resource type="Texture2D" uid="uid://b74bv60hqqcpp" path="res://Виталя/сцена/сцена 2.png" id="2_7annf"]
+[ext_resource type="Texture2D" uid="uid://dg0pxokjm5gg2" path="res://Виталя/сцена/сцена 3.png" id="3_ptjn6"]
+[ext_resource type="Texture2D" uid="uid://b2v6l3tx5wxnv" path="res://Виталя/сцена/сцена 4.png" id="4_gx07w"]
+[ext_resource type="Texture2D" uid="uid://c0jef8vl7cmgh" path="res://Виталя/сцена/сцена 5.png" id="5_a5sf8"]
+[ext_resource type="Texture2D" uid="uid://d3snurjo34rpq" path="res://Виталя/сцена/сцена 6.png" id="6_g7a3n"]
+[ext_resource type="Texture2D" uid="uid://cj3hu8rcot7pf" path="res://Виталя/сцена/сцена 7.png" id="7_l4373"]
+[ext_resource type="Script" path="res://cutscene1.gd" id="8_5h5ui"]
+[ext_resource type="Texture2D" uid="uid://cox7ywt2mmmkw" path="res://Виталя/сцена/Ракета.png" id="9_4sh2s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_evqa2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 5.0,
+"texture": ExtResource("1_34tpc")
+}, {
+"duration": 5.0,
+"texture": ExtResource("2_7annf")
+}, {
+"duration": 5.0,
+"texture": ExtResource("3_ptjn6")
+}, {
+"duration": 5.0,
+"texture": ExtResource("4_gx07w")
+}, {
+"duration": 5.0,
+"texture": ExtResource("5_a5sf8")
+}, {
+"duration": 5.0,
+"texture": ExtResource("6_g7a3n")
+}, {
+"duration": 5.0,
+"texture": ExtResource("7_l4373")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 360)
+scale = Vector2(3.429, 3.429)
+sprite_frames = SubResource("SpriteFrames_evqa2")
+script = ExtResource("8_5h5ui")
+
+[node name="rocket" type="Sprite2D" parent="."]
+position = Vector2(536, 291)
+rotation = 1.02608
+scale = Vector2(0.404187, 0.404187)
+texture = ExtResource("9_4sh2s")
+
+[node name="dark" type="ColorRect" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+z_index = 10
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 0, 0, 1)
