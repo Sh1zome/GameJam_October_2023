@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://wt00wwcu0hg5"]
+[gd_scene load_steps=22 format=3 uid="uid://wt00wwcu0hg5"]
 
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="1_tt0hf"]
 [ext_resource type="Texture2D" uid="uid://vsv1cvlkcv3m" path="res://Виталя/Текстуры/Корабли.png" id="2_kfqk5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://do3eol2w3uryk" path="res://Виталя/Текстуры/артефакт.png" id="7_qvi1y"]
 [ext_resource type="Texture2D" uid="uid://r3f0hftsoqrg" path="res://Виталя/Текстуры/рАЗЪЁБАННЫЙ КОРОЛЬ СЛИЗИ.PNG" id="8_b6krx"]
 [ext_resource type="Texture2D" uid="uid://bt8hvi7iwf7qo" path="res://Виталя/Текстуры/ЖЁСТКОЕ ПОРЕВО СО СЛИЗНЯМИ.PNG" id="9_r4i1g"]
+[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="10_v80ay"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_stn41"]
 texture = ExtResource("1_tt0hf")
@@ -1307,7 +1308,7 @@ texture = ExtResource("2_kfqk5")
 
 [node name="ОвецСнов1" type="Sprite2D" parent="."]
 modulate = Color(0.780392, 0.780392, 0.780392, 1)
-position = Vector2(173, 566)
+position = Vector2(173, 576)
 texture = ExtResource("3_ga1aw")
 
 [node name="ОвецСновМаленькиВер2" type="Sprite2D" parent="."]
@@ -1340,7 +1341,7 @@ position = Vector2(100, 627)
 texture = ExtResource("9_r4i1g")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(146.75, 534)
+position = Vector2(147, 541)
 scale = Vector2(0.789063, 2.73047)
 energy = 0.5
 shadow_enabled = true
@@ -1348,7 +1349,7 @@ texture = SubResource("GradientTexture2D_u8p0m")
 offset = Vector2(0, 30)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(197.75, 534)
+position = Vector2(198, 541)
 scale = Vector2(0.804687, 2.73438)
 energy = 0.5
 shadow_enabled = true
@@ -1359,3 +1360,7 @@ offset = Vector2(0, 30)
 position = Vector2(-1, 1390)
 scale = Vector2(1, -1)
 occluder = SubResource("OccluderPolygon2D_r6pkm")
+
+[node name="Вцв" type="Sprite2D" parent="."]
+position = Vector2(173, 536)
+texture = ExtResource("10_v80ay")

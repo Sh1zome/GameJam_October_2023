@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bkr2x65ad44kq"]
+[gd_scene load_steps=32 format=3 uid="uid://bkr2x65ad44kq"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Script" path="res://lev_5.gd" id="1_xgtt5"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cdofqnao24c56" path="res://Виталя/Текстуры/Экспонаты/Гуманоид с планеты жопа.png" id="5_7tt5m"]
 [ext_resource type="Texture2D" uid="uid://h7xdlxiu3wnv" path="res://Виталя/Текстуры/Экспонаты/telescop.png" id="6_6vngj"]
 [ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_kjn3m"]
+[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="10_hkopb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4y2q6"]
 texture = ExtResource("1_gcuxi")
@@ -5172,7 +5173,7 @@ position = Vector2(-23.7714, -21.9429)
 shape = SubResource("RectangleShape2D_2a0ay")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(153.719, 581)
+position = Vector2(153, 588)
 scale = Vector2(1.14063, 1.96875)
 energy = 0.5
 shadow_enabled = true
@@ -5180,7 +5181,7 @@ texture = SubResource("GradientTexture2D_7imd5")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(80.7273, 580)
+position = Vector2(80, 588)
 scale = Vector2(1.12463, 2)
 energy = 0.5
 shadow_enabled = true
@@ -5188,7 +5189,7 @@ texture = SubResource("GradientTexture2D_kbu68")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(211.25, 581)
+position = Vector2(211, 588)
 scale = Vector2(0.875, 1.98438)
 energy = 0.5
 shadow_enabled = true
@@ -5196,7 +5197,7 @@ texture = SubResource("GradientTexture2D_ruxm7")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D4" type="PointLight2D" parent="."]
-position = Vector2(215.156, 580)
+position = Vector2(215, 588)
 scale = Vector2(1.07813, 1.98438)
 energy = 0.5
 shadow_enabled = true
@@ -5212,6 +5213,14 @@ occluder = SubResource("OccluderPolygon2D_y0p5o")
 position = Vector2(1, 1366)
 scale = Vector2(1, -1)
 occluder = SubResource("OccluderPolygon2D_sqr7t")
+
+[node name="Вцв" type="Sprite2D" parent="."]
+position = Vector2(83, 584)
+texture = ExtResource("10_hkopb")
+
+[node name="Вцв2" type="Sprite2D" parent="."]
+position = Vector2(213, 584)
+texture = ExtResource("10_hkopb")
 
 [connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
 

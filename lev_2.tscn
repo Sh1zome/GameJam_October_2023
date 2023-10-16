@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://cat5nxj3cw0tb"]
+[gd_scene load_steps=29 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
 [ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="4_t2fno"]
+[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="6_ocjaf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -4311,16 +4312,16 @@ position = Vector2(-25, -39)
 shape = SubResource("RectangleShape2D_fgikk")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(80.1073, 579.012)
-scale = Vector2(0.55363, 1.9998)
+position = Vector2(79.3336, 588)
+scale = Vector2(0.720426, 1.9998)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_78631")
 offset = Vector2(30, 30)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(205.313, 579.969)
-scale = Vector2(0.65625, 1.98438)
+position = Vector2(201.26, 586)
+scale = Vector2(0.786132, 1.98438)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_o7mfu")
@@ -4372,20 +4373,28 @@ position = Vector2(189, -46)
 shape = SubResource("RectangleShape2D_idu6b")
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(77.9158, 580)
-scale = Vector2(0.542114, 1.98437)
+position = Vector2(76.6753, 588)
+scale = Vector2(0.704441, 1.98437)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_ckwnx")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D4" type="PointLight2D" parent="."]
-position = Vector2(202.33, 581.486)
-scale = Vector2(0.834812, 1.95991)
+position = Vector2(197.867, 587)
+scale = Vector2(0.901088, 1.95991)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_6dkd1")
 offset = Vector2(-30, 30)
+
+[node name="Вцв" type="Sprite2D" parent="."]
+position = Vector2(80, 584)
+texture = ExtResource("6_ocjaf")
+
+[node name="Вцв2" type="Sprite2D" parent="."]
+position = Vector2(196, 584)
+texture = ExtResource("6_ocjaf")
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 [connection signal="body_entered" from="Perehod2" to="." method="_on_perehod_2_body_entered"]
