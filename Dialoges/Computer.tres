@@ -190,7 +190,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 261.0
+"y": 261.001
 },
 "speaker": ""
 },
@@ -235,7 +235,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 261.0
+"y": 260.999
 },
 "speaker": ""
 },
@@ -385,7 +385,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 261.0
+"y": 261.001
 },
 "speaker": ""
 },
@@ -409,8 +409,8 @@ nodes = {
 "dialogue": "Диск вставлен",
 "offset": Vector2(1477.62, -34.553),
 "options": {
-"0": {
-"link": "END",
+0: {
+"link": &"3_5",
 "text": ""
 }
 },
@@ -481,6 +481,11 @@ nodes = {
 "link": "END",
 "offset": Vector2(1331.89, 983.641),
 "signalValue": "GoTo5"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2(1820, 40),
+"signalValue": "ssd"
 },
 "5_1": {
 "false": &"1_2",

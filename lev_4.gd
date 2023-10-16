@@ -1,5 +1,4 @@
 extends Node2D
-
 @onready var dialog = $PlayerAndUI/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -8,9 +7,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
-		
-
+	if GloabalTreker.nahod == 1 && GloabalTreker.playCamni == true:
+		$kamni.play()
+		GloabalTreker.playCamni = false
 #Коробка 1
 func _on_box_1_body_entered(body):
 	if body.name == "PlayerHuman":

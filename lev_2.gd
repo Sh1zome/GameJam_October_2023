@@ -66,6 +66,7 @@ func _on_perehod_3_body_entered(body):
 		dialog.start("Computer")
 	if GloabalTreker.nahod == 1 :
 		#СЮДА ПЕРЕХОД НА КАТСЦЕНУ
+		GloabalTreker.openDoor = true
 		print("playCatscene")
 		
 func _on_perehod_3_body_exited(body):

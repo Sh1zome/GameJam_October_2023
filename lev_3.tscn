@@ -14,8 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_p0rdu"]
 [ext_resource type="Texture2D" uid="uid://c1xflliexqwid" path="res://light/spot.png" id="12_m35of"]
 [ext_resource type="PackedScene" uid="uid://igmfatqwefse" path="res://Mobs/astronaut/astronaut.tscn" id="14_bcpp4"]
-[ext_resource type="Texture2D" uid="uid://bqkp3718mjvhu" path="res://light/light.png" id="9_p0rdu"]
-[ext_resource type="Texture2D" uid="uid://cv6i04mrte6rg" path="res://light/spot.png" id="12_m35of"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73x4r"]
 size = Vector2(58.9429, 84.9427)

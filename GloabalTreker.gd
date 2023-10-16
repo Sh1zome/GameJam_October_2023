@@ -9,6 +9,7 @@ var nahod = 0
 var openDoor = false
 var artifact = false
 var ssd = true
+var playCamni = true
 
 func _ready():
 	print(GloabalTreker.health)

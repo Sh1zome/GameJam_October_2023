@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/kamni.mp3-1b5d573d441c257c7a6d44dfb5bf9192.mp
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

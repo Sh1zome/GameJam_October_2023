@@ -4,8 +4,9 @@ extends Control
 @onready var InColdown = $CanvasLayer/InColdown
 @onready var OutColdown = $CanvasLayer/OutColdown
 @onready var Player = $"../../PlayerHuman"
-@onready var dialog = $PlayerAndUI/CanvasLayer/DashColdown/Comp
-var lvl
+@onready var dialog = $Comp
+
+
 
 func _ready():
 	InColdown.visible = false
@@ -21,18 +22,12 @@ func _process(delta):
 		OutColdown.visible = true
 		
 func _on_comp_dialogue_signal(value):
-	if value == "nahod+":
-		GloabalTreker.openDoor = true
-		lvl = SceneTree.current_scene
-		lvl.get_node("./kamni").playing = true
-		
+	if value == "nahod+":	
 		GloabalTreker.nahod +=1
-	if value == "SSD":
-		if GloabalTreker.ssd == false:
-			pass
-		if GloabalTreker.ssd == true:
-			pass
-			
+		GloabalTreker.playCamni = true
+	if value == "ssd":
+		GloabalTreker.openDoor = true
+		
 	if value == "GoToScene4":
 		get_tree().change_scene_to_file("res://lev_4.tscn")
 		print("TEST")
@@ -40,3 +35,4 @@ func _on_comp_dialogue_signal(value):
 		get_tree().change_scene_to_file("res://lev_3.tscn")
 	if value == "GoTo5" && GloabalTreker.openDoor == true:
 		get_tree().change_scene_to_file("res://lev_5.tscn")
+		

@@ -4297,9 +4297,6 @@ position_smoothing_speed = 0.0
 rotation_smoothing_speed = 0.0
 drag_right_margin = 1.0
 
-[node name="LightOccluder2D" parent="PlayerAndUI2/PlayerHuman" index="4"]
-position = Vector2(-97, 13)
-
 [node name="DashColdown" parent="PlayerAndUI2/CanvasLayer" index="0"]
 offset_left = 378.0
 offset_top = 72.0
