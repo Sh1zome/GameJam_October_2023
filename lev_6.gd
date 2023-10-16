@@ -13,4 +13,5 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body):
 	if body.name == "PlayerHuman":
+		GloabalTreker.tp2 = true
 		get_tree().change_scene_to_file("res://lev_5.tscn")

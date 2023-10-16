@@ -16,10 +16,16 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	if GloabalTreker.tp2 == true:
-		$PlayerAndUI.position.x = 180
-		$PlayerAndUI.position.y = 700
+		print($PlayerAndUI/PlayerHuman.global_position)
+		$PlayerAndUI.position.x = 57
+		$PlayerAndUI.position.y = 704
 		GloabalTreker.tp2 == false
+	if GloabalTreker.tp3 == true:
+		$PlayerAndUI/PlayerHuman.global_position.x = 45
+		GloabalTreker.tp3 = false
+		#$PlayerAndUI/PlayerHuman.global_position =
 		
 	timer = timer + (delta * 1)
 	
