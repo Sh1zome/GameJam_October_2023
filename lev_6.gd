@@ -16,7 +16,6 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if GloabalTreker.artic == true:
-		print("tested")
 		$"Артефакт".visible = false
 		$"Artifact".global_position.x = 100000
 	

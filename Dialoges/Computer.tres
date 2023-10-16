@@ -15,6 +15,7 @@ starts = {
 "Cosmonavt1": &"0_10",
 "MiddleDoor": &"0_4",
 "RightDoor": &"0_3",
+"Steklo": &"0_12",
 "Table": &"0_2"
 }
 nodes = {
@@ -32,6 +33,11 @@ nodes = {
 "link": &"1_26",
 "offset": Vector2(2176.4, 588.712),
 "start_id": "Artifact"
+},
+"0_12": {
+"link": &"1_29",
+"offset": Vector2(2137.67, 948.674),
+"start_id": "Steklo"
 },
 "0_2": {
 "link": &"1_3",
@@ -130,7 +136,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 261.0
+"y": 260.999
 },
 "speaker": ""
 },
@@ -256,7 +262,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 261.0
+"y": 261.001
 },
 "speaker": ""
 },
@@ -395,6 +401,21 @@ nodes = {
 },
 "speaker": ""
 },
+"1_29": {
+"dialogue": "Вай ээ какой мужчинаа....",
+"offset": Vector2(2580, 940),
+"options": {
+0: {
+"link": &"1_30",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
 "1_3": {
 "dialogue": "Эти цифры напоминают мне мой атестат",
 "offset": Vector2(1080, 580),
@@ -407,6 +428,36 @@ nodes = {
 "size": {
 "x": 200.0,
 "y": 261.0
+},
+"speaker": ""
+},
+"1_30": {
+"dialogue": ".....",
+"offset": Vector2(2860, 960),
+"options": {
+0: {
+"link": &"1_31",
+"text": "....."
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_31": {
+"dialogue": "Это просто муляж за стеклом...",
+"offset": Vector2(3160, 940),
+"options": {
+"0": {
+"link": "END",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 233.0
 },
 "speaker": ""
 },

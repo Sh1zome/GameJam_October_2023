@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bkr2x65ad44kq"]
+[gd_scene load_steps=33 format=3 uid="uid://bkr2x65ad44kq"]
 
 [ext_resource type="Texture2D" uid="uid://tsv8frga0h47" path="res://Виталя/Текстуры/всетекстуры шкафы.png" id="1_gcuxi"]
 [ext_resource type="Script" path="res://lev_5.gd" id="1_xgtt5"]
@@ -5096,6 +5096,9 @@ polygon = PackedVector2Array(97, 683, 92, 683, 93, 684, 93, 686, 84, 694, 80, 69
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ukbk0"]
 size = Vector2(20, 94)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8gi5"]
+size = Vector2(24, 52)
+
 [node name="Lev_5" type="Node2D"]
 position = Vector2(-8, 20)
 script = ExtResource("1_xgtt5")
@@ -5109,6 +5112,7 @@ position = Vector2(-30, 3)
 
 [node name="Camera" parent="PlayerAndUI/PlayerHuman" index="2"]
 zoom = Vector2(4.7, 4.7)
+limit_top = 583
 limit_right = 275
 
 [node name="основа" type="TileMap" parent="."]
@@ -5238,8 +5242,16 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(145, 661)
+shape = SubResource("RectangleShape2D_f8gi5")
+
 [connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
 [connection signal="body_entered" from="GoTo6" to="." method="_on_go_to_6_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 
 [editable path="PlayerAndUI"]
 [editable path="PlayerAndUI/PlayerHuman"]
