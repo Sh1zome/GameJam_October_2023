@@ -8,7 +8,7 @@ var entered = false
 var exited = false
 var lvl3 = false
 var lvl6 = false
-
+@onready var dialog = $PlayerAndUI/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	entered = true
@@ -36,7 +36,6 @@ func _process(delta):
 		
 	if exit_timer >= 0.35:
 		if lvl3:
-			GloabalTreker.tp = true;
 			GloabalTreker.tp3 = true
 			get_tree().change_scene_to_file("res://lev_3.tscn")
 		if lvl6:
@@ -59,3 +58,13 @@ func _on_go_to_6_body_entered(body):
 	if body.name == "PlayerHuman":
 		exited = true
 		lvl6 = true
+
+
+func _on_area_2d_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.start("Steklo")
+
+
+func _on_area_2d_body_exited(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()

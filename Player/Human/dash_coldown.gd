@@ -28,6 +28,7 @@ func _on_comp_dialogue_signal(value):
 		print("ppp")
 	if value == "ssd":
 		GloabalTreker.openDoor = true
+	
 		
 	if value == "GoToScene4":
 		GloabalTreker.goToLvl4 = true
@@ -39,4 +40,7 @@ func _on_comp_dialogue_signal(value):
 	if value == "GoTo5" && GloabalTreker.openDoor == true:
 		GloabalTreker.goToLvl5 = true
 		get_tree().change_scene_to_file("res://lev_5.tscn")
+	if value == "GetArtifact":
+		GloabalTreker.artic = true
+		
 		

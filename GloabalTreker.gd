@@ -14,6 +14,7 @@ var tp3 = false
 var goToLvl5 = false
 var BackToLvl3 = false
 var goToLvl4 = false
+var artic = false
 
 func _ready():
 	print(GloabalTreker.health)

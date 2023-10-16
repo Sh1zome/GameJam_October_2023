@@ -26,6 +26,7 @@ scale = Vector2(1, 1.02593)
 metadata/_edit_use_anchors_ = true
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+visible = false
 offset_left = 154.0
 offset_top = 649.0
 offset_right = 277.0
