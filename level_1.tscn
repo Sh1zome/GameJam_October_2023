@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://c4pdrkhalwkik"]
+[gd_scene load_steps=37 format=3 uid="uid://c4pdrkhalwkik"]
 
 [ext_resource type="Script" path="res://level_1.gd" id="1_5sw6k"]
 [ext_resource type="Texture2D" uid="uid://gmwrgbxh40il" path="res://Виталя/Планета/1111111.png" id="2_dy7v7"]
@@ -8,8 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://due8taewbgcps" path="res://Виталя/Планета/верёвка.png" id="5_1dleq"]
 [ext_resource type="Texture2D" uid="uid://sx44xg564uoe" path="res://Виталя/Планета/Sprite-0001.png" id="6_tkmah"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="8_7rw78"]
-[ext_resource type="PackedScene" uid="uid://dgwjlici6moar" path="res://slime.tscn" id="8_n78aq"]
-[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="10_p24x4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7nob7"]
 texture = ExtResource("4_5kto1")
@@ -3683,9 +3681,6 @@ layer_2/y_sort_enabled = false
 layer_2/y_sort_origin = 0
 layer_2/z_index = 0
 layer_2/tile_data = PackedInt32Array()
-
-[node name="slime" parent="." instance=ExtResource("8_n78aq")]
-position = Vector2(431, 662)
 
 [node name="dark" type="ColorRect" parent="."]
 visible = false

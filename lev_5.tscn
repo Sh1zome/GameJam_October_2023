@@ -5094,6 +5094,9 @@ polygon = PackedVector2Array(196, 680, 196, 685, 194, 685, 194, 689, 184, 689, 1
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_sqr7t"]
 polygon = PackedVector2Array(97, 683, 92, 683, 93, 684, 93, 686, 84, 694, 80, 694, 68, 683, 70, 683, 70, 681, 65, 681, 65, 683, 66, 683, 79, 696, 79, 699, 84, 697, 94, 687, 94, 685, 96, 685)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ukbk0"]
+size = Vector2(20, 94)
+
 [node name="Lev_5" type="Node2D"]
 position = Vector2(-8, 20)
 script = ExtResource("1_xgtt5")
@@ -5214,15 +5217,15 @@ position = Vector2(1, 1366)
 scale = Vector2(1, -1)
 occluder = SubResource("OccluderPolygon2D_sqr7t")
 
-[node name="Вцв" type="Sprite2D" parent="."]
-position = Vector2(83, 584)
-texture = ExtResource("10_hkopb")
+[node name="GoTo6" type="Area2D" parent="."]
+position = Vector2(314, 574)
 
-[node name="Вцв2" type="Sprite2D" parent="."]
-position = Vector2(213, 584)
-texture = ExtResource("10_hkopb")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoTo6"]
+position = Vector2(-36, 83)
+shape = SubResource("RectangleShape2D_ukbk0")
 
 [connection signal="body_entered" from="BackTo4" to="." method="_on_back_to_4_body_entered"]
+[connection signal="body_entered" from="GoTo6" to="." method="_on_go_to_6_body_entered"]
 
 [editable path="PlayerAndUI"]
 [editable path="PlayerAndUI/PlayerHuman"]
