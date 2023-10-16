@@ -6,7 +6,7 @@ var timer = 0
 var exit_timer = 0
 var entered = false
 var exited = false
-
+@onready var dialog = $PlayerAndUI2/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	entered = true
@@ -35,3 +35,8 @@ func _process(delta):
 func _on_area_2d_body_entered(body):
 	if body.name == "PlayerHuman":
 		exited = true
+
+
+func _on_artifact_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.play()
