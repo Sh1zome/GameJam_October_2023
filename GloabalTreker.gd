@@ -15,9 +15,8 @@ var goToLvl5 = false
 var BackToLvl3 = false
 var goToLvl4 = false
 var artic = false
-
 func _ready():
-	print(GloabalTreker.health)
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -14,7 +14,6 @@ func _ready():
 		GloabalTreker.complete1 = true
 	
 func _process(delta):
-	
 	if GloabalTreker.tp == true:
 		$PlayerAndUI.position.x = 375
 		$PlayerAndUI.position.y = 660
