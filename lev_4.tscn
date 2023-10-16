@@ -9,7 +9,7 @@
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
-[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
 [ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="13_4crt3"]
 [ext_resource type="AudioStream" uid="uid://cu2a3hgoenryt" path="res://kamni.mp3" id="14_xebj4"]
@@ -5901,6 +5901,7 @@ offset_bottom = 848.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
+
 [node name="Вцв" type="Sprite2D" parent="."]
 position = Vector2(80, 584)
 texture = ExtResource("13_4crt3")

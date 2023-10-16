@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://wt00wwcu0hg5"]
 
 [ext_resource type="Script" path="res://lev_6.gd" id="1_5k03u"]
-[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="1_88kkq"]
+[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_88kkq"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="1_tt0hf"]
 [ext_resource type="Texture2D" uid="uid://vsv1cvlkcv3m" path="res://Виталя/Текстуры/Корабли.png" id="2_kfqk5"]
 [ext_resource type="Texture2D" uid="uid://ds14fh2eg78rc" path="res://Виталя/Текстуры/ОВЕЦ СНОВ 1.PNG" id="3_ga1aw"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://do3eol2w3uryk" path="res://Виталя/Текстуры/артефакт.png" id="7_qvi1y"]
 [ext_resource type="Texture2D" uid="uid://r3f0hftsoqrg" path="res://Виталя/Текстуры/рАЗЪЁБАННЫЙ КОРОЛЬ СЛИЗИ.PNG" id="8_b6krx"]
 [ext_resource type="Texture2D" uid="uid://bt8hvi7iwf7qo" path="res://Виталя/Текстуры/ЖЁСТКОЕ ПОРЕВО СО СЛИЗНЯМИ.PNG" id="9_r4i1g"]
-[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="10_v80ay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifbpe"]
 size = Vector2(351, 24)

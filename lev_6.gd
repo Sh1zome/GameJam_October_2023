@@ -21,13 +21,13 @@ func _process(delta):
 	if entered && timer >= 0.5:
 		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,0), delta * 10)
 		
-	elif exited:
+	if exited:
 		exit_timer = exit_timer + (delta * 1)
 		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,1), delta * 10)
 		
 
 		if exit_timer >= 0.35:
-			loabalTreker.tp2 = true
+			GloabalTreker.tp2 = true
 			get_tree().change_scene_to_file("res://lev_5.tscn")
 	pass
 
