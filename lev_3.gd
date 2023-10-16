@@ -35,7 +35,7 @@ func _process(delta):
 			if lvl2:
 				get_tree().change_scene_to_file("res://lev_2.tscn")
 			if lvl5:
-				get_tree().change_scene_to_file("res://lev_5.tscn")
+				get_tree().change_scene_to_file("res://lev_3.tscn")
 			if GloabalTreker.goToLvl5:
 				get_tree().change_scene_to_file("res://lev_5.tscn")
 				

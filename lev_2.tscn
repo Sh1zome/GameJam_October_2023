@@ -4304,9 +4304,6 @@ offset_top = 72.0
 offset_right = -719.0
 offset_bottom = -484.0
 
-[node name="ProgressBar" parent="PlayerAndUI2/CanvasLayer" index="1"]
-visible = true
-
 [node name="Perehod" type="Area2D" parent="."]
 position = Vector2(35, 688)
 
