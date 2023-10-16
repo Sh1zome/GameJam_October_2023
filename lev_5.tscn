@@ -5224,6 +5224,7 @@ position = Vector2(-36, 83)
 shape = SubResource("RectangleShape2D_ukbk0")
 
 [node name="dark" type="ColorRect" parent="."]
+visible = false
 z_index = 10
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 15

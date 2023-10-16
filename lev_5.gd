@@ -36,7 +36,6 @@ func _process(delta):
 		
 	if exit_timer >= 0.35:
 		if lvl3:
-			GloabalTreker.tp = true;
 			GloabalTreker.tp3 = true
 			get_tree().change_scene_to_file("res://lev_3.tscn")
 		if lvl6:
