@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://bxngx0v0hyhju"]
+[gd_scene load_steps=39 format=3 uid="uid://bxngx0v0hyhju"]
 
 [ext_resource type="Script" path="res://lev_3.gd" id="1_8a57a"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_a2mho"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_p0rdu"]
 [ext_resource type="Texture2D" uid="uid://c1xflliexqwid" path="res://light/spot.png" id="12_m35of"]
 [ext_resource type="PackedScene" uid="uid://igmfatqwefse" path="res://Mobs/astronaut/astronaut.tscn" id="14_bcpp4"]
+[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="15_jsngy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_73x4r"]
 size = Vector2(58.9429, 84.9427)
@@ -5224,7 +5225,7 @@ position = Vector2(203, 683)
 texture = ExtResource("7_mmvn4")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(68.7188, 582)
+position = Vector2(75.5, 588)
 scale = Vector2(1.14063, 1.98438)
 energy = 0.5
 shadow_enabled = true
@@ -5232,7 +5233,7 @@ texture = SubResource("GradientTexture2D_77n24")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D5" type="PointLight2D" parent="."]
-position = Vector2(200.906, 582)
+position = Vector2(201, 588)
 scale = Vector2(1.04687, 1.98438)
 energy = 0.5
 shadow_enabled = true
@@ -5240,15 +5241,15 @@ texture = SubResource("GradientTexture2D_77n24")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(72.7813, 581)
-scale = Vector2(0.890625, 1.95739)
+position = Vector2(80, 588)
+scale = Vector2(1.09033, 1.95739)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_dynfu")
 offset = Vector2(30, 30)
 
 [node name="PointLight2D6" type="PointLight2D" parent="."]
-position = Vector2(204.844, 581)
+position = Vector2(205, 587)
 scale = Vector2(0.921868, 1.95739)
 energy = 0.5
 shadow_enabled = true
@@ -5335,6 +5336,14 @@ position = Vector2(186, 679)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="astronaut/Area2D"]
 position = Vector2(7.5, -8)
 shape = SubResource("RectangleShape2D_kfv3y")
+
+[node name="Вцв" type="Sprite2D" parent="."]
+position = Vector2(79, 585)
+texture = ExtResource("15_jsngy")
+
+[node name="Вцв2" type="Sprite2D" parent="."]
+position = Vector2(209, 584)
+texture = ExtResource("15_jsngy")
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 [connection signal="body_entered" from="StaticBody2D/Perehod2" to="." method="_on_perehod_2_body_entered"]

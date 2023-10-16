@@ -3591,8 +3591,8 @@ layer_4/tile_data = PackedInt32Array()
 visible = false
 
 [node name="КОЛОНА ЗАД" type="TileMap" parent="."]
-modulate = Color(0.627451, 0.627451, 0.627451, 1)
-position = Vector2(16, 1)
+modulate = Color(0.694118, 0.694118, 0.694118, 1)
+position = Vector2(2, 1)
 tile_set = SubResource("TileSet_8kcap")
 format = 2
 layer_0/tile_data = PackedInt32Array(1114119, 1310721, 9, 1179655, 1310721, 10, 1245191, 1310721, 11, 1310727, 1310721, 12, 1114120, 1376257, 9, 1179656, 1376257, 10, 1245192, 1376257, 11, 1310728, 1376257, 12)
@@ -3697,7 +3697,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(128, 563)
+position = Vector2(131, 571)
 scale = Vector2(1.46875, 2.06232)
 energy = 0.5
 shadow_enabled = true
@@ -3705,23 +3705,23 @@ texture = SubResource("GradientTexture2D_7e5e3")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D4" type="PointLight2D" parent="PointLight2D2"]
-position = Vector2(4.02127, 0.88858)
-scale = Vector2(1.01064, 0.962205)
+position = Vector2(3.46424, 0.484863)
+scale = Vector2(0.712828, 0.962205)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_np1mt")
 offset = Vector2(30, 30)
 
 [node name="PointLight2D4" type="PointLight2D" parent="."]
-position = Vector2(263, 564)
-scale = Vector2(1.46875, 2.06232)
+position = Vector2(261, 573)
+scale = Vector2(0.827148, 2.06232)
 energy = 0.5
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_7e5e3")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D4" type="PointLight2D" parent="PointLight2D4"]
-position = Vector2(4.02127, 0.88858)
+position = Vector2(4.036, -0.485)
 scale = Vector2(1.01064, 0.962205)
 energy = 0.5
 shadow_enabled = true
@@ -3729,7 +3729,7 @@ texture = SubResource("GradientTexture2D_np1mt")
 offset = Vector2(30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(391, 561)
+position = Vector2(397, 564)
 scale = Vector2(1.46875, 2.06232)
 energy = 0.5
 shadow_enabled = true
@@ -3737,7 +3737,7 @@ texture = SubResource("GradientTexture2D_7e5e3")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D4" type="PointLight2D" parent="PointLight2D3"]
-position = Vector2(4.02127, 0.88858)
+position = Vector2(4.08508, -0.969788)
 scale = Vector2(1.01064, 0.962205)
 energy = 0.5
 shadow_enabled = true
@@ -3761,6 +3761,18 @@ occluder = SubResource("OccluderPolygon2D_0vxnb")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="LightOccluder2D/LightOccluder2D/LightOccluder2D/LightOccluder2D/LightOccluder2D"]
 occluder = SubResource("OccluderPolygon2D_ky5as")
+
+[node name="Вцв" type="Sprite2D" parent="."]
+position = Vector2(137, 566)
+texture = ExtResource("10_p24x4")
+
+[node name="Вцв2" type="Sprite2D" parent="."]
+position = Vector2(265, 568)
+texture = ExtResource("10_p24x4")
+
+[node name="Вцв3" type="Sprite2D" parent="."]
+position = Vector2(399, 568)
+texture = ExtResource("10_p24x4")
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 

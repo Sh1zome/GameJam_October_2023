@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://do3eol2w3uryk" path="res://Виталя/Текстуры/артефакт.png" id="7_qvi1y"]
 [ext_resource type="Texture2D" uid="uid://r3f0hftsoqrg" path="res://Виталя/Текстуры/рАЗЪЁБАННЫЙ КОРОЛЬ СЛИЗИ.PNG" id="8_b6krx"]
 [ext_resource type="Texture2D" uid="uid://bt8hvi7iwf7qo" path="res://Виталя/Текстуры/ЖЁСТКОЕ ПОРЕВО СО СЛИЗНЯМИ.PNG" id="9_r4i1g"]
+[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="10_v80ay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifbpe"]
 size = Vector2(351, 24)
@@ -1334,7 +1335,7 @@ texture = ExtResource("2_kfqk5")
 
 [node name="ОвецСнов1" type="Sprite2D" parent="."]
 modulate = Color(0.780392, 0.780392, 0.780392, 1)
-position = Vector2(173, 566)
+position = Vector2(173, 576)
 texture = ExtResource("3_ga1aw")
 
 [node name="ОвецСновМаленькиВер2" type="Sprite2D" parent="."]
@@ -1367,7 +1368,7 @@ position = Vector2(100, 627)
 texture = ExtResource("9_r4i1g")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(146.75, 534)
+position = Vector2(147, 541)
 scale = Vector2(0.789063, 2.73047)
 energy = 0.5
 shadow_enabled = true
@@ -1375,7 +1376,7 @@ texture = SubResource("GradientTexture2D_u8p0m")
 offset = Vector2(0, 30)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(197.75, 534)
+position = Vector2(198, 541)
 scale = Vector2(0.804687, 2.73438)
 energy = 0.5
 shadow_enabled = true
