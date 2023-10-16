@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://wt00wwcu0hg5"]
 
 [ext_resource type="Script" path="res://lev_6.gd" id="1_5k03u"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="1_88kkq"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="1_88kkq"]
 [ext_resource type="Texture2D" uid="uid://llswtrcb14br" path="res://Виталя/Текстуры/всетекстуры (4).png" id="1_tt0hf"]
 [ext_resource type="Texture2D" uid="uid://vsv1cvlkcv3m" path="res://Виталя/Текстуры/Корабли.png" id="2_kfqk5"]
 [ext_resource type="Texture2D" uid="uid://ds14fh2eg78rc" path="res://Виталя/Текстуры/ОВЕЦ СНОВ 1.PNG" id="3_ga1aw"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://do3eol2w3uryk" path="res://Виталя/Текстуры/артефакт.png" id="7_qvi1y"]
 [ext_resource type="Texture2D" uid="uid://r3f0hftsoqrg" path="res://Виталя/Текстуры/рАЗЪЁБАННЫЙ КОРОЛЬ СЛИЗИ.PNG" id="8_b6krx"]
 [ext_resource type="Texture2D" uid="uid://bt8hvi7iwf7qo" path="res://Виталя/Текстуры/ЖЁСТКОЕ ПОРЕВО СО СЛИЗНЯМИ.PNG" id="9_r4i1g"]
+[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="10_v80ay"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifbpe"]
 size = Vector2(351, 24)
@@ -1334,7 +1335,7 @@ texture = ExtResource("2_kfqk5")
 
 [node name="ОвецСнов1" type="Sprite2D" parent="."]
 modulate = Color(0.780392, 0.780392, 0.780392, 1)
-position = Vector2(173, 566)
+position = Vector2(173, 576)
 texture = ExtResource("3_ga1aw")
 
 [node name="ОвецСновМаленькиВер2" type="Sprite2D" parent="."]
@@ -1367,7 +1368,7 @@ position = Vector2(100, 627)
 texture = ExtResource("9_r4i1g")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
-position = Vector2(146.75, 534)
+position = Vector2(147, 541)
 scale = Vector2(0.789063, 2.73047)
 energy = 0.5
 shadow_enabled = true
@@ -1375,7 +1376,7 @@ texture = SubResource("GradientTexture2D_u8p0m")
 offset = Vector2(0, 30)
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(197.75, 534)
+position = Vector2(198, 541)
 scale = Vector2(0.804687, 2.73438)
 energy = 0.5
 shadow_enabled = true
@@ -1410,6 +1411,20 @@ shape = SubResource("RectangleShape2D_ifbpe")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(25, 656.75)
 shape = SubResource("RectangleShape2D_pfodg")
+
+[node name="dark" type="ColorRect" parent="."]
+z_index = 10
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1508.0
+offset_top = -848.0
+offset_right = 1507.0
+offset_bottom = 848.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 

@@ -21,11 +21,6 @@ func _process(delta):
 		GloabalTreker.tp = false
 		
 	timer = timer + (delta * 1)
-	if entered && timer >= 0.35:
-		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,0), delta * 2)
-	elif exited:
-		exit_timer = exit_timer + (delta * 1)
-		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,1), delta * 8)
 
 	
 	if entered && timer >= 0.5:

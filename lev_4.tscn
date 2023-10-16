@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d27f10s7ekrsm"]
+[gd_scene load_steps=41 format=3 uid="uid://d27f10s7ekrsm"]
 
 [ext_resource type="Script" path="res://lev_4.gd" id="1_nrrhy"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_pyei7"]
@@ -9,8 +9,9 @@
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="5_532hd"]
 [ext_resource type="Texture2D" uid="uid://b1ws8yrmpbvds" path="res://Виталя/Текстуры/Картины/Чёрная Грязь.png" id="5_mo8vn"]
 [ext_resource type="Texture2D" uid="uid://b5dfm1gpgkiee" path="res://Виталя/Текстуры/Картины/галактика.png" id="6_2frew"]
-[ext_resource type="PackedScene" uid="uid://df2won3jo2r5x" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
+[ext_resource type="PackedScene" uid="uid://c3s7gsmgxtgg1" path="res://Player/Human/player_and_ui.tscn" id="7_0m0yg"]
 [ext_resource type="Texture2D" uid="uid://13iaaowhlwnu" path="res://light/light.png" id="9_ejicj"]
+[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="13_4crt3"]
 [ext_resource type="AudioStream" uid="uid://cu2a3hgoenryt" path="res://kamni.mp3" id="14_xebj4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16xrf"]
@@ -5827,7 +5828,7 @@ scale = Vector2(0.253906, 0.253906)
 texture = ExtResource("6_2frew")
 
 [node name="PointLight2D2" type="PointLight2D" parent="."]
-position = Vector2(83.1452, 579)
+position = Vector2(77.3, 588)
 scale = Vector2(0.927422, 2)
 energy = 0.5
 shadow_enabled = true
@@ -5835,7 +5836,7 @@ texture = SubResource("GradientTexture2D_dnv4y")
 offset = Vector2(-30, 30)
 
 [node name="PointLight2D3" type="PointLight2D" parent="."]
-position = Vector2(86.8841, 578.031)
+position = Vector2(81, 588)
 scale = Vector2(0.94207, 2.01563)
 energy = 0.5
 shadow_enabled = true
@@ -5886,6 +5887,23 @@ shape = SubResource("RectangleShape2D_tdif2")
 [node name="kamni" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(74, 645)
 stream = ExtResource("14_xebj4")
+
+[node name="dark" type="ColorRect" parent="."]
+z_index = 10
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1508.0
+offset_top = -848.0
+offset_right = 1507.0
+offset_bottom = 848.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+[node name="Вцв" type="Sprite2D" parent="."]
+position = Vector2(80, 584)
+texture = ExtResource("13_4crt3")
 
 [connection signal="body_entered" from="Box1" to="." method="_on_box_1_body_entered"]
 [connection signal="body_exited" from="Box1" to="." method="_on_box_1_body_exited"]
