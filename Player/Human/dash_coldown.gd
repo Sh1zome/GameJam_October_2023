@@ -42,5 +42,8 @@ func _on_comp_dialogue_signal(value):
 		get_tree().change_scene_to_file("res://lev_5.tscn")
 	if value == "GetArtifact":
 		GloabalTreker.artic = true
+	if value == "end":
+		dialog.stop()
+		get_tree().change_scene_to_file("res://titles.tscn")
 		
 		

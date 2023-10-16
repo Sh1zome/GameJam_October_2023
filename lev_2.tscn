@@ -1,13 +1,11 @@
-[gd_scene load_steps=31 format=3 uid="uid://cat5nxj3cw0tb"]
+[gd_scene load_steps=29 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
 [ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="4_t2fno"]
-[ext_resource type="AudioStream" uid="uid://diwtu6ke6uwl6" path="res://museum.wav" id="6_e8n0b"]
 [ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="6_ocjaf"]
-[ext_resource type="Script" path="res://Player/Human/Theme.gd" id="7_5laeu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -4305,12 +4303,6 @@ offset_left = 378.0
 offset_top = 72.0
 offset_right = -719.0
 offset_bottom = -484.0
-
-[node name="Theme" parent="PlayerAndUI2" index="4"]
-stream = ExtResource("6_e8n0b")
-volume_db = 24.0
-autoplay = true
-script = ExtResource("7_5laeu")
 
 [node name="Perehod" type="Area2D" parent="."]
 position = Vector2(35, 688)

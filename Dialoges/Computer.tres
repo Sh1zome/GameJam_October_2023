@@ -136,7 +136,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 260.999
+"y": 261.0
 },
 "speaker": ""
 },
@@ -345,8 +345,8 @@ nodes = {
 "dialogue": "Давай отнесём его в лаболаторию..",
 "offset": Vector2(2817.69, 144.318),
 "options": {
-"0": {
-"link": "END",
+0: {
+"link": &"3_7",
 "text": "Идём"
 }
 },
@@ -397,7 +397,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 233.0
+"y": 261.0
 },
 "speaker": ""
 },
@@ -457,7 +457,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 233.0
+"y": 261.0
 },
 "speaker": ""
 },
@@ -593,6 +593,11 @@ nodes = {
 "link": "END",
 "offset": Vector2(3106.39, 578.424),
 "signalValue": "GetArtifact"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2(3087.46, 141.713),
+"signalValue": "end"
 },
 "5_1": {
 "false": &"1_2",
