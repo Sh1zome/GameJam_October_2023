@@ -20,3 +20,8 @@ func _on_back_to_4_body_entered(body):
 
 
 
+
+
+func _on_go_to_6_body_entered(body):
+	if body.name == "PlayerHuman":
+		get_tree().change_scene_to_file("res://lev_6.tscn")
