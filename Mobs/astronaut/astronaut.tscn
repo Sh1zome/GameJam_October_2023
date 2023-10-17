@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://igmfatqwefse"]
+
+[ext_resource type="Script" path="res://Mobs/astronaut/astronaut.gd" id="1_q5n04"]
+[ext_resource type="Texture2D" uid="uid://c4mkel2faxkgv" path="res://Mobs/astronaut/assets/существует1.png" id="2_gfk0i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kiy32"]
+atlas = ExtResource("2_gfk0i")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b7t07"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kiy32")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="astronaut" type="CharacterBody2D"]
+script = ExtResource("1_q5n04")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7.9375, -9.9375)
+scale = Vector2(0.626953, 0.626953)
+sprite_frames = SubResource("SpriteFrames_b7t07")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.88387
+flip_h = true

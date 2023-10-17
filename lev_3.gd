@@ -7,6 +7,7 @@ var exit_timer = 0
 var entered = false
 var exited = false
 var lvl2 = false
+var lvl5 = false
 
 @onready var dialog = $PlayerAndUI/CanvasLayer/DashColdown/Comp
 # Called when the node enters the scene tree for the first time.
@@ -16,6 +17,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if GloabalTreker.tp3 == true:
+		$PlayerAndUI/PlayerHuman.global_position.x = 45
+		GloabalTreker.tp3 = false
+		
+		
 	timer = timer + (delta * 1)
 	
 	if entered && timer >= 0.5:
@@ -28,7 +34,11 @@ func _process(delta):
 		if exit_timer >= 0.35:
 			if lvl2:
 				get_tree().change_scene_to_file("res://lev_2.tscn")
-
+			if lvl5:
+				get_tree().change_scene_to_file("res://lev_3.tscn")
+			if GloabalTreker.goToLvl5:
+				get_tree().change_scene_to_file("res://lev_5.tscn")
+				
 
 func _on_perehod_body_entered(body):
 	if body.name == "PlayerHuman":
@@ -40,6 +50,7 @@ func _on_perehod_body_entered(body):
 
 func _on_perehod_2_body_entered(body):
 	if body.name == "PlayerHuman":
+		dialog.stop()
 		dialog.start("RightDoor")
 
 
@@ -50,4 +61,32 @@ func _on_perehod_2_body_exited(body):
 
 func _on_door_active_body_entered(body):
 	if body.name == "PlayerHuman":
+		dialog.stop()
 		dialog.start("MiddleDoor")
+
+
+func _on_door_active_body_exited(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
+
+
+func _on_door_active_2_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
+		dialog.start("ByAuthor")
+
+
+func _on_go_to_5_body_entered(body):
+	if body.name == "PlayerHuman":
+		entered = false
+		exited = true
+		lvl5 = true
+
+#Космонавт
+func _on_area_2d_body_entered(body):
+	if body.name == "PlayerHuman":
+		dialog.stop()
+		if GloabalTreker.artic == false:
+			dialog.start("Cosmonavt0")
+		else:
+			dialog.start("Cosmonavt1")

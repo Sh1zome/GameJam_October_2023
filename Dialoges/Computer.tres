@@ -5,10 +5,17 @@
 [resource]
 script = ExtResource("1_ebw4k")
 starts = {
+"Artifact": &"0_11",
+"BackTo3": &"0_7",
 "Box1": &"0_5",
+"Box2": &"0_6",
+"ByAuthor": &"0_8",
 "Computer": &"0_1",
+"Cosmonavt0": &"0_9",
+"Cosmonavt1": &"0_10",
 "MiddleDoor": &"0_4",
 "RightDoor": &"0_3",
+"Steklo": &"0_12",
 "Table": &"0_2"
 }
 nodes = {
@@ -16,6 +23,21 @@ nodes = {
 "link": &"1_1",
 "offset": Vector2(500, 487),
 "start_id": "Computer"
+},
+"0_10": {
+"link": &"1_21",
+"offset": Vector2(2140, 240),
+"start_id": "Cosmonavt1"
+},
+"0_11": {
+"link": &"1_26",
+"offset": Vector2(2176.4, 588.712),
+"start_id": "Artifact"
+},
+"0_12": {
+"link": &"1_29",
+"offset": Vector2(2137.67, 948.674),
+"start_id": "Steklo"
 },
 "0_2": {
 "link": &"1_3",
@@ -37,6 +59,26 @@ nodes = {
 "offset": Vector2(556.915, 1582.71),
 "start_id": "Box1"
 },
+"0_6": {
+"link": &"1_14",
+"offset": Vector2(447.737, 1849.58),
+"start_id": "Box2"
+},
+"0_7": {
+"link": &"1_17",
+"offset": Vector2(680, 2400),
+"start_id": "BackTo3"
+},
+"0_8": {
+"link": &"1_18",
+"offset": Vector2(410.874, 2628.03),
+"start_id": "ByAuthor"
+},
+"0_9": {
+"link": &"1_20",
+"offset": Vector2(2161.01, 84.7612),
+"start_id": "Cosmonavt0"
+},
 "1_1": {
 "dialogue": "В эти компьютеры можно вставить диск.
 ",
@@ -49,17 +91,17 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 233.0
+"y": 261.0
 },
 "speaker": ""
 },
 "1_10": {
-"dialogue": "1",
-"offset": Vector2(1540, 1200),
+"dialogue": "К сожалению тут ничего нет...",
+"offset": Vector2(1480, 1340),
 "options": {
 "0": {
 "link": "END",
-"text": "Далее"
+"text": ""
 }
 },
 "size": {
@@ -69,12 +111,27 @@ nodes = {
 "speaker": ""
 },
 "1_11": {
-"dialogue": "2",
-"offset": Vector2(1560, 1460),
+"dialogue": "Ненаход.....",
+"offset": Vector2(1480, 1580),
 "options": {
 "0": {
 "link": "END",
-"text": "Далее"
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_12": {
+"dialogue": "ЧТО ЖЕ ЭТО!! ничего нет...",
+"offset": Vector2(1480, 2060),
+"options": {
+"0": {
+"link": "END",
+"text": ""
 }
 },
 "size": {
@@ -84,12 +141,48 @@ nodes = {
 "speaker": ""
 },
 "1_13": {
-"dialogue": "4",
-"offset": Vector2(1600, 1960),
+"dialogue": "Вы стали чуть ближе к находу
+Проверьте другой комод",
+"offset": Vector2(1480, 1820),
 "options": {
 "0": {
 "link": "END",
-"text": "Далее"
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.001
+},
+"speaker": ""
+},
+"1_14": {
+"dialogue": "Проверить серверную?",
+"offset": Vector2(740, 1840),
+"options": {
+0: {
+"link": &"1_15",
+"text": "Сверху"
+},
+1: {
+"link": &"1_16",
+"text": "Снизу"
+}
+},
+"size": {
+"x": 200.0,
+"y": 289.0
+},
+"speaker": ""
+},
+"1_15": {
+"dialogue": "[shake]А вот и диск![/shake]
+",
+"offset": Vector2(980, 1840),
+"options": {
+0: {
+"link": &"3_2",
+"text": ""
 }
 },
 "size": {
@@ -98,19 +191,63 @@ nodes = {
 },
 "speaker": ""
 },
-"1_14": {
-"dialogue": "Вы чувствуете что вы ближе к находке..
-",
-"offset": Vector2(1640, 1720),
+"1_16": {
+"dialogue": "Думаю стоит глянуть сверху",
+"offset": Vector2(1140, 2140),
 "options": {
 "0": {
 "link": "END",
-"text": "Далее"
+"text": ""
 }
 },
 "size": {
 "x": 200.0,
-"y": 261.001
+"y": 261.0
+},
+"speaker": ""
+},
+"1_17": {
+"dialogue": "Вернуться?",
+"offset": Vector2(926.549, 2373.71),
+"options": {
+0: {
+"link": &"3_3",
+"text": "Вернуться"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_18": {
+"dialogue": "Сверху написано имя автора..",
+"offset": Vector2(737.471, 2629.28),
+"options": {
+0: {
+"link": &"1_19",
+"text": "Прочитать"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_19": {
+"dialogue": "[shake]by catborisovv[/shake]",
+"offset": Vector2(1010.29, 2619.54),
+"options": {
+"0": {
+"link": "END",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
 },
 "speaker": ""
 },
@@ -121,6 +258,156 @@ nodes = {
 "0": {
 "link": "END",
 "text": "ОК"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.001
+},
+"speaker": ""
+},
+"1_20": {
+"dialogue": "Мне нужен предмет который мы ....",
+"offset": Vector2(2240, -420),
+"options": {
+0: {
+"link": &"1_28",
+"text": "Зачем?"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": "Космонавт"
+},
+"1_21": {
+"dialogue": "Ого, ты принёс артифакт..",
+"offset": Vector2(2480, 180),
+"options": {
+0: {
+"link": &"1_25",
+"text": "Да"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": "Космонавт"
+},
+"1_22": {
+"dialogue": "Мне нужно отнессти его в лаболаторию",
+"offset": Vector2(2700, -280),
+"options": {
+0: {
+"link": &"1_23",
+"text": "Далее"
+}
+},
+"size": {
+"x": 200.001,
+"y": 261.0
+},
+"speaker": "Космонавт"
+},
+"1_23": {
+"dialogue": "Там мы его уничтожим и тогда...",
+"offset": Vector2(2957.05, -272.491),
+"options": {
+0: {
+"link": &"1_24",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": "Космонавт"
+},
+"1_24": {
+"dialogue": "Наша планета будет спасена",
+"offset": Vector2(3220, -300),
+"options": {
+"0": {
+"link": "END",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": "Космонавт"
+},
+"1_25": {
+"dialogue": "Давай отнесём его в лаболаторию..",
+"offset": Vector2(2817.69, 144.318),
+"options": {
+0: {
+"link": &"3_7",
+"text": "Идём"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": "Космонавт"
+},
+"1_26": {
+"dialogue": "Что за чудесный предмет?",
+"offset": Vector2(2480, 560),
+"options": {
+0: {
+"link": &"1_27",
+"text": "Смотреть"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_27": {
+"dialogue": "Что то манит его взять...",
+"offset": Vector2(2820, 540),
+"options": {
+0: {
+"link": &"3_6",
+"text": "Взять..."
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_28": {
+"dialogue": "Который мы когда принесли с далёкой планеты...",
+"offset": Vector2(2500, -460),
+"options": {
+0: {
+"link": &"1_22",
+"text": ""
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_29": {
+"dialogue": "Вай ээ какой мужчинаа....",
+"offset": Vector2(2580, 940),
+"options": {
+0: {
+"link": &"1_30",
+"text": "Далее"
 }
 },
 "size": {
@@ -136,6 +423,36 @@ nodes = {
 "0": {
 "link": "END",
 "text": "Ага"
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_30": {
+"dialogue": ".....",
+"offset": Vector2(2860, 960),
+"options": {
+0: {
+"link": &"1_31",
+"text": "....."
+}
+},
+"size": {
+"x": 200.0,
+"y": 261.0
+},
+"speaker": ""
+},
+"1_31": {
+"dialogue": "Это просто муляж за стеклом...",
+"offset": Vector2(3160, 940),
+"options": {
+"0": {
+"link": "END",
+"text": ""
 }
 },
 "size": {
@@ -160,17 +477,17 @@ nodes = {
 "speaker": ""
 },
 "1_5": {
-"dialogue": "[shake]Дверь слишком тяжёлая...[/shake]",
-"offset": Vector2(1140, 940),
+"dialogue": "[shake]Дверь очень тяжёлая...[/shake]",
+"offset": Vector2(1100, 920),
 "options": {
 0: {
-"link": &"4_1",
+"link": &"3_4",
 "text": ""
 }
 },
 "size": {
 "x": 200.0,
-"y": 261.0
+"y": 261.002
 },
 "speaker": ""
 },
@@ -186,7 +503,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 261.0
+"y": 261.001
 },
 "speaker": ""
 },
@@ -194,14 +511,14 @@ nodes = {
 "dialogue": "Диск вставлен",
 "offset": Vector2(1477.62, -34.553),
 "options": {
-"0": {
-"link": "END",
+0: {
+"link": &"3_5",
 "text": ""
 }
 },
 "size": {
-"x": 200.0,
-"y": 233.0
+"x": 200.001,
+"y": 261.0
 },
 "speaker": ""
 },
@@ -216,7 +533,7 @@ nodes = {
 },
 "size": {
 "x": 200.0,
-"y": 233.0
+"y": 261.0
 },
 "speaker": ""
 },
@@ -233,17 +550,17 @@ nodes = {
 "text": "2"
 },
 2: {
-"link": &"1_14",
+"link": &"1_13",
 "text": "3"
 },
 3: {
-"link": &"1_13",
+"link": &"1_12",
 "text": "4"
 }
 },
 "size": {
 "x": 200.0,
-"y": 317.0
+"y": 345.0
 },
 "speaker": ""
 },
@@ -252,12 +569,35 @@ nodes = {
 "offset": Vector2(1100, 1300),
 "signalValue": "GoToScene4"
 },
-"4_1": {
+"3_2": {
 "link": "END",
-"offset": Vector2(1560, 1000),
-"type": 1,
-"value": "1",
-"variable": "ssd"
+"offset": Vector2(1220, 1940),
+"signalValue": "nahod+"
+},
+"3_3": {
+"link": "END",
+"offset": Vector2(1220, 2460),
+"signalValue": "BackTo3"
+},
+"3_4": {
+"link": "END",
+"offset": Vector2(1331.89, 983.641),
+"signalValue": "GoTo5"
+},
+"3_5": {
+"link": "END",
+"offset": Vector2(1820, 40),
+"signalValue": "ssd"
+},
+"3_6": {
+"link": "END",
+"offset": Vector2(3106.39, 578.424),
+"signalValue": "GetArtifact"
+},
+"3_7": {
+"link": "END",
+"offset": Vector2(3087.46, 141.713),
+"signalValue": "end"
 },
 "5_1": {
 "false": &"1_2",
@@ -276,4 +616,5 @@ variables = {
 }
 comments = Array[String]([])
 strays = Array[String]([])
-characters = ""
+characters = "
+"

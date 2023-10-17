@@ -14,18 +14,12 @@ func _ready():
 		GloabalTreker.complete1 = true
 	
 func _process(delta):
-	
 	if GloabalTreker.tp == true:
 		$PlayerAndUI.position.x = 375
 		$PlayerAndUI.position.y = 660
 		GloabalTreker.tp = false
 		
 	timer = timer + (delta * 1)
-	if entered && timer >= 0.35:
-		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,0), delta * 2)
-	elif exited:
-		exit_timer = exit_timer + (delta * 1)
-		dark.self_modulate = dark.self_modulate.lerp(Color(1,1,1,1), delta * 8)
 
 	
 	if entered && timer >= 0.5:

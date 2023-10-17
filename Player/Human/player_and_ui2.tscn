@@ -22,9 +22,6 @@ limit_right = 310
 [node name="GPUParticles2D" parent="PlayerHuman" index="3"]
 position = Vector2(48, -17)
 
-[node name="CollisionShape2D" parent="PlayerHuman/Area2D" index="0"]
-position = Vector2(102, -24)
-
 [node name="ProgressBar" parent="CanvasLayer" index="1"]
 offset_left = 124.0
 offset_top = 652.0

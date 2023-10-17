@@ -1,10 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://cat5nxj3cw0tb"]
+[gd_scene load_steps=29 format=3 uid="uid://cat5nxj3cw0tb"]
 
 [ext_resource type="Script" path="res://lev_2.gd" id="1_07tsa"]
 [ext_resource type="Texture2D" uid="uid://cvvn8epcl7s38" path="res://Виталя/Текстуры/всетекстуры.png" id="1_ojoin"]
 [ext_resource type="Texture2D" uid="uid://dntrlbvxjc5sj" path="res://Виталя/Текстуры/Картины/Картина с луноходом.png" id="2_ileey"]
 [ext_resource type="PackedScene" uid="uid://bwo6chdqne5wk" path="res://Player/Human/player_and_ui2.tscn" id="3_yms1s"]
 [ext_resource type="Shader" path="res://pixelate.gdshader" id="4_t2fno"]
+[ext_resource type="Texture2D" uid="uid://d0p16eng6x4jw" path="res://Виталя/вцв.png" id="6_ocjaf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6enuc"]
 texture = ExtResource("1_ojoin")
@@ -4170,11 +4171,45 @@ sources/0 = SubResource("TileSetAtlasSource_4wsu1")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fgikk"]
 size = Vector2(20, 126)
 
+[sub_resource type="Gradient" id="Gradient_uprbj"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_78631"]
+gradient = SubResource("Gradient_uprbj")
+fill_from = Vector2(0.779817, 0.394495)
+fill_to = Vector2(0.133028, 0.747706)
+
+[sub_resource type="Gradient" id="Gradient_uhdrb"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_o7mfu"]
+gradient = SubResource("Gradient_uhdrb")
+fill_from = Vector2(0.779817, 0.43578)
+fill_to = Vector2(0.174312, 0.788991)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vd6mf"]
+polygon = PackedVector2Array(-371.791, 188.391, -280.419, 188.391, -280.419, 249.163, -371.791, 249.163)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7gifo"]
+polygon = PackedVector2Array(-23, 263, -15, 263, -15, 262, -13, 262, -13, 260, -12, 260, -12, 259, -11, 259, -11, 255, -10, 255, -10, 255, -9, 254, -9, 252, -11, 252, -11, 248, -12, 248, -12, 247, -13, 247, -13, 246, -17, 246, -17, 245, -18, 245, -18, 242, -17, 241, -16, 240, -14, 239, -14, 238, -13, 238, -13, 237, -15, 237, -15, 239, -16, 240, -17, 241, -19, 241, -20, 241, -21, 241, -22, 240, -23, 239, -24, 239, -25, 238, -25, 237, -24, 237, -23, 237, -23, 238, -23, 239, -22, 239, -21, 240, -20, 241, -21, 241, -21, 242, -20, 242, -20, 245, -21, 245, -21, 246, -25, 246, -25, 247, -26, 247, -26, 248, -27, 248, -27, 252, -29, 252, -29, 255, -28, 255, -27, 256, -27, 256, -26, 256, -26, 259, -25, 259, -25, 262, -23, 262)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3tft1"]
 size = Vector2(46, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_idu6b"]
 size = Vector2(16, 12)
+
+[sub_resource type="Gradient" id="Gradient_cibc4"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ckwnx"]
+gradient = SubResource("Gradient_cibc4")
+fill_from = Vector2(0.201835, 0.481651)
+fill_to = Vector2(0.857798, 0.821101)
+
+[sub_resource type="Gradient" id="Gradient_uikb2"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_6dkd1"]
+gradient = SubResource("Gradient_uikb2")
+fill_from = Vector2(0.165138, 0.440367)
+fill_to = Vector2(0.894495, 0.688073)
 
 [node name="Lev 2" type="Node2D"]
 position = Vector2(-3, 3)
@@ -4276,8 +4311,32 @@ position = Vector2(35, 688)
 position = Vector2(-25, -39)
 shape = SubResource("RectangleShape2D_fgikk")
 
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(79.3336, 588)
+scale = Vector2(0.720426, 1.9998)
+energy = 0.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_78631")
+offset = Vector2(30, 30)
+
+[node name="PointLight2D2" type="PointLight2D" parent="."]
+position = Vector2(201.26, 586)
+scale = Vector2(0.786132, 1.98438)
+energy = 0.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_o7mfu")
+offset = Vector2(30, 30)
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2(199, 575)
+scale = Vector2(0.317383, 0.493653)
+occluder = SubResource("OccluderPolygon2D_vd6mf")
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2(213, 457)
+occluder = SubResource("OccluderPolygon2D_7gifo")
+
 [node name="dark" type="ColorRect" parent="."]
-visible = false
 z_index = 10
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 15
@@ -4311,6 +4370,30 @@ position = Vector2(-53, 648)
 [node name="Table" type="CollisionShape2D" parent="Perehod4"]
 position = Vector2(189, -46)
 shape = SubResource("RectangleShape2D_idu6b")
+
+[node name="PointLight2D3" type="PointLight2D" parent="."]
+position = Vector2(76.6753, 588)
+scale = Vector2(0.704441, 1.98437)
+energy = 0.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ckwnx")
+offset = Vector2(-30, 30)
+
+[node name="PointLight2D4" type="PointLight2D" parent="."]
+position = Vector2(197.867, 587)
+scale = Vector2(0.901088, 1.95991)
+energy = 0.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_6dkd1")
+offset = Vector2(-30, 30)
+
+[node name="Вцв" type="Sprite2D" parent="."]
+position = Vector2(80, 584)
+texture = ExtResource("6_ocjaf")
+
+[node name="Вцв2" type="Sprite2D" parent="."]
+position = Vector2(196, 584)
+texture = ExtResource("6_ocjaf")
 
 [connection signal="body_entered" from="Perehod" to="." method="_on_perehod_body_entered"]
 [connection signal="body_entered" from="Perehod2" to="." method="_on_perehod_2_body_entered"]
